@@ -1,0 +1,172 @@
+\documentclass[final]{ltugboat}
+\usepackage[T1]{fontenc} % tt \_
+\usepackage{lmodern}
+\usepackage{hologo}
+\usepackage{microtype}
+\usepackage{soul}
+\usepackage[font=small, labelfont=bf, justification=justified, format=plain]{caption}
+\usepackage{minted}
+\setminted{breaklines}
+\usemintedstyle{bw}
+\def\slash{\discretionary{/}{/}{/}}
+\def\hyphen{\discretionary{-}{-}{-}}
+\DeclareUnicodeCharacter{2014}{\Dash}
+\def\verb{\mintinline{text}}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage[hidelinks,pdfa]{hyperref}
+\def\url{\tbsurl}
+% silence font warnings:
+% LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <45> not available
+% (Font)              size <24.88> substituted on input line 94.
+\makeatletter\def\@font@warning#1{}\makeatother
+
+%%% Start of metadata %%%
+\title{Expltools: Development tools for expl3 programmers}
+
+% repeat info for each author; comment out items that don't apply.
+\author{V\'{i}t Star\'{y} Novotn\'{y}}
+\address{Studen\'{a} 453/15 \\ Brno 63800, Czech Republic}
+\netaddress{witiko (at) mail dot muni dot cz}
+\personalURL{github.com/witiko}
+
+\author{Oliver Kopp}
+\address{Sindelfingen, Germany \\ \acro{ORCID} 0000-0001-6962-4290}
+
+%%% End of metadata %%%
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\end{abstract}
+
+\section{Introduction}
+Most modern programming languages\Dash whether interpreted or compiled\Dash share a broadly similar syntax, differing mainly in the specific keywords and symbols used to express language constructs. Even interpreted languages such as Lua, Python, and JavaScript often inherit their syntactic conventions from compiled languages like Pascal and C. This inheritance persists partly due to familiarity and momentum, but also because predictable syntax offers significant advantages for code performance and tooling.
+
+\subsection{Why predictable syntax matters}
+One key advantage of predictable syntax is that it enables \emph{static analysis}\Dash automated reasoning about code without running it. Static analysis underpins many tools that help developers write, understand, and improve their code.
+
+Text editors, for example, can offer smarter features thanks to predictable syntax. Even simple syntax highlighting\Dash using different colors for keywords, variables, and comments\Dash makes the code structure easier to read. Going further, editors can index the names and types of variables, functions, and other objects, enabling smarter code completion, more accurate navigation, and robust search across a project. With deeper static analysis, they can even support complex refactoring\Dash such as renaming a variable consistently across its entire scope.
+
+Language interpreters also benefit: they can often detect and report syntax errors before executing the program, simply by parsing the code and enforcing grammatical rules.
+
+\subsection{Letting linters do the boring work}
+In addition to editors and interpreters, many languages have tools called \emph{linters}, which use techniques from compiler design to catch common mistakes. Linters can flag undefined variables, wrong argument counts, or type mismatches\Dash for example, passing a number where a string is expected.
+
+Linters complement human-written tests: while tests verify dynamic behavior at runtime, they must be explicitly written to cover each relevant case. Linters, on the other hand, scan through all your code up front. They might not catch everything, and their checks are usually more general, but they can flag a lot of potential issues right away\Dash before you’ve written a single test or even run the program.
+
+\subsection{What makes \TeX{} hard to analyze}
+Unlike languages like Lua, Python, or JavaScript, which come from the tradition of numerical and procedural programming, \TeX{} descends from a different lineage: \emph{macro processors}, where programs are built by defining and expanding text-based substitutions (so-called \emph{macros}). This heritage introduces unique challenges for static analysis.
+
+In macro languages, program structure often isn't visible in the source code\Dash it only emerges after macro expansion. \TeX{} goes even further: it allows the meaning of individual characters to change at runtime, further obfuscating the surface syntax.
+
+On top of that, macro languages like \TeX{} lack type annotations, function signatures, and other cues that clarify programmer intent. Without these, it’s hard to distinguish variables from functions, since both are represented by macros. This makes even basic checks\Dash such as validating argument counts or data types\Dash difficult to perform.
+
+Scoping adds to the complexity. Most modern languages use \emph{lexical scoping}, where the meaning of an identifier is determined by its position in the code. \TeX{}, however, uses \emph{dynamic scoping}, where the meaning of a macro depends not on where it appears, but on the state of the execution environment when it is used. This makes it hard for tools to reason about the flow of control and data in \TeX{} programs.
+
+All of this makes \TeX{} inherently resistant to static analysis. Even simple editor features like syntax highlighting can be unreliable. While tools can handle constrained subsets of the language, analyzing arbitrary \TeX{} code remains fundamentally limited.
+
+\subsection{How expl3 tames the chaos}
+\emph{Expl3}~\cite{latex2025expl3, peischl2023introduction} is a high-level programming language built on top of \TeX{}, designed to simplify the internal implementation of the \LaTeX{} format and serve as a programming layer for \LaTeX{} package authors. In practice, it can also be used with other \TeX{} formats, such as plain \TeX{} and \Hologo{ConTeXt}, making it a viable replacement for \TeX{} in many contexts. Compared to \TeX{}, expl3 introduces a number of conventions that make analysis far more tractable.
+
+Although it still permits changing the meaning of individual characters at runtime, such behavior is rarely needed, thanks to higher-level abstractions and built-in data types. This improves the consistency of surface syntax.
+
+Unlike \TeX{}, expl3 clearly distinguishes variables from functions. Variable names include metadata such as type, scope, and mutability, while function names specify argument counts, types, and even visibility (public vs.\ private). This kind of structured interface makes it possible to perform checks\Dash like validating argument counts or detecting type mismatches\Dash that are nearly impossible in \TeX{}.
+
+Scoping remains dynamic in expl3, but the language encourages the use of function arguments over unbound variables. In particular, function variants that take \texttt{V}- or \texttt{v}-type arguments promote a pass-by-value style, reducing unintended interactions through dynamic scope.
+
+While these conventions are not enforced by the runtime, many expl3 packages adopt them, making the syntax more predictable and amenable to static analysis. Despite this, there was no editor support, linter, or other static tooling available for expl3 as recently as a year ago.
+
+\subsection{Toward better tooling for expl3}
+Between April and August 2024, we published a series of blog posts on the static analysis of expl3~\cite{starynovotny2024statica, starynovotny2024staticb, starynovotny2024staticc, starynovotny2024staticd}, culminating in a proposal for a year-long project to develop \emph{explcheck}\Dash an expl3 linter\Dash submitted to the \TeX{} Development Fund in September~\cite{starynovotny2024project}. The proposal was accepted, and over the following two months, we worked toward explcheck's initial release.
+
+\begin{figure}[b]
+\centering
+\input images/platypus-detective-seabed
+\caption{Explcheck’s mascot is \emph{Platy}, an underwater detective who dives beneath the surface of your expl3 code to uncover hidden issues.\\[1ex] The concept was suggested by Paulo Cereda, and the illustration was created by Greg at \tbsurl{https://quickcartoons.com}. All illustrations of Platy are licensed under \acro{CC-BY}, so you're free to use them in your own promotional materials and derivative works, provided you credit the artist~\cite{starynovotny2025platy}.}
+\end{figure}
+
+On December 5, we demonstrated a pre-release version to Frank Mittelbach during their visit to Brno~\cite{starynovotny2024statice}. The first public release (v0.1.0) followed on December 14~\cite{starynovotny2024release, starynovotny2025ctan}, and was presented at the general assembly of the Czech and Slovak \TeX{} Users Group (\CSTUG) on December 16~\cite{starynovotny2024staticf}.
+
+Since then, we have continued development with monthly updates, aiming for a stable v1.0.0. Progress has been regularly documented on the first author's blog~\cite{starynovotny2025expl3}, as well as on Twitter/X~\cite{starynovotny2024tweet} and Mastodon~\cite{starynovotny2024toot}.
+
+\section{Outline}
+In this article, we present the current state of explcheck, emphasizing its design, demonstrating its practical use, and validating its results on real-world expl3 code.
+
+Section~\ref{sec:requirements} begins with a requirements analysis, covering both the intended scope of explcheck’s functionality and other considerations. Section~\ref{sec:design} outlines the high-level design of explcheck.
+
+In Section~\ref{sec:demonstration}, we demonstrate how explcheck can be used\Dash from the command line, within a text editor, or on the web. Section~\ref{sec:validation} presents a validation of explcheck’s results across all expl3 packages in \TeX{}~Live 2013–2025, both through continuous analysis and a set of targeted experiments developed for this article.
+
+In Section~\ref{sec:future-work}, we discuss current limitations and suggest directions for future development. Section~\ref{sec:related-work} surveys related efforts in static analysis of \TeX{} and other programming languages more broadly, highlighting influences on explcheck’s design. Finally, Section~\ref{sec:conclusion} summarizes our contributions.
+
+\vfill
+
+\section{Requirements}
+\label{sec:requirements}
+% Corresponds to Section 2 of project-proposal.pdf.
+\subsection{Functional requirements}
+\subsection{Non-functional requirements}
+\subsubsection{Issues}
+\subsubsection{Architecture}
+\subsubsection{Validation}
+\subsubsection{License terms}
+\section{Design}
+\label{sec:design}
+% Corresponds to the first three subsections of Section 4 of project-proposal.pdf.
+\subsection{Processing steps}
+\subsection{Warnings and errors}
+\subsection{Limitations}
+\section{Demonstration}
+\label{sec:demonstration}
+\subsection{Interfaces}
+% Corresponds to parts of Section 4.1 of starynovotny-expltools-slides.pdf.
+\subsubsection{Command-line interfaces}
+\subsubsection{Lua interface}
+\subsection{Integration with text editors}
+\subsubsection{Quickfix and M-x compile}
+% See:
+% - Pages 31 and 32 of starynovotny-expltools-slides.pdf
+% - <https://github.com/Witiko/expltools/issues/8#issuecomment-2538185841>
+\subsubsection{Language server protocol}
+% See <https://github.com/Witiko/expltools/issues/68>.
+\subsection{Online resources}
+\subsubsection{Docker image}
+\subsubsection{List of issues}
+% See <https://github.com/Witiko/expltools/issues/28> and <https://github.com/koppor/explcheck-issues>.
+\subsubsection{Library of symbols}
+% See <https://github.com/Witiko/expltools/issues/33>.
+\section{Validation}
+\label{sec:validation}
+\subsection{Continuous integration}
+\subsubsection{Unit tests}
+\subsubsection{Regression tests}
+\subsection{Exploratory data analysis}
+% A back-reference to Section "List of issues".
+% See e-mails to devfund@tug.org during April '05.
+\subsection{Experiments}
+\subsubsection{Prevalence of expl3 in \TeX{} code}
+% Corresponds to Section 4.2 of starynovotny-expltools-slides.pdf.
+\subsubsection{Most common issues}
+\subsubsection{Code coverage}
+\section{Future work}
+\label{sec:future-work}
+% Back-reference to Section "Limitations".
+% See also <https://github.com/Witiko/expltools/issues?q=is%3Aissue%20state%3Aopen%20milestone%3A%22explcheck%20v1.1.0%20(after%20first%20stable%20release)%22>.
+\section{Related work}
+% Corresponds to Section 3 of project-proposal.pdf.
+\label{sec:related-work}
+\section{Conclusion}
+\label{sec:conclusion}
+\section*{Acknowledgements}
+
+\SetBibJustification{\raggedright \advance\itemsep by 2pt plus1pt minus1pt}
+\bibliographystyle{tugboat}
+\begingroup
+\small
+\gappto{\UrlBreaks}{\UrlOrds}
+\bibliography{tb143starynovotny-expltools}
+\endgroup
+
+\makesignature
+\end{document}
