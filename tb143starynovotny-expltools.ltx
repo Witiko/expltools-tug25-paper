@@ -39,6 +39,11 @@
 \maketitle
 
 \begin{abstract}
+Static analysis tools are invaluable for catching bugs early and improving code quality. However, the highly dynamic nature of \TeX{} has long posed a barrier to static analysis.
+
+Expl3 is a high-level programming layer built on top of \TeX. Originally developed to simplify the \LaTeX{} kernel, it is now widely used by package authors across \LaTeX{} and other \TeX{} formats. While it retains much of \TeX's flexibility, real-world expl3 code tends to follow more predictable patterns, making it far more amenable to static analysis.
+
+In this article, we introduce \emph{expltools}\Dash a long-overdue addition to the expl3 programmer’s toolbox. Designed to support semantic analysis, it brings clarity and structure to a domain traditionally resistant to static tooling. We present the current state of the project, focusing on its design, practical usage, and validation on real-world expl3 packages.
 \end{abstract}
 
 \section{Introduction}
@@ -87,16 +92,19 @@ Between April and August 2024, we published a series of blog posts on the static
 \caption{Explcheck’s mascot is \emph{Platy}, an underwater detective who dives beneath the surface of your expl3 code to uncover hidden issues.\\[1ex] The concept was suggested by Paulo Cereda, and the illustration was created by Greg at \tbsurl{https://quickcartoons.com}. All illustrations of Platy are licensed under \acro{CC-BY}, so you're free to use them in your own promotional materials and derivative works, provided you credit the artist~\cite{starynovotny2025platy}.}
 \end{figure}
 
-On December 5, we demonstrated a pre-release version to Frank Mittelbach during their visit to Brno~\cite{starynovotny2024statice}. The first public release (v0.1.0) followed on December 14~\cite{starynovotny2024release, starynovotny2025ctan}, and was presented at the general assembly of the Czech and Slovak \TeX{} Users Group (\CSTUG) on December 16~\cite{starynovotny2024staticf}.
+On December 5, we demonstrated a pre-release version to Frank Mittelbach during their visit to Brno~\cite{starynovotny2024statice}. The first public release (v0.1.0) followed on December 14~\cite{starynovotny2024release}, and was presented at the general assembly of the Czech and Slovak \TeX{} Users Group (\CSTUG) on December 16~\cite{starynovotny2024staticf}.
 
 Since then, we have continued development with monthly updates, aiming for a stable v1.0.0. Progress has been regularly documented on the first author's blog~\cite{starynovotny2025expl3}, as well as on Twitter/X~\cite{starynovotny2024tweet} and Mastodon~\cite{starynovotny2024toot}.
+
+Currently, explcheck is the first and only tool in what will become the \emph{expltools} bundle~\cite{starynovotny2025ctan}. In the future, we plan to extend expltools into a suite of static analysis tools for expl3, all built on a common library of reusable components. Explcheck serves as the foundation for this broader toolkit.
 
 \section{Outline}
 In this article, we present the current state of explcheck, emphasizing its design, demonstrating its practical use, and validating its results on real-world expl3 code.
 
 Section~\ref{sec:requirements} begins with a requirements analysis, covering both the intended scope of explcheck’s functionality and other considerations. Section~\ref{sec:design} outlines the high-level design of explcheck.
 
-In Section~\ref{sec:demonstration}, we demonstrate how explcheck can be used\Dash from the command line, within a text editor, or on the web. Section~\ref{sec:validation} presents a validation of explcheck’s results across all expl3 packages in \TeX{}~Live 2013–2025, both through continuous analysis and a set of targeted experiments developed for this article.
+In Section~\ref{sec:demonstration}, we demonstrate how explcheck can be used\Dash from the command line, within a text editor, or on the web. Section~\ref{sec:validation} presents a validation of explcheck’s results across all expl3 packages in \TeX{}~Live 2013–2025, both through continuous analysis and a set of experiments developed for this article.
+\looseness=-1
 
 In Section~\ref{sec:future-work}, we discuss current limitations and suggest directions for future development. Section~\ref{sec:related-work} surveys related efforts in static analysis of \TeX{} and other programming languages more broadly, highlighting influences on explcheck’s design. Finally, Section~\ref{sec:conclusion} summarizes our contributions.
 
