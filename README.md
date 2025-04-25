@@ -12,4 +12,4 @@ latexmk -pdf tb143starynovotny-expltools.ltx
 After running the command, a file [`tb143starynovotny-expltools.pdf`][1] with the
 typeset article will be created.
 
- [1]: https://github.com/witiko/expltools-tug05-paper/releases/download/latest/tb143starynovotny-expltools.pdf
+ [1]: https://github.com/witiko/expltools-tug25-paper/releases/download/latest/tb143starynovotny-expltools.pdf
