@@ -103,9 +103,9 @@ Currently, explcheck is the first and only tool in what will become the \emph{ex
 \section{Outline}
 In this article, we present the current state of explcheck, emphasizing its design, demonstrating its practical use, and validating its results on real code.
 
-Section~\ref{sec:requirements} begins with a requirements analysis, covering both the intended scope of explcheck's functionality and other considerations. Section~\ref{sec:design} outlines the high-level design of explcheck. These sections closely follow our original project proposal, and can be skipped if you're only interested in practical use.
+Section~\ref{sec:requirements} begins with a requirements analysis, covering both the intended scope of explcheck's functionality and other considerations. This section closely follows our original project proposal, and can be skipped if you're not interested in the process.
 
-In Section~\ref{sec:demonstration} on page \pageref{sec:demonstration}, we show how you can use explcheck. Section~\ref{sec:requirements-validation} presents a validation of explcheck's results across all expl3 packages in \TeX{}~Live 2013–2025, both through continuous analysis and a set of experiments developed for this article.
+Section~\ref{sec:design} on page \pageref{sec:design} outlines the high-level design of explcheck. In Section~\ref{sec:demonstration}, we show how you can use explcheck. Section~\ref{sec:requirements-validation} presents a validation of explcheck's results across all expl3 packages in \TeX{}~Live 2013–2025, both through continuous analysis and a set of experiments developed for this article.
 \looseness=-1
 
 In Section~\ref{sec:future-work}, we discuss current limitations and suggest directions for future development. Section~\ref{sec:related-work} surveys related efforts in static analysis of \TeX{} and other programming languages more broadly, highlighting influences on explcheck's design. Finally, Section~\ref{sec:conclusion} summarizes our contributions.
@@ -244,10 +244,12 @@ As outlined in Section~\ref{sec:requirements}, the linter processes input files 
 
 Figure~\textbf{??} illustrates the full processing pipeline applied to an example expl3 code snippet.
 
-\vfill
-
 \subsection{Warnings and errors}
 \label{sec:warnings-and-errors}
+% Let's continue by explaining that after the parsing, each processing step from the previous section reports issues that correspond to its level of understanding of the code, using the warnings from the figure as examples.
+%
+% This seems much more interesting than discussing the initial draft of `warnings-and-errors.pdf`, which I suggest we delay until the closing paragraph of the section.
+
 \subsection{Limitations}
 \label{sec:limitations}
 
