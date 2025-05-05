@@ -105,7 +105,7 @@ In this article, we present the current state of explcheck, emphasizing its desi
 
 Section~\ref{sec:requirements} begins with a requirements analysis, covering both the intended scope of explcheck's functionality and other considerations. Section~\ref{sec:design} outlines the high-level design of explcheck. These sections closely follow our original project proposal, and can be skipped if you're only interested in practical use.
 
-In Section~\ref{sec:demonstration} on page \pageref{sec:demonstration}, we show how you can use explcheck. Section~\ref{sec:validation} presents a validation of explcheck's results across all expl3 packages in \TeX{}~Live 2013–2025, both through continuous analysis and a set of experiments developed for this article.
+In Section~\ref{sec:demonstration} on page \pageref{sec:demonstration}, we show how you can use explcheck. Section~\ref{sec:requirements-validation} presents a validation of explcheck's results across all expl3 packages in \TeX{}~Live 2013–2025, both through continuous analysis and a set of experiments developed for this article.
 
 In Section~\ref{sec:future-work}, we discuss current limitations and suggest directions for future development. Section~\ref{sec:related-work} surveys related efforts in static analysis of \TeX{} and other programming languages more broadly, highlighting influences on explcheck's design. Finally, Section~\ref{sec:conclusion} summarizes our contributions.
 
@@ -192,7 +192,7 @@ Each step should take input from the previous step, look for issues, and convert
 The linter should also work well with text editors. Ideally, it should either support the Language Server Protocol (\acro{LSP}), or be designed so that writing an \acro{LSP} wrapper is straightforward.
 
 \subsubsection{Validation}
-\label{sec:validation}
+\label{sec:requirements-validation}
 As part of a test-driven development paradigm, each type of issue detected by a processing step should have at least one corresponding test in the linter's code repository~\cite{starynovotny2025github}. These tests should be run regularly throughout development to ensure the correctness and stability of the tool.
 
 As part of what we might only half-jokingly call a dogfooding paradigm, the linter should be used in the continuous integration pipeline of the first author's Markdown package for \TeX. This will help uncover practical issues and gather early feedback in a real-world setting. Other brave early adopters are warmly encouraged to try it out and report any bugs or oddities in the code repository.
