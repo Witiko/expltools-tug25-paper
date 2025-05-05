@@ -35,7 +35,7 @@
 
 %%% End of metadata %%%
 
-% Note to editor: If possible, please arrange for the first page to fall on an even-numbered page, so that the introduction and outline can be viewed side by side. The rest of the article is also written with this in mind.
+% Note to editor: If possible, please arrange for the first page to fall on an even-numbered page, so that the introduction and outline can appear side by side. The rest of the article has been written with this layout in mind. That said, no worries if it doesn't work out\Dash I'm sure the article will still look great, thanks in no small part to your careful editing.
 
 \begin{document}
 \maketitle
@@ -112,13 +112,14 @@ In Section~\ref{sec:future-work}, we discuss current limitations and suggest dir
 
 \section{Requirements}
 \label{sec:requirements}
-In this section, we outline our goals for explcheck. Section~\ref{sec:functional-requirements} identifies the core features the tool should provide\Dash its functional requirements. Section~\ref{sec:non-functional-requirements} considers broader concerns such as usability, performance, and maintainability\Dash its non-functional requirements.
+In this section, we outline our goals for \emph{explcheck}. Section~\ref{sec:functional-requirements} identifies the core features the tool should provide, while Section~\ref{sec:non-functional-requirements} covers broader considerations such as the classification of reported issues, software architecture, validation, and licensing.
 
 \subsection{Functional requirements}
 \label{sec:functional-requirements}
 Explcheck should accept a list of input expl3 files, analyze each one, and report any issues it identifies.
 
 In its initial version, the linter should detect at least the following types of issues, which we have grouped into three broad categories:
+\medskip
 
 \paragraph{Style issues:}
 \begin{itemize}
@@ -142,7 +143,7 @@ In its initial version, the linter should detect at least the following types of
 \item Multiply declared variables and constants
 \item Using undefined variables or constants
 \item Using variables with incompatible types
-\item Using deprecated/removed variables/constants
+\item {\raggedright Using deprecated or removed variables and constants\par}
 \item Setting constants or undeclared variables
 \item Unused variables and constants
 \item Locally setting global variables (and vice versa)
@@ -151,11 +152,12 @@ In its initial version, the linter should detect at least the following types of
 
 \subsection{Non-functional requirements}
 \label{sec:non-functional-requirements}
-In this section, we outline several non-functional aspects of explcheck. Section~\ref{sec:issues} defines the two fundamental classes of issues the tool should report. Section~\ref{sec:architecture} addresses the choice of programming language and key architectural considerations. Section~\ref{sec:validation} discusses how explcheck should be validated during development. Finally, Section~\ref{sec:license-terms} specifies the intended licensing terms.
+In this section, we outline several non-functional aspects of explcheck. Section~\ref{sec:issues} defines the two fundamental classes of issues the tool should report, and describes how individual issues should be identified and handled by the linter. Section~\ref{sec:architecture} addresses the choice of programming language and key architectural considerations. Section~\ref{sec:validation} discusses how explcheck should be validated during development. Finally, Section~\ref{sec:license-terms} specifies the licensing terms.
 
 \subsubsection{Issues}
 \label{sec:issues}
 The linter should distinguish between two classes of issues: \emph{warnings} and \emph{errors}. As a rule of thumb, warnings highlight violations of best practices, while errors correspond to issues likely to cause incorrect behavior at runtime.
+\medskip
 
 \paragraph{Examples of warnings:}
 \begin{itemize}
@@ -167,9 +169,10 @@ The linter should distinguish between two classes of issues: \emph{warnings} and
 \paragraph{Examples of errors:}
 \begin{itemize}
 \item Using an undefined message
-\item Calling a function with a \texttt{V}-type argument using a variable or constant of a type that does not support \texttt{V}-type expansion
+\item Calling a function with a \texttt{V}-type argument on a variable that does not support \texttt{V}-type expansion
 \item Multiple declarations of one variable/constant
 \end{itemize}
+\medskip
 
 The overriding design goal for early releases of the linter should be implementation simplicity and robustness to unexpected input. When reporting issues, the linter should only emit a warning or error when it is reasonably confident that the code has been correctly understood\Dash even if that means some issues may go undetected.
 
@@ -182,7 +185,7 @@ To make the linter easy to run in continuous integration pipelines, it should be
 
 The linter should process input files in a series of well-defined steps, each implemented as a separate Lua module. These modules should be usable on their own, so users can drop them into other Lua code without having to rely on the rest of the linter.
 
-Each step should take input from the previous step, look for issues, and convert the data into a format the next step can use. The default command-line script should run all steps in order and print any issues it finds. Users should be able to tweak this script easily—for example, to:
+Each step should take input from the previous step, look for issues, and convert the data into a format the next step can use. The default command-line script should run all steps in order and print any issues it finds. Users should be able to tweak this script easily\Dash for example, to:
 
 \begin{enumerate}
 \item change how input files are discovered,
@@ -222,14 +225,32 @@ Notably, \acro{GNU GPL} creates a one-way licensing situation: once a derivative
 
 In summary, this dual-licensing approach allows us to maintain the integrity of the \TeX\ ecosystem while making the project more accessible to the broader free open-source community. It provides flexibility for different use cases, though we will need to carefully manage contributions to ensure compliance with all licenses.
 
-\vfill
-
 \section{Design}
 \label{sec:design}
-% Corresponds to the first three subsections of Section 4 of project-proposal.pdf.
+In this section, we outline the high-level design of explcheck. Section~\ref{sec:processing-steps} describes how input files are processed. Section~\ref{sec:warnings-and-errors} elaborates on the types of issues that the linter is expected to detect. Finally, Section~\ref{sec:limitations} outlines features that explcheck will not support, given our requirements and design decisions.
+
 \subsection{Processing steps}
+\label{sec:processing-steps}
+
+As outlined in Section~\ref{sec:requirements}, the linter processes input files in a series of discrete \emph{processing steps}, each implemented as a separate Lua module:
+
+\begin{enumerate}
+\item \textbf{Preprocessing} segments input files into \emph{parts} that contain expl3 code.
+\item \textbf{Lexical analysis} reads the parts as \emph{\TeX{} tokens}.
+\item \textbf{Syntactic analysis} merges tokens into \emph{calls}.
+\item \textbf{Semantic analysis} classifies calls as \emph{statements}.
+\item \textbf{Flow analysis} merges statements into \emph{chunks} of well-understood code.
+\end{enumerate}
+
+Figure~\textbf{??} illustrates the full processing pipeline applied to an example expl3 code snippet.
+
+\vfill
+
 \subsection{Warnings and errors}
+\label{sec:warnings-and-errors}
 \subsection{Limitations}
+\label{sec:limitations}
+
 \section{Demonstration}
 \label{sec:demonstration}
 \subsection{Interfaces}
