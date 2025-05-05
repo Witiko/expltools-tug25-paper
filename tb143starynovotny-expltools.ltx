@@ -35,15 +35,17 @@
 
 %%% End of metadata %%%
 
+% Note to editor: If possible, please arrange for the first page to fall on an even-numbered page, so that the introduction and outline can be viewed side by side. The rest of the article is also written with this in mind.
+
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Static analysis tools are invaluable for catching bugs early and improving code quality. However, the highly dynamic nature of \TeX{} has long posed a barrier to static analysis.
+Static analysis tools are invaluable for catching bugs early and improving code quality. However, the dynamic nature of \TeX{} has long posed a barrier to static analysis.
 
 Expl3 is a high-level programming layer built on top of \TeX. Originally developed to simplify the \LaTeX{} kernel, it is now widely used by package authors across \LaTeX{} and other \TeX{} formats. While it retains much of \TeX's flexibility, real-world expl3 code tends to follow more predictable patterns, making it far more amenable to static analysis.
 
-In this article, we introduce \emph{expltools}\Dash a long-overdue addition to the expl3 programmer’s toolbox. Designed to support semantic analysis, it brings clarity and structure to a domain traditionally resistant to static tooling. We present the current state of the project, focusing on its design, practical usage, and validation on real-world expl3 packages.
+In this article, we introduce \emph{expltools}\Dash a long-overdue addition to the expl3 programmer's toolbox. Designed to support semantic analysis, it brings clarity and structure to a domain traditionally resistant to static tooling. We present the current state of the project, focusing on its design, practical usage, and validation on real-world expl3 packages.
 \end{abstract}
 
 \section{Introduction}
@@ -59,14 +61,14 @@ Language interpreters also benefit: they can often detect and report syntax erro
 \subsection{Letting linters do the boring work}
 In addition to editors and interpreters, many languages have tools called \emph{linters}, which use techniques from compiler design to catch common mistakes. Linters can flag undefined variables, wrong argument counts, or type mismatches\Dash for example, passing a number where a string is expected.
 
-Linters complement human-written tests: while tests verify dynamic behavior at runtime, they must be explicitly written to cover each relevant case. Linters, on the other hand, scan through all your code up front. They might not catch everything, and their checks are usually more general, but they can flag a lot of potential issues right away\Dash before you’ve written a single test or even run the program.
+Linters complement human-written tests: while tests verify dynamic behavior at runtime, they must be explicitly written to cover each relevant case. Linters, on the other hand, scan through all your code up front. They might not catch everything, and their checks are usually more general, but they can flag a lot of potential issues right away\Dash before you've written a single test or even run the program.
 
 \subsection{What makes \TeX{} hard to analyze}
 Unlike languages like Lua, Python, or JavaScript, which come from the tradition of numerical and procedural programming, \TeX{} descends from a different lineage: \emph{macro processors}, where programs are built by defining and expanding text-based substitutions (so-called \emph{macros}). This heritage introduces unique challenges for static analysis.
 
 In macro languages, program structure often isn't visible in the source code\Dash it only emerges after macro expansion. \TeX{} goes even further: it allows the meaning of individual characters to change at runtime, further obfuscating the surface syntax.
 
-On top of that, macro languages like \TeX{} lack type annotations, function signatures, and other cues that clarify programmer intent. Without these, it’s hard to distinguish variables from functions, since both are represented by macros. This makes even basic checks\Dash such as validating argument counts or data types\Dash difficult to perform.
+On top of that, macro languages like \TeX{} lack type annotations, function signatures, and other cues that clarify programmer intent. Without these, it's hard to distinguish variables from functions, since both are represented by macros. This makes even basic checks\Dash such as validating argument counts or data types\Dash difficult to perform.
 
 Scoping adds to the complexity. Most modern languages use \emph{lexical scoping}, where the meaning of an identifier is determined by its position in the code. \TeX{}, however, uses \emph{dynamic scoping}, where the meaning of a macro depends not on where it appears, but on the state of the execution environment when it is used. This makes it hard for tools to reason about the flow of control and data in \TeX{} programs.
 
@@ -89,7 +91,7 @@ Between April and August 2024, we published a series of blog posts on the static
 \begin{figure}[b]
 \centering
 \input images/platypus-detective-seabed
-\caption{Explcheck’s mascot is \emph{Platy}, an underwater detective who dives beneath the surface of your expl3 code to uncover hidden issues.\\[1ex] The concept was suggested by Paulo Cereda, and the illustration was created by Greg at \tbsurl{https://quickcartoons.com}. All illustrations of Platy are licensed under \acro{CC-BY}, so you're free to use them in your own promotional materials and derivative works, provided you credit the artist~\cite{starynovotny2025platy}.}
+\caption{Explcheck's mascot is \emph{Platy}, an underwater detective who dives beneath the surface of your expl3 code to uncover hidden issues.\\[1ex] The concept was suggested by Paulo Cereda, and the illustration was created by Greg at \tbsurl{https://quickcartoons.com}. All illustrations of Platy are licensed under \acro{CC-BY}, so you're free to use them in your own promotional materials and derivative works, provided you credit the artist~\cite{starynovotny2025platy}.}
 \end{figure}
 
 On December 5, we demonstrated a pre-release version to Frank Mittelbach during their visit to Brno~\cite{starynovotny2024statice}. The first public release (v0.1.0) followed on December 14~\cite{starynovotny2024release}, and was presented at the general assembly of the Czech and Slovak \TeX{} Users Group (\CSTUG) on December 16~\cite{starynovotny2024staticf}.
@@ -99,26 +101,128 @@ Since then, we have continued development with monthly updates, aiming for a sta
 Currently, explcheck is the first and only tool in what will become the \emph{expltools} bundle~\cite{starynovotny2025ctan}. In the future, we plan to extend expltools into a suite of static analysis tools for expl3, all built on a common library of reusable components. Explcheck serves as the foundation for this broader toolkit.
 
 \section{Outline}
-In this article, we present the current state of explcheck, emphasizing its design, demonstrating its practical use, and validating its results on real-world expl3 code.
+In this article, we present the current state of explcheck, emphasizing its design, demonstrating its practical use, and validating its results on real code.
 
-Section~\ref{sec:requirements} begins with a requirements analysis, covering both the intended scope of explcheck’s functionality and other considerations. Section~\ref{sec:design} outlines the high-level design of explcheck.
+Section~\ref{sec:requirements} begins with a requirements analysis, covering both the intended scope of explcheck's functionality and other considerations. Section~\ref{sec:design} outlines the high-level design of explcheck. These sections closely follow our original project proposal, and can be skipped if you're only interested in practical use.
 
-In Section~\ref{sec:demonstration}, we demonstrate how explcheck can be used\Dash from the command line, within a text editor, or on the web. Section~\ref{sec:validation} presents a validation of explcheck’s results across all expl3 packages in \TeX{}~Live 2013–2025, both through continuous analysis and a set of experiments developed for this article.
-\looseness=-1
+In Section~\ref{sec:demonstration} on page \pageref{sec:demonstration}, we show how you can use explcheck. Section~\ref{sec:validation} presents a validation of explcheck's results across all expl3 packages in \TeX{}~Live 2013–2025, both through continuous analysis and a set of experiments developed for this article.
 
-In Section~\ref{sec:future-work}, we discuss current limitations and suggest directions for future development. Section~\ref{sec:related-work} surveys related efforts in static analysis of \TeX{} and other programming languages more broadly, highlighting influences on explcheck’s design. Finally, Section~\ref{sec:conclusion} summarizes our contributions.
-
-\vfill
+In Section~\ref{sec:future-work}, we discuss current limitations and suggest directions for future development. Section~\ref{sec:related-work} surveys related efforts in static analysis of \TeX{} and other programming languages more broadly, highlighting influences on explcheck's design. Finally, Section~\ref{sec:conclusion} summarizes our contributions.
 
 \section{Requirements}
 \label{sec:requirements}
-% Corresponds to Section 2 of project-proposal.pdf.
+In this section, we outline our goals for explcheck. Section~\ref{sec:functional-requirements} identifies the core features the tool should provide\Dash its functional requirements. Section~\ref{sec:non-functional-requirements} considers broader concerns such as usability, performance, and maintainability\Dash its non-functional requirements.
+
 \subsection{Functional requirements}
+\label{sec:functional-requirements}
+Explcheck should accept a list of input expl3 files, analyze each one, and report any issues it identifies.
+
+In its initial version, the linter should detect at least the following types of issues, which we have grouped into three broad categories:
+
+\paragraph{Style issues:}
+\begin{itemize}
+\item Overly long lines
+\item Missing stylistic whitespace
+\item Malformed names of functions, variables, constants, quarks, or scan marks
+\end{itemize}
+
+\paragraph{Function issues:}
+\begin{itemize}
+\item Multiply defined functions and function variants
+\item Calls to undefined functions and variants
+\item Calls to deprecated or removed\footnote{Deprecated and removed expl3 material is listed in the file \href{https://github.com/latex3/latex3/blob/main/l3kernel/doc/l3obsolete.txt}{\texttt{l3obsolete.txt}}, which is maintained by the \LaTeX{} team.} functions
+\item Unknown argument specifiers
+\item Unexpected arguments in function calls
+\item Unused private functions and variants
+\end{itemize}
+
+\paragraph{Variable and constant issues:}
+\begin{itemize}
+\item Multiply declared variables and constants
+\item Using undefined variables or constants
+\item Using variables with incompatible types
+\item Using deprecated/removed variables/constants
+\item Setting constants or undeclared variables
+\item Unused variables and constants
+\item Locally setting global variables (and vice versa)
+\end{itemize}
+\medskip
+
 \subsection{Non-functional requirements}
+\label{sec:non-functional-requirements}
+In this section, we outline several non-functional aspects of explcheck. Section~\ref{sec:issues} defines the two fundamental classes of issues the tool should report. Section~\ref{sec:architecture} addresses the choice of programming language and key architectural considerations. Section~\ref{sec:validation} discusses how explcheck should be validated during development. Finally, Section~\ref{sec:license-terms} specifies the intended licensing terms.
+
 \subsubsection{Issues}
+\label{sec:issues}
+The linter should distinguish between two classes of issues: \emph{warnings} and \emph{errors}. As a rule of thumb, warnings highlight violations of best practices, while errors correspond to issues likely to cause incorrect behavior at runtime.
+
+\paragraph{Examples of warnings:}
+\begin{itemize}
+\item Missing stylistic whitespace
+\item Using deprecated functions or variables
+\item Unused variable or constant
+\end{itemize}
+
+\paragraph{Examples of errors:}
+\begin{itemize}
+\item Using an undefined message
+\item Calling a function with a \texttt{V}-type argument using a variable or constant of a type that does not support \texttt{V}-type expansion
+\item Multiple declarations of one variable/constant
+\end{itemize}
+
+The overriding design goal for early releases of the linter should be implementation simplicity and robustness to unexpected input. When reporting issues, the linter should only emit a warning or error when it is reasonably confident that the code has been correctly understood\Dash even if that means some issues may go undetected.
+
+Each issue should be assigned a unique identifier. These identifiers allow flexible suppression of specific issues: globally via a configuration file, per input file from the command line, or locally in the source code using \TeX{} comments.
+
 \subsubsection{Architecture}
+\label{sec:architecture}
+
+To make the linter easy to run in continuous integration pipelines, it should be written in Lua~5.3 using only the standard Lua library.
+
+The linter should process input files in a series of well-defined steps, each implemented as a separate Lua module. These modules should be usable on their own, so users can drop them into other Lua code without having to rely on the rest of the linter.
+
+Each step should take input from the previous step, look for issues, and convert the data into a format the next step can use. The default command-line script should run all steps in order and print any issues it finds. Users should be able to tweak this script easily—for example, to:
+
+\begin{enumerate}
+\item change how input files are discovered,
+\item swap out or rearrange processing steps, or add their own, and
+\item change how the linter reacts to the issues it finds.
+\end{enumerate}
+
+The linter should also work well with text editors. Ideally, it should either support the Language Server Protocol (\acro{LSP}), or be designed so that writing an \acro{LSP} wrapper is straightforward.
+
 \subsubsection{Validation}
+\label{sec:validation}
+As part of a test-driven development paradigm, each type of issue detected by a processing step should have at least one corresponding test in the linter's code repository~\cite{starynovotny2025github}. These tests should be run regularly throughout development to ensure the correctness and stability of the tool.
+
+As part of what we might only half-jokingly call a dogfooding paradigm, the linter should be used in the continuous integration pipeline of the first author's Markdown package for \TeX. This will help uncover practical issues and gather early feedback in a real-world setting. Other brave early adopters are warmly encouraged to try it out and report any bugs or oddities in the code repository.
+
+At a later stage, a broader validation should be conducted as part of a TUGboat article presenting the linter (yes, this article) to the wider \TeX{} community. This validation should involve running the linter on all expl3 packages from both current and historical \TeX{} Live distributions. The results should be evaluated both quantitatively and qualitatively: the quantitative analysis should focus on trends in how expl3 is used in practice, while the qualitative analysis should highlight the linter's limitations and suggest directions for improvement.
+
 \subsubsection{License terms}
+\label{sec:license-terms}
+The linter should be free software and dual-licensed under the following two software licenses:
+\begin{enumerate}
+\item \acro{GNU} General Public License (\acro{GNU GPL})${}\geq{}$2.0
+\item \LaTeX{} Project Public License (\acro{LPPL})${}\geq{}$1.3c
+\end{enumerate}
+
+The option to use \acro{GNU GPL}~2.0 or later is motivated by the fact that \acro{GNU GPL}~2.0 and~3.0 are mutually incompatible. Supporting both \acro{GNU GPL}~2.0 and~3.0 extends the number of free open-source projects that will be able to alter and redistribute the linter.
+
+The option to use \acro{LPPL}~1.3c is motivated by the fact that it imposes very few licensing restrictions on \TeX\ users. Furthermore, it also preserves the integrity of \TeX\ distributions by enforcing its naming and maintenance clauses, which ensure ongoing project stewardship and prevent confusion between modified and official versions.
+
+Admittedly, \acro{GNU GPL} and \acro{LPPL} may seem like an unusual combination, since \acro{GNU GPL} is a copyleft license whereas \acro{LPPL} is a permissive license. However, there are strategic benefits to offering both.
+
+We would offer \acro{LPPL} as the primary license for derivative works within the \TeX\ ecosystem. One downside of using \acro{LPPL} is that it could potentially allow bad actors to create proprietary derivative works without contributing back to the original project. However, this trade-off helps maintain the \TeX\ ecosystem's consistency and reliability. Incidentally, there is an element of trust in the \TeX\ user community to voluntarily contribute improvements back, even though the license itself does not mandate it.
+
+We would offer \acro{GNU GPL} as an alternative license for derivative works outside the \TeX\ ecosystem. The key benefit of including \acro{GNU GPL} is that it enables the code to be integrated into free open-source projects, especially those with licenses that are incompatible with \acro{LPPL}'s naming requirements. This opens the door for broader collaboration with the free software community.
+
+Notably, \acro{GNU GPL} creates a one-way licensing situation: once a derivative work is licensed under \acro{GNU GPL}, it cannot be legally re-licensed under a less restrictive license like \acro{LPPL}. As a result, we wouldn't be able to incorporate changes made to \acro{GNU GPL}-licensed works back into the original project under \acro{LPPL} without also creating two forks of the project licensed under \acro{GNU GPL}~2.0 and \acro{GNU GPL}~3.0, respectively. While this might seem like a downside, we view it as an important counterbalance to the potential for proprietary derivative works under \acro{LPPL}.
+
+In summary, this dual-licensing approach allows us to maintain the integrity of the \TeX\ ecosystem while making the project more accessible to the broader free open-source community. It provides flexibility for different use cases, though we will need to carefully manage contributions to ensure compliance with all licenses.
+
+\vfill
+
 \section{Design}
 \label{sec:design}
 % Corresponds to the first three subsections of Section 4 of project-proposal.pdf.
@@ -157,6 +261,7 @@ In Section~\ref{sec:future-work}, we discuss current limitations and suggest dir
 % Corresponds to Section 4.2 of starynovotny-expltools-slides.pdf.
 \subsubsection{Most common issues}
 \subsubsection{Code coverage}
+\subsection{Comparison to large language models}
 \section{Future work}
 \label{sec:future-work}
 % Back-reference to Section "Limitations".
