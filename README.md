@@ -3,9 +3,10 @@
 This repo contains the source code of the article *Expltools: Development tools
 for expl3 programmers* to be published in TUGboat 46(2).
 
-You can typeset the article by running the following command:
+You can typeset the article by running the following commands:
 
 ```
+latexmk -pdf -cd images/iceberg-code-01.tex
 latexmk -pdf tb143starynovotny-expltools.ltx
 ```
 
