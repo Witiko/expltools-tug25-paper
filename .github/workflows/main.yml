@@ -23,6 +23,8 @@ jobs:
           apt -qy install --no-install-recommends zip
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Typeset figures
+        run: latexmk -cd images/iceberg-code-01.tex
       - name: Typeset article
         run: latexmk tb143starynovotny-expltools.ltx
       - name: Archive sources

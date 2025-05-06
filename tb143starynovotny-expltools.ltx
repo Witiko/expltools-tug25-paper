@@ -4,6 +4,8 @@
 \usepackage{hologo}
 \usepackage{microtype}
 \usepackage{soul}
+\usepackage{transparent}
+\usepackage{verbatimbox}
 \usepackage[font=small, labelfont=bf, justification=justified, format=plain]{caption}
 \usepackage{minted}
 \setminted{breaklines}
@@ -13,7 +15,11 @@
 \DeclareUnicodeCharacter{2014}{\Dash}
 \def\verb{\mintinline{text}}
 \usepackage{tikz}
-\usetikzlibrary{positioning}
+\usetikzlibrary{
+  positioning,
+  arrows.meta,
+  decorations.pathmorphing,
+}
 \usepackage[hidelinks,pdfa]{hyperref}
 \def\url{\tbsurl}
 % silence font warnings:
@@ -242,8 +248,15 @@ As outlined in Section~\ref{sec:requirements}, the linter processes input files 
 \item \textbf{Flow analysis} merges statements into \emph{chunks} of well-understood code.
 \end{enumerate}
 
-Diagram~\textbf{??} illustrates the full pipeline applied to an example \LaTeX{} document with expl3 code.
+Figure~\ref{fig:iceberg} illustrates the full pipeline applied to an example \LaTeX{} document with expl3 code.
 \looseness=-1
+
+\begin{figure*}[p]
+\centering
+\input images/iceberg
+\caption{Processing an example \LaTeX{} document \texttt{example.tex} (top left) with Lua\LaTeX{} (top right) and \emph{explcheck} (bottom). While compiling with Lua\LaTeX{} produces a \acro{PDF} without warnings or errors, running the same code through explcheck allows us to dive beneath the surface and uncover many issues worth fixing. Illustration by Gabriela Fišerová.\looseness=-1}
+\label{fig:iceberg}
+\end{figure*}
 
 \subsection{Warnings and errors}
 \label{sec:warnings-and-errors}
