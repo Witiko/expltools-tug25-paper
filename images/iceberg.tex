@@ -72,8 +72,11 @@
 \node [right=30pt of code-02-tex.north east, anchor=north west, text width=5.95cm, align=left, yshift=36pt] (code-05-tex) {%
   \begingroup
     \setlength{\fboxsep}{2pt}%
-    \def\cs#1{\fcolorbox{black}{white}{\vphantom{/}\texttt{#1}} }%
+    \def\cshelper#1#2#3{\fcolorbox{#2}{#3}{\vphantom{/}\texttt{#1}} }
+    \def\cs#1{\cshelper{#1}{black}{white}}%
+    \def\errorcs#1{\textcolor{red}{\cshelper{#1}{red}{pink}}}%
     \def\token#1#2{\texttt{#1}\textsubscript{#2} }%
+    \def\errortoken#1#2{\textcolor{red}{\token{#1}{#2}}}%
     \small
     \baselineskip=13pt%
     \cs{iow\_new:N}%
@@ -98,8 +101,8 @@
     \token{\{}{1}%
     \cs{cs\_new:Nn}%
     \cs{example\_bar:nn}%
-    \textcolor{red}{\token{\{}{1}}%
-    \textcolor{red}{\token{\#}{6}}%
+    \errortoken{\{}{1}%
+    \errortoken{\#}{6}%
     \token{2}{12}%
     \token{,}{12}%
     \token{\textvisiblespace}{10}%
@@ -109,8 +112,8 @@
     \token{\#}{6}%
     \token{\#}{6}%
     \token{2}{12}%
-    \textcolor{red}{\token{!}{12}}%
-    \textcolor{red}{\token{\}}{2}}%
+    \errortoken{!}{12}%
+    \errortoken{\}}{2}%
     \token{\}}{2}%
     \cs{cs\_generate\_variant:Nn}%
     \cs{\_\_example\_foo:n}%
@@ -125,17 +128,17 @@
     \token{l}{11}%
     \token{o}{11}%
     \token{\}}{2}%
-    \cs{begin}%
-    \textcolor{red}{\token{\{}{1}}%
-    \textcolor{red}{\token{d}{11}}%
+    \errorcs{begin}%
+    \errortoken{\{}{1}%
+    \errortoken{d}{11}%
     \token{o}{11}%
     \token{c}{11}%
     \token{u}{11}%
     \token{m}{11}%
     \token{e}{11}%
     \token{n}{11}%
-    \textcolor{red}{\token{t}{11}}%
-    \textcolor{red}{\token{\}}{2}}%
+    \errortoken{t}{11}%
+    \errortoken{\}}{2}%
     \cs{example\_bar:nn}%
     \token{w}{11}%
     \token{\{}{1}%
@@ -149,7 +152,7 @@
 };
 \node [below=10pt of code-05-tex.south, anchor=north, text width=6cm, align=center] {%
   \small
-  (b) Lexical analysis identifies 68 tokens and warns about missing whitespaces.
+  (b) Lexical analysis identifies 68 tokens and warns about missing whitespaces around braces (\texttt{\{}, \texttt{\}}) on lines 6 and 12.
 };
 \draw [-{Stealth[length=3mm, width=3mm]}, line width=\fboxrule] ([xshift=-5pt, yshift=5pt] code-02-tex.north east) to [bend left] ([xshift=-5pt, yshift=-5pt] code-05-tex.north west);
 \end{tikzpicture}
