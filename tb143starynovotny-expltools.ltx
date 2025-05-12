@@ -88,14 +88,14 @@ Although it still permits changing the meaning of individual characters at runti
 
 Unlike \TeX{}, expl3 clearly distinguishes variables from functions. Variable names include metadata such as type, scope, and mutability, while function names specify argument counts, types, and even visibility (public vs.\ private). This kind of structured interface makes it possible to perform checks\Dash like validating argument counts or detecting type mismatches\Dash that are nearly impossible in \TeX{}.
 
-Scoping remains dynamic in expl3, but the language encourages the use of function arguments over unbound variables. In particular, function variants that take \texttt{V}- or \texttt{v}-type arguments promote a pass-by-value style, reducing unintended interactions through dynamic scope.
+Scoping remains dynamic in expl3, but the language encourages the use of function arguments over unbound variables. In particular, function variants that take \texttt{V}- or \texttt{v}-type arguments~\cite[Section~1.1]{latex2025interface3} promote a pass-by-value style, reducing unintended interactions through dynamic scope.
 
 While these conventions are not enforced by the runtime, many expl3 packages adopt them, making the syntax more predictable and amenable to static analysis. Despite this, there was no editor support, linter, or other static tooling available for expl3 as recently as a year ago.
 
 \subsection{Toward better tooling for expl3}
 Between April and August 2024, we published a series of blog posts on the static analysis of expl3~\cite{starynovotny2024statica, starynovotny2024staticb, starynovotny2024staticc, starynovotny2024staticd}, culminating in a proposal for a year-long project to develop \emph{explcheck}\Dash an expl3 linter\Dash submitted to the \TeX{} Development Fund in September~\cite{starynovotny2024project}. The proposal was accepted, and over the following two months, we worked toward explcheck's initial release.
 
-\begin{figure}[b]
+\begin{figure}[t]
 \centering
 \input images/platypus-detective-seabed
 \caption{Explcheck's mascot is \emph{Platy}, an underwater detective who dives beneath the surface of your expl3 code to uncover hidden issues.\\[1ex] The concept was suggested by Paulo Cereda, and the illustration was created by Greg at \tbsurl{https://quickcartoons.com}. All illustrations of Platy are licensed under \acro{CC-BY}, so you're free to use them in your own promotional materials and derivative works, provided you credit the artist~\cite{starynovotny2025platy}.}
@@ -112,7 +112,7 @@ In this article, we present the current state of explcheck, emphasizing its desi
 
 Section~\ref{sec:requirements} begins with a requirements analysis, covering both the intended scope of explcheck's functionality and other considerations. This section closely follows our original project proposal, and can be skipped if you're not interested in the process.
 
-Section~\ref{sec:design} on page \pageref{sec:design} outlines the high-level design of explcheck. In Section~\ref{sec:demonstration}, we show how you can use explcheck. Section~\ref{sec:requirements-validation} presents a validation of explcheck's results across all expl3 packages in \TeX{}~Live 2013–2025, both through continuous analysis and a set of experiments developed for this article.
+Section~\ref{sec:design} on page \pageref{sec:design} outlines the high-level design of explcheck. In Section~\ref{sec:demonstration}, we show how you can use explcheck. Section~\ref{sec:validation} presents a validation of explcheck's results across all expl3 packages in \TeX{}~Live 2013–2025, both through continuous analysis and a set of experiments developed for this article.
 \looseness=-1
 
 In Section~\ref{sec:future-work}, we discuss current limitations and suggest directions for future development. Section~\ref{sec:related-work} surveys related efforts in static analysis of \TeX{} and other programming languages more broadly, highlighting influences on explcheck's design. Finally, Section~\ref{sec:conclusion} summarizes our contributions.
@@ -159,7 +159,7 @@ In its initial version, the linter should detect at least the following types of
 
 \subsection{Non-functional requirements}
 \label{sec:non-functional-requirements}
-In this section, we outline several non-functional aspects of explcheck. Section~\ref{sec:issues} defines the two fundamental classes of issues the tool should report, and describes how individual issues should be identified and handled by the linter. Section~\ref{sec:architecture} addresses the choice of programming language and key architectural considerations. Section~\ref{sec:validation} discusses how explcheck should be validated during development. Finally, Section~\ref{sec:license-terms} specifies the licensing terms.
+In this section, we outline several non-functional aspects of explcheck. Section~\ref{sec:issues} defines the two fundamental classes of issues the tool should report, and describes how individual issues should be identified and handled by the linter. Section~\ref{sec:architecture} addresses the choice of programming language and key architectural considerations. Section~\ref{sec:requirements-validation} discusses how explcheck should be validated during development. Finally, Section~\ref{sec:license-terms} specifies the licensing terms.
 
 \subsubsection{Issues}
 \label{sec:issues}
@@ -188,7 +188,7 @@ Each issue should be assigned a unique identifier. These identifiers allow flexi
 \subsubsection{Architecture}
 \label{sec:architecture}
 
-To make the linter easy to run in continuous integration pipelines, it should be written in Lua~5.3 using only the standard Lua library.
+To make the linter easy to run in continuous integration pipelines, it should be written in Lua~5.3, as this is the version used by recent releases of Lua\TeX{}, and should rely only on the standard Lua library.
 
 The linter should process input files in a series of well-defined steps, each implemented as a separate Lua module. These modules should be usable on their own, so users can drop them into other Lua code without having to rely on the rest of the linter.
 
