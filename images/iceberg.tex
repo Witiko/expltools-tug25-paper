@@ -9,32 +9,149 @@
   }%
   \hspace{5pt}%
 }%
+\def\startonline#1{%
+  \ifnum\value{VerbboxLineNo}=1\relax
+    \addtocounter{VerbboxLineNo}{#1}%
+    \addtocounter{VerbboxLineNo}{-1}%
+  \fi
+}%
 \verbfilebox[\linenumber\small]{images/iceberg-code-01.tex}%
 \newsavebox\firstcode\sbox\firstcode{\box\savedverbbox}%
+\addtocounter{VerbboxLineNo}{2}%
+\verbfilebox[\startonline{3}\linenumber\small]{images/iceberg-code-02.tex}%
+\newsavebox\secondcode\sbox\secondcode{\box\savedverbbox}%
+\verbfilebox[\startonline{11}\linenumber\small]{images/iceberg-code-03.tex}%
+\newsavebox\thirdcode\sbox\thirdcode{\box\savedverbbox}%
+\verbfilebox[\color{red}\def\color##1{}\startonline{15}\linenumber\small]{images/iceberg-code-04.tex}%
+\newsavebox\fourthcode\sbox\fourthcode{\box\savedverbbox}%
 \begin{tikzpicture}[every node/.style={inner sep=0pt, outer sep=0pt}]
 % The iceberg in the background
 \node (background) at (0, 0) {{%
-  \transparent{0.2}%
+  \transparent{0.15}%
   \includegraphics[width=0.7\linewidth]{images/iceberg-color}%
 }};
 % The water surface
-% TODO: Either double the amplitude for the east and west segments or shift the phase of the start / end of the curve, so that we get a full wave at the ends.
-\draw[decorate, decoration={snake, segment length=15.05mm, amplitude=2mm}] (-10, 5) -- (6, 5);
+\draw[decorate, decoration={snake, segment length=30.10mm, amplitude=4mm}, yshift=-5.5pt] (-10, 5) -- (-8, 5);
+\draw[decorate, decoration={snake, segment length=15.05mm, amplitude=2mm}] (-8, 5) -- (4, 5);
+\draw[decorate, decoration={snake, segment length=30.10mm, amplitude=4mm}, yshift=-5.5pt] (4, 5) -- (6, 5);
 % The LaTeX source code as an abstract ice floe
-\node [left=of background.north, xshift=0.5cm, yshift=-1.5cm, rotate=1] (code-01-tex) {%
+\node [left=of background.north, xshift=0.5cm, yshift=-1.5cm] (code-01-tex) {%
   \fcolorbox{black}{white}{\usebox{\firstcode}}%
 };
 % The result of compiling the source code as another ice floe
-\node [right=of code-01-tex.south east, anchor=south west, xshift=1cm, rotate=-1] (code-01-pdf) {%
+\node [right=of code-01-tex.south east, anchor=south west, xshift=1cm] (code-01-pdf) {%
   \fcolorbox{black}{white}{%
     \includegraphics[width=3cm]{images/iceberg-code-01}%
   }%
 };
 % The compilation, i.e. the "above-the-surface" of a TeX document.
-\draw [-{Stealth[length=3mm, width=3mm]}, line width=\fboxrule] ([xshift=5pt] code-01-tex.east) to [bend left] node [text width=5cm, midway, above, align=center, rotate=-10, xshift=1cm, yshift=0.5cm] {%
+\draw [-{Stealth[length=3mm, width=3mm]}, line width=\fboxrule] ([xshift=5pt] code-01-tex.east) to [bend left] node [text width=5cm, midway, above, align=center, xshift=1.55cm, yshift=0.5cm] {%
   compile with\\
   \texttt{lualatex example.tex}%
 } ([yshift=5pt] code-01-pdf.north);
+% The result of the preprocessing a TeX document with explcheck.
+%% Preprocessing
+\node [below=60pt of code-01-tex.south west, anchor=north west, xshift=-15pt] (code-02-tex) {%
+  \fcolorbox{black}{white}{\usebox{\secondcode}}%
+};
+\node [below=5pt of code-02-tex.south east, anchor=north east, xshift=5pt] (code-04-tex) {%
+  \fcolorbox{red}{pink}{\usebox{\fourthcode}}%
+};
+\node [left=5pt of code-04-tex.north west, anchor=north east] (code-03-tex) {%
+  \fcolorbox{black}{white}{\usebox{\thirdcode}}%
+};
+\node [below=65pt of code-02-tex.south, anchor=north, text width=10cm, align=center] {%
+  \small
+  (a) Preprocessing identifies two expl3 parts and warns about an unnecessary command \cs{ExplSyntaxOff} on line 15.
+};
+\draw [-{Stealth[length=3mm, width=3mm]}, line width=\fboxrule] ([xshift=-2cm, yshift=-5pt] code-01-tex.south) to [bend right] node [text width=5cm, midway, right, align=left, xshift=12.5pt, yshift=-10pt] {%
+  analyze with\\
+  \texttt{explcheck example.tex}\\
+} ([xshift=-2cm, yshift=5pt] code-02-tex.north);
+% Lexical analysis
+\node [right=30pt of code-02-tex.north east, anchor=north west, text width=5.95cm, align=left, yshift=36pt] (code-05-tex) {%
+  \begingroup
+    \setlength{\fboxsep}{2pt}%
+    \def\cs#1{\fcolorbox{black}{white}{\vphantom{/}\texttt{#1}} }%
+    \def\token#1#2{\texttt{#1}\textsubscript{#2} }%
+    \small
+    \baselineskip=13pt%
+    \cs{iow\_new:N}%
+    \cs{l\_example\_iow}%
+    \cs{iow\_open:Nn}%
+    \cs{l\_example\_iow}%
+    \token{\{}{1}%
+    \token{e}{11}%
+    \token{x}{11}%
+    \token{a}{11}%
+    \token{m}{11}%
+    \token{p}{11}%
+    \token{l}{11}%
+    \token{e}{11}%
+    \token{.}{12}%
+    \token{i}{11}%
+    \token{d}{11}%
+    \token{x}{11}%
+    \token{\}}{2}%
+    \cs{cs\_new:Nn}%
+    \cs{\_\_example\_foo:n}%
+    \token{\{}{1}%
+    \cs{cs\_new:Nn}%
+    \cs{example\_bar:nn}%
+    \textcolor{red}{\token{\{}{1}}%
+    \textcolor{red}{\token{\#}{6}}%
+    \token{2}{12}%
+    \token{,}{12}%
+    \token{\textvisiblespace}{10}%
+    \token{\#}{6}%
+    \token{\#}{6}%
+    \token{1}{12}%
+    \token{\#}{6}%
+    \token{\#}{6}%
+    \token{2}{12}%
+    \textcolor{red}{\token{!}{12}}%
+    \textcolor{red}{\token{\}}{2}}%
+    \token{\}}{2}%
+    \cs{cs\_generate\_variant:Nn}%
+    \cs{\_\_example\_foo:n}%
+    \token{\{}{1}%
+    \token{V}{11}%
+    \token{\}}{2}%
+    \cs{\_\_example\_foo:n}%
+    \token{\{}{1}%
+    \token{H}{11}%
+    \token{e}{11}%
+    \token{l}{11}%
+    \token{l}{11}%
+    \token{o}{11}%
+    \token{\}}{2}%
+    \cs{begin}%
+    \textcolor{red}{\token{\{}{1}}%
+    \textcolor{red}{\token{d}{11}}%
+    \token{o}{11}%
+    \token{c}{11}%
+    \token{u}{11}%
+    \token{m}{11}%
+    \token{e}{11}%
+    \token{n}{11}%
+    \textcolor{red}{\token{t}{11}}%
+    \textcolor{red}{\token{\}}{2}}%
+    \cs{example\_bar:nn}%
+    \token{w}{11}%
+    \token{\{}{1}%
+    \token{o}{11}%
+    \token{r}{11}%
+    \token{l}{11}%
+    \token{d}{11}%
+    \token{\}}{2}%
+    \par
+  \endgroup
+};
+\node [below=10pt of code-05-tex.south, anchor=north, text width=6cm, align=center] {%
+  \small
+  (b) Lexical analysis identifies 68 tokens and warns about missing whitespaces.
+};
+\draw [-{Stealth[length=3mm, width=3mm]}, line width=\fboxrule] ([xshift=-5pt, yshift=5pt] code-02-tex.north east) to [bend left] ([xshift=-5pt, yshift=-5pt] code-05-tex.north west);
 \end{tikzpicture}
 \endgroup
 \vspace{0.75cm}%

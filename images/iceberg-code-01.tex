@@ -3,7 +3,7 @@
 \iow_new:N \l_example_iow
 \iow_open:Nn \l_example_iow { example.idx }
 \cs_new:Nn \__example_foo:n {
-  \cs_new:Nn \example_bar:nn {#1,~##1##2!} }
+  \cs_new:Nn \example_bar:nn {#2,~##1##2!} }
 \cs_generate_variant:Nn \__example_foo:n { V }
 \ExplSyntaxOff
 \usepackage{lmodern}
