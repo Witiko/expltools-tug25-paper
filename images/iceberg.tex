@@ -15,6 +15,7 @@
     \addtocounter{VerbboxLineNo}{-1}%
   \fi
 }%
+% TODO: Replace `{ V }` with `{ V, x }` in iceberg-code-01.tex and -02.tex to show the M:N relation between calls and statements. With some luck, this should also allow us to align the top part of subfigure (a) with the bottom two parts. While that may look too boring and symmetrical now, similar to the two "ice floes" that are no longer slightly tilted as if rocking gently on the waves (sad face), it will look better when the diagram is finished, since there will be many smaller asymmetries that will add up and any dampening will be appreciated by the tired reader who just wants to ingest the information, not experience an epilepsy induced seizure.
 \verbfilebox[\linenumber\small]{images/iceberg-code-01.tex}%
 \newsavebox\firstcode\sbox\firstcode{\box\savedverbbox}%
 \addtocounter{VerbboxLineNo}{2}%
@@ -55,6 +56,7 @@
   \fcolorbox{black}{white}{\usebox{\secondcode}}%
 };
 \node [below=5pt of code-02-tex.south east, anchor=north east, xshift=5pt] (code-04-tex) {%
+  % TODO: Line 15 is not an expl3 part, just a warning, so perhaps get rid of the `\fcolorbox` to distinguish it from the other two parts in subfigure (a)?
   \fcolorbox{red}{pink}{\usebox{\fourthcode}}%
 };
 \node [left=5pt of code-04-tex.north west, anchor=north east] (code-03-tex) {%
@@ -154,6 +156,7 @@
   \small
   (b) Lexical analysis identifies 68 tokens and warns about missing whitespaces around braces (\texttt{\{}, \texttt{\}}) on lines 6 and 12.
 };
+% TODO: These arrows are likely best removed, since they add a lot of visual noise without doing much for the reader. If we wanted to keep them (at least for now), we should make their heads smaller, so that they are distinct from the two "big" arrows (lualatex and explcheck) and less distracting. In that case, we should also add an arrow from the bottom left part of subfigure (a) to the last occurence of the csname token "example_bar:nn" in subfigure (b) to indicate how both expl3 parts map to the TeX tokens.
 \draw [-{Stealth[length=3mm, width=3mm]}, line width=\fboxrule] ([xshift=-5pt, yshift=5pt] code-02-tex.north east) to [bend left] ([xshift=-5pt, yshift=-5pt] code-05-tex.north west);
 \end{tikzpicture}
 \endgroup
