@@ -15,7 +15,6 @@
     \addtocounter{VerbboxLineNo}{-1}%
   \fi
 }%
-% TODO: Replace `{ V }` with `{ V, x }` in iceberg-code-01.tex and -02.tex to show the M:N relation between calls and statements. With some luck, this should also allow us to align the top part of subfigure (a) with the bottom two parts. While that may look too boring and symmetrical now, similar to the two "ice floes" that are no longer slightly tilted as if rocking gently on the waves (sad face), it will look better when the diagram is finished, since there will be many smaller asymmetries that will add up and any dampening will be appreciated by the tired reader who just wants to ingest the information, not experience an epilepsy induced seizure.
 \verbfilebox[\linenumber\small]{images/iceberg-code-01.tex}%
 \newsavebox\firstcode\sbox\firstcode{\box\savedverbbox}%
 \addtocounter{VerbboxLineNo}{2}%
@@ -32,15 +31,15 @@
   \includegraphics[width=0.7\linewidth]{images/iceberg-color}%
 }};
 % The water surface
-\draw[decorate, decoration={snake, segment length=30.10mm, amplitude=4mm}, yshift=-5.5pt] (-10, 5) -- (-8, 5);
+\draw[decorate, decoration={snake, segment length=30.10mm, amplitude=4mm}, yshift=-5.5pt] (-10.1, 5) -- (-8, 5);
 \draw[decorate, decoration={snake, segment length=15.05mm, amplitude=2mm}] (-8, 5) -- (4, 5);
-\draw[decorate, decoration={snake, segment length=30.10mm, amplitude=4mm}, yshift=-5.5pt] (4, 5) -- (6, 5);
+\draw[decorate, decoration={snake, segment length=30.10mm, amplitude=4mm}, yshift=-5.5pt] (4.4, 5) -- (6.3, 5);
 % The LaTeX source code as an abstract ice floe
-\node [left=of background.north, xshift=0.5cm, yshift=-1.5cm] (code-01-tex) {%
+\node [left=of background.north, xshift=0.8cm, yshift=-1.5cm] (code-01-tex) {%
   \fcolorbox{black}{white}{\usebox{\firstcode}}%
 };
 % The result of compiling the source code as another ice floe
-\node [right=of code-01-tex.south east, anchor=south west, xshift=1cm] (code-01-pdf) {%
+\node [right=12pt of code-01-tex.south east, anchor=south west, xshift=1cm, rotate=-1] (code-01-pdf) {%
   \fcolorbox{black}{white}{%
     \includegraphics[width=3cm]{images/iceberg-code-01}%
   }%
@@ -52,17 +51,20 @@
 } ([yshift=5pt] code-01-pdf.north);
 % The result of the preprocessing a TeX document with explcheck.
 %% Preprocessing
-\node [below=60pt of code-01-tex.south west, anchor=north west, xshift=-15pt] (code-02-tex) {%
+\node [below=60pt of code-01-tex.south west, anchor=north west, xshift=-13pt] (code-02-tex) {%
   \fcolorbox{black}{white}{\usebox{\secondcode}}%
 };
-\node [below=5pt of code-02-tex.south east, anchor=north east, xshift=5pt] (code-04-tex) {%
-  % TODO: Line 15 is not an expl3 part, just a warning, so perhaps get rid of the `\fcolorbox` to distinguish it from the other two parts in subfigure (a)?
-  \fcolorbox{red}{pink}{\usebox{\fourthcode}}%
-};
-\node [left=5pt of code-04-tex.north west, anchor=north east] (code-03-tex) {%
+\node [below=8pt of code-02-tex.south west, anchor=north west] (code-03-tex) {%
   \fcolorbox{black}{white}{\usebox{\thirdcode}}%
 };
-\node [below=65pt of code-02-tex.south, anchor=north, text width=10cm, align=center] {%
+\node [below=8pt of code-02-tex.south east, anchor=north east, xshift=-\dimexpr(2\fboxsep-6pt+2\fboxrule)] (code-04-tex) {%
+  \begingroup
+  \fboxsep=3pt%
+  \fboxrule=0pt%
+  \fcolorbox{red}{pink}{\usebox{\fourthcode}}%
+  \endgroup
+};
+\node [below=70pt of code-02-tex.south, anchor=north, text width=9cm, align=center] {%
   \small
   (a) Preprocessing identifies two expl3 parts and warns about an unnecessary command \cs{ExplSyntaxOff} on line 15.
 };
@@ -71,14 +73,14 @@
   \texttt{explcheck example.tex}\\
 } ([xshift=-2cm, yshift=5pt] code-02-tex.north);
 % Lexical analysis
-\node [right=30pt of code-02-tex.north east, anchor=north west, text width=5.95cm, align=left, yshift=36pt] (code-05-tex) {%
+\def\cshelper#1#2#3{\fcolorbox{#2}{#3}{\vphantom{/}\texttt{#1}} }%
+\def\cs#1{\cshelper{#1}{black}{white}}%
+\def\errorcs#1{\textcolor{red}{\cshelper{#1}{red}{pink}}}%
+\def\token#1#2{\texttt{#1}\textsubscript{#2} }%
+\def\errortoken#1#2{\textcolor{red}{\token{#1}{#2}}}%
+\node [right=25pt of code-02-tex.north east, anchor=north west, text width=5.95cm, align=left, yshift=38pt] (code-05-tex) {%
   \begingroup
     \setlength{\fboxsep}{2pt}%
-    \def\cshelper#1#2#3{\fcolorbox{#2}{#3}{\vphantom{/}\texttt{#1}} }
-    \def\cs#1{\cshelper{#1}{black}{white}}%
-    \def\errorcs#1{\textcolor{red}{\cshelper{#1}{red}{pink}}}%
-    \def\token#1#2{\texttt{#1}\textsubscript{#2} }%
-    \def\errortoken#1#2{\textcolor{red}{\token{#1}{#2}}}%
     \small
     \baselineskip=13pt%
     \cs{iow\_new:N}%
@@ -122,6 +124,14 @@
     \token{\{}{1}%
     \token{V}{11}%
     \token{\}}{2}%
+    \par
+  \endgroup
+};
+\node [below=8pt of code-05-tex.south west, anchor=north west, text width=5.95cm, align=left] (code-06-tex) {%
+  \begingroup
+    \setlength{\fboxsep}{2pt}%
+    \small
+    \baselineskip=13pt%
     \cs{\_\_example\_foo:n}%
     \token{\{}{1}%
     \token{H}{11}%
@@ -152,12 +162,12 @@
     \par
   \endgroup
 };
-\node [below=10pt of code-05-tex.south, anchor=north, text width=6cm, align=center] {%
+\node [below=10pt of code-06-tex.south, anchor=north, text width=6cm, align=center, xshift=-3pt] {%
   \small
   (b) Lexical analysis identifies 68 tokens and warns about missing whitespaces around braces (\texttt{\{}, \texttt{\}}) on lines 6 and 12.
 };
-% TODO: These arrows are likely best removed, since they add a lot of visual noise without doing much for the reader. If we wanted to keep them (at least for now), we should make their heads smaller, so that they are distinct from the two "big" arrows (lualatex and explcheck) and less distracting. In that case, we should also add an arrow from the bottom left part of subfigure (a) to the last occurence of the csname token "example_bar:nn" in subfigure (b) to indicate how both expl3 parts map to the TeX tokens.
-\draw [-{Stealth[length=3mm, width=3mm]}, line width=\fboxrule] ([xshift=-5pt, yshift=5pt] code-02-tex.north east) to [bend left] ([xshift=-5pt, yshift=-5pt] code-05-tex.north west);
+\draw [-{Stealth[length=2mm, width=2mm]}, line width=\fboxrule] ([xshift=-5pt, yshift=5pt] code-02-tex.north east) to [bend left] ([xshift=-5pt, yshift=-5pt] code-05-tex.north west);
+\draw [-{Stealth[length=2mm, width=2mm]}, line width=\fboxrule] ([xshift=5pt, yshift=5pt] code-03-tex.south east) to [bend right] ([xshift=-5pt, yshift=-8pt] code-06-tex.north west);
 \end{tikzpicture}
 \endgroup
 \vspace{0.75cm}%
