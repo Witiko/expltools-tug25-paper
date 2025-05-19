@@ -76,8 +76,15 @@
 \def\cshelper#1#2#3{\fcolorbox{#2}{#3}{\vphantom{/}\texttt{#1}} }%
 \def\cs#1{\cshelper{#1}{black}{white}}%
 \def\errorcs#1{\textcolor{red}{\cshelper{#1}{red}{pink}}}%
-\def\token#1#2{\texttt{#1}\textsubscript{#2} }%
-\def\errortoken#1#2{\textcolor{red}{\token{#1}{#2}}}%
+\def\token#1#2{\tokenhelper{#1}{#2} }%
+\def\errortoken#1#2{%
+  \begingroup
+  \fboxsep=0pt%
+  \fboxrule=0pt%
+  \fcolorbox{red}{pink}{\textcolor{red}{\tokenhelper{\strut#1}{#2}}} 
+  \endgroup
+}%
+\def\tokenhelper#1#2{\texttt{#1}\textsubscript{#2}}%
 \node [right=25pt of code-02-tex.north east, anchor=north west, text width=5.95cm, align=left, yshift=38pt] (code-05-tex) {%
   \begingroup
     \setlength{\fboxsep}{2pt}%
