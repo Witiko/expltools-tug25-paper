@@ -66,7 +66,7 @@
 };
 \node [below=70pt of code-02-tex.south, anchor=north, text width=9cm, align=center] {%
   \small
-  (a) Preprocessing identifies two expl3 parts and warns about an unnecessary command \cs{ExplSyntaxOff} on line 15.
+  (a) Preprocessing identifies two expl3 parts and warns about an unnecessary command ``\cs{ExplSyntaxOff}'' on line 15.
 };
 \draw [-{Stealth[length=3mm, width=3mm]}, line width=\fboxrule] ([xshift=-2cm, yshift=-5pt] code-01-tex.south) to [bend right] node [text width=5cm, midway, right, align=left, xshift=12.5pt, yshift=-10pt] {%
   analyze with\\
@@ -123,6 +123,8 @@
     \cs{\_\_example\_foo:n}%
     \token{\{}{1}%
     \token{V}{11}%
+    \token{,}{12}%
+    \token{x}{11}%
     \token{\}}{2}%
     \par
   \endgroup
@@ -162,12 +164,29 @@
     \par
   \endgroup
 };
-\node [below=10pt of code-06-tex.south, anchor=north, text width=6cm, align=center, xshift=-3pt] {%
+\node [below=10pt of code-06-tex.south, anchor=north, text width=6cm, align=center, xshift=-3pt] (code-07-tex) {%
   \small
   (b) Lexical analysis identifies 68 tokens and warns about missing whitespaces around braces (\texttt{\{}, \texttt{\}}) on lines 6 and 12.
 };
-\draw [-{Stealth[length=2mm, width=2mm]}, line width=\fboxrule] ([xshift=-5pt, yshift=5pt] code-02-tex.north east) to [bend left] ([xshift=-5pt, yshift=-5pt] code-05-tex.north west);
-\draw [-{Stealth[length=2mm, width=2mm]}, line width=\fboxrule] ([xshift=5pt, yshift=5pt] code-03-tex.south east) to [bend right] ([xshift=-5pt, yshift=-8pt] code-06-tex.north west);
+%\draw [-{Stealth[length=2mm, width=2mm]}, line width=\fboxrule] ([xshift=-5pt, yshift=5pt] code-02-tex.north east) to [bend left] ([xshift=-5pt, yshift=-5pt] code-05-tex.north west);
+%\draw [-{Stealth[length=2mm, width=2mm]}, line width=\fboxrule] ([xshift=5pt, yshift=5pt] code-03-tex.south east) to [bend right] ([xshift=-5pt, yshift=-8pt] code-06-tex.north west);
+% Syntactic analysis
+\node [below=45pt of code-03-tex.south west, anchor=north west, text width=7.6cm, align=left, xshift=-5pt] (code-07-tex) {%
+  \small
+  \sethlcolor{pink}%
+  \begin{enumerate}
+  \item A call to ``\texttt{\textbackslash iow\_new:N}'' with the argument ``\texttt{\textbackslash l\_example\_iow}''
+  \item A call to ``\texttt{\textbackslash iow\_open:Nn}'' with arguments ``\texttt{\textbackslash l\_example\_iow}'' and ``\{ \texttt{example.idx} \}''
+  \item A call to ``\texttt{\textbackslash cs\_new:Nn}'' with arguments ``\texttt{\textbackslash \_\_example\_foo:n}'' and ``\texttt{\{ \textbackslash cs\_new:Nn\,\ldots\,\}}''
+  \item ``\texttt{\textbackslash cs\_generate\_variant:Nn}'' with arguments ``\texttt{\textbackslash \_\_example\_foo:n}'' and ``\texttt{\{ V, x \}}''
+  \item ``\texttt{\textbackslash \_\_example\_foo:n}'' with ``\texttt{\{ Hello \}}''
+  \item ``\texttt{\textbackslash example\_bar:nn}'' with \textcolor{red}{\hl{``\texttt{w}''}} and ``\texttt{\{ orld \}}''
+  \end{enumerate}
+};
+\node [below=10pt of code-07-tex.south, anchor=north, text width=7.6cm, align=center, xshift=5pt] (code-07-label) {%
+  \small
+  (c) Syntactic analysis identifies six expl3 calls and 11~unrecognized tokens ``\texttt{\textbackslash begin\{document\}}'' and warns about missing braces around the \mbox{\texttt{n}-type} argument~\cite[Section~1.1]{latex2025interface3} ``\texttt{w}'' on line 13.
+};
 \end{tikzpicture}
 \endgroup
-\vspace{0.75cm}%
+\vspace{5pt}%
