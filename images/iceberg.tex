@@ -1,4 +1,5 @@
 \begingroup
+\sethlcolor{pink}%
 \setlength{\fboxsep}{10pt}%
 % Setting up the verbatim boxes with code examples.
 \def\linenumber{%
@@ -66,7 +67,7 @@
 };
 \node [below=70pt of code-02-tex.south, anchor=north, text width=9cm, align=center] {%
   \small
-  (a) Preprocessing identifies two expl3 parts and warns about an unnecessary command ``\cs{ExplSyntaxOff}'' on line 15.
+  (a) Preprocessing identifies two expl3 parts and warns about an unnecessary command \cs{ExplSyntaxOff} on line 15.
 };
 \draw [-{Stealth[length=3mm, width=3mm]}, line width=\fboxrule] ([xshift=-2cm, yshift=-5pt] code-01-tex.south) to [bend right] node [text width=5cm, midway, right, align=left, xshift=12.5pt, yshift=-10pt] {%
   analyze with\\
@@ -141,7 +142,7 @@
     \setlength{\fboxsep}{2pt}%
     \small
     \baselineskip=13pt%
-    \cs{\_\_example\_foo:n}%
+    \cs{\_\_example\_foo:x}%
     \token{\{}{1}%
     \token{H}{11}%
     \token{e}{11}%
@@ -180,19 +181,46 @@
 % Syntactic analysis
 \node [below=40pt of code-03-tex.south west, anchor=north west, text width=7.6cm, align=left, xshift=-5pt] (code-07-tex) {%
   \small
-  \sethlcolor{pink}%
   \begin{enumerate}
-  \item A call to ``\texttt{\textbackslash iow\_new:N}'' with the argument ``\texttt{\textbackslash l\_example\_iow}''
-  \item A call to ``\texttt{\textbackslash iow\_open:Nn}'' with arguments ``\texttt{\textbackslash l\_example\_iow}'' and ``\{ \texttt{example.idx} \}''
-  \item A call to ``\texttt{\textbackslash cs\_new:Nn}'' with arguments ``\texttt{\textbackslash \_\_example\_foo:n}'' and ``\texttt{\{ \textbackslash cs\_new:Nn\,\ldots\,\}}''
-  \item ``\texttt{\textbackslash cs\_generate\_variant:Nn}'' with arguments ``\texttt{\textbackslash \_\_example\_foo:n}'' and ``\texttt{\{ V, x \}}''
-  \item ``\texttt{\textbackslash \_\_example\_foo:n}'' with ``\texttt{\{ Hello \}}''
-  \item ``\texttt{\textbackslash example\_bar:nn}'' with \textcolor{red}{\hl{``\texttt{w}''}} and ``\texttt{\{ orld \}}''
+  \item Call \texttt{\textbackslash iow\_new:N} with the argument \texttt{\textbackslash l\_example\_iow}.
+  \item Call \texttt{\textbackslash iow\_open:Nn} with arguments \texttt{\textbackslash l\_example\_iow} and \{ \texttt{example.idx} \}.
+  \item Call \texttt{\textbackslash cs\_new:Nn} with arguments \texttt{\textbackslash \_\_example\_foo:n} and \texttt{\{ \textbackslash cs\_new:Nn \ldots\ \}}.
+  \item Call \texttt{\textbackslash cs\_generate\_variant:Nn} with \texttt{\textbackslash \_\_example\_foo:n} and \texttt{\{ V, x \}}.
+  \item Call \texttt{\textbackslash \_\_example\_foo:x} with \texttt{\{ Hello \}}.
+  \item Call \texttt{\textbackslash example\_bar:nn} with \textcolor{red}{\hl{\texttt{w}}} and \texttt{\{ orld \}}.
   \end{enumerate}
 };
-\node [below=10pt of code-07-tex.south, anchor=north, text width=7.6cm, align=center, xshift=5pt] (code-07-label) {%
+\node [below=10pt of code-07-tex.south, anchor=north, text width=7.2cm, align=center, xshift=-5pt] (code-07-label) {%
   \small
-  (c) Syntactic analysis identifies six expl3 calls and warns about missing braces around the \mbox{\texttt{n}-type} argument~\cite[Section~1.1]{latex2025interface3} ``\texttt{w}'' on line 13.
+  (c) Syntactic analysis identifies six expl3 calls and warns about missing braces around the \mbox{\texttt{n}-type} argument~\cite[Section~1.1]{latex2025interface3} \texttt{w} on line 13.
+};
+% Semantic analysis
+\node [right=12.5pt of code-07-tex.south east, anchor=south west, text width=6.1cm, align=left] (code-08-tex) {%
+  \small
+  \begin{enumerate}[nosep, itemsep=1pt]
+  \item[1.] \textcolor{red}{\hl{Reserve a stream \texttt{\textbackslash l\_example\_iow}.}}
+  \item[2.] Open a file \texttt{example.idx} for writing.
+  \item[3.] Define a function \texttt{\textbackslash \_\_example\_foo:n}:
+  \begin{enumerate}
+  \item[4.] Define \texttt{\textbackslash \_\_example\_bar:nn} with text \meta{argument}\texttt{,\textvisiblespace}\meta{arguments}\texttt{!}.
+  \end{enumerate}
+  \item[5.] \textcolor{red}{\hl{Generate variant \texttt{\textbackslash \_\_example\_foo:V}.}}
+  \item[6.] Generate variant \texttt{\textbackslash \_\_example\_foo:x}.
+  \item[7.] Call \texttt{\textbackslash \_\_example\_foo:x}.
+  \item[8.] Call \texttt{\textbackslash \_\_example\_bar:nn}.
+  \end{enumerate}
+};
+% Flow analysis
+\draw[decorate, decoration={brace, amplitude=50pt}] ([yshift=-5pt] code-08-tex.north east) -- ([yshift=25pt] code-08-tex.south east) node[midway, xshift=57.5pt] {\small 1};
+\draw[decorate, decoration={brace, amplitude=10pt}] ([yshift=-37.5pt] code-08-tex.north east) -- ([yshift=47.5pt] code-08-tex.south east) node[midway, xshift=15pt] {\small 2};
+\draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule] ([xshift=-53pt, yshift=17pt] code-08-tex.south east) to ([xshift=30pt, yshift=17pt] code-08-tex.south east);
+\node at ([xshift=35pt, yshift=17pt] code-08-tex.south east) {\small 3};
+\draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule] ([xshift=-48pt, yshift=5pt] code-08-tex.south east) to ([xshift=30pt, yshift=5pt] code-08-tex.south east);
+\node at ([xshift=35pt, yshift=5pt] code-08-tex.south east) {\small 4};
+% Label for both semantic and flow analyses.
+\node [right=6pt of code-07-label.north east, anchor=north west, text width=9cm, align=center] (code-08-label) {%
+  \small
+  (d) Semantic analysis identifies eight statements and warns about an unused variant from line 7. Flow analysis identifies four chunks and warns about an unclosed stream from line 4.
 };
 \end{tikzpicture}
 \endgroup
