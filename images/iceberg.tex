@@ -195,7 +195,7 @@
   (c) Syntactic analysis identifies six expl3 calls and warns about missing braces around the \mbox{\texttt{n}-type} argument~\cite[Section~1.1]{latex2025interface3} \texttt{w} on line 13.
 };
 % Semantic analysis
-\node [right=12.5pt of code-07-tex.south east, anchor=south west, text width=6.1cm, align=left] (code-08-tex) {%
+\node [right=5pt of code-07-tex.south east, anchor=south west, text width=6.1cm, align=left] (code-08-tex) {%
   \small
   \begin{enumerate}[nosep, itemsep=1pt]
   \item[S1.] \textcolor{red}{\hl{Reserve a stream \texttt{\textbackslash l\_example\_iow}.}}
@@ -211,12 +211,15 @@
   \end{enumerate}
 };
 % Flow analysis
-\draw[decorate, decoration={brace, amplitude=47.5pt}] ([yshift=-5pt] code-08-tex.north east) -- ([yshift=25pt] code-08-tex.south east) node[midway, xshift=57.5pt] {\small Ch1};
-\draw[decorate, decoration={brace, amplitude=5pt}] ([yshift=-37.5pt] code-08-tex.north east) -- ([yshift=47.5pt] code-08-tex.south east) node[midway, xshift=15pt] {\small Ch2};
-\draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule] ([xshift=-53pt, yshift=17pt] code-08-tex.south east) to ([xshift=25pt, yshift=17pt] code-08-tex.south east);
-\node at ([xshift=35pt, yshift=17pt] code-08-tex.south east) {\small Ch3};
-\draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule] ([xshift=-48pt, yshift=5pt] code-08-tex.south east) to ([xshift=25pt, yshift=5pt] code-08-tex.south east);
-\node at ([xshift=35pt, yshift=5pt] code-08-tex.south east) {\small Ch4};
+\draw[decorate, decoration={brace, amplitude=55pt}, line width=\fboxrule, color=gray] ([yshift=-5pt] code-08-tex.north east) -- ([yshift=25pt] code-08-tex.south east) node[midway, xshift=65pt, color=black] (ch1) {\small Ch1};
+\draw[decorate, decoration={brace, amplitude=10pt}, line width=\fboxrule, color=gray] ([yshift=-37.5pt] code-08-tex.north east) -- ([yshift=47.5pt] code-08-tex.south east) node[midway, xshift=20pt, color=black] (ch2) {\small Ch2};
+\draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule, color=gray] ([xshift=-53pt, yshift=17pt] code-08-tex.south east) to ([xshift=32.5pt, yshift=17pt] code-08-tex.south east);
+\node (ch3) at ([xshift=42.5pt, yshift=17pt] code-08-tex.south east) {\small Ch3};
+\draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule, color=gray] ([xshift=-48pt, yshift=5pt] code-08-tex.south east) to ([xshift=32.5pt, yshift=5pt] code-08-tex.south east);
+\node (ch4) at ([xshift=42.5pt, yshift=5pt] code-08-tex.south east) {\small Ch4};
+\draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule] ([yshift=-5pt] ch1.south) to [bend left] ([yshift=5pt] ch3.north east);
+\draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule] ([yshift=5pt] ch3.north west) to [bend left] ([yshift=-5pt] ch2.south);
+\draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule] ([xshift=5pt] ch3.north east) to [bend left] ([xshift=5pt] ch4.south east);
 % Label for both semantic and flow analyses.
 \node [right=6pt of code-07-label.north east, anchor=north west, text width=9cm, align=center] (code-08-label) {%
   \small
