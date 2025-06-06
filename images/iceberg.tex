@@ -174,7 +174,7 @@
 };
 \node [below=10pt of code-06-tex.south, anchor=north, text width=6cm, align=center, xshift=-3pt] (code-07-tex) {%
   \small
-  (b) Lexical analysis identifies 68 tokens and warns about missing whitespaces around braces (\texttt{\{}, \texttt{\}}) on lines 6 and 12.
+  (b) Lexical analysis identifies 68 tokens and warns about missing whitespace around braces (\texttt{\{}, \texttt{\}}) on lines 6 and 12.
 };
 %\draw [-{Stealth[length=2mm, width=2mm]}, line width=\fboxrule] ([xshift=-5pt, yshift=5pt] code-02-tex.north east) to [bend left] ([xshift=-5pt, yshift=-5pt] code-05-tex.north west);
 %\draw [-{Stealth[length=2mm, width=2mm]}, line width=\fboxrule] ([xshift=5pt, yshift=5pt] code-03-tex.south east) to [bend right] ([xshift=-5pt, yshift=-8pt] code-06-tex.north west);
@@ -195,7 +195,7 @@
   (c) Syntactic analysis identifies six expl3 calls and warns about missing braces around the \mbox{\texttt{n}-type} argument~\cite[Section~1.1]{latex2025interface3} \texttt{w} on line 13.
 };
 % Semantic analysis
-\node [right=5pt of code-07-tex.south east, anchor=south west, text width=6.1cm, align=left] (code-08-tex) {%
+\node [right=0pt of code-07-tex.south east, anchor=south west, text width=6.1cm, align=left] (code-08-tex) {%
   \small
   \begin{enumerate}[nosep, itemsep=1pt]
   \item[S1.] \textcolor{red}{\hl{Reserve a stream \texttt{\textbackslash l\_example\_iow}.}}
@@ -211,12 +211,12 @@
   \end{enumerate}
 };
 % Flow analysis
-\draw[decorate, decoration={brace, amplitude=55pt}, line width=\fboxrule, color=gray] ([yshift=-5pt] code-08-tex.north east) -- ([yshift=25pt] code-08-tex.south east) node[midway, xshift=65pt, color=black] (ch1) {\small Ch1};
-\draw[decorate, decoration={brace, amplitude=10pt}, line width=\fboxrule, color=gray] ([yshift=-37.5pt] code-08-tex.north east) -- ([yshift=47.5pt] code-08-tex.south east) node[midway, xshift=20pt, color=black] (ch2) {\small Ch2};
-\draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule, color=gray] ([xshift=-53pt, yshift=17pt] code-08-tex.south east) to ([xshift=32.5pt, yshift=17pt] code-08-tex.south east);
-\node (ch3) at ([xshift=42.5pt, yshift=17pt] code-08-tex.south east) {\small Ch3};
-\draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule, color=gray] ([xshift=-48pt, yshift=5pt] code-08-tex.south east) to ([xshift=32.5pt, yshift=5pt] code-08-tex.south east);
-\node (ch4) at ([xshift=42.5pt, yshift=5pt] code-08-tex.south east) {\small Ch4};
+\draw[decorate, decoration={brace, amplitude=60pt, aspect=0.5}, line width=\fboxrule, color=gray] ([yshift=-5pt] code-08-tex.north east) -- ([yshift=25pt] code-08-tex.south east) node[midway, xshift=70pt, color=black] (ch1) {\small Ch1};
+\draw[decorate, decoration={brace, amplitude=15pt, aspect=0.3}, line width=\fboxrule, color=gray] ([yshift=-37.5pt] code-08-tex.north east) -- ([yshift=47.5pt] code-08-tex.south east) node[midway, xshift=25pt, , yshift=5pt, color=black] (ch2) {\small Ch2};
+\draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule, color=gray] ([xshift=-53pt, yshift=17pt] code-08-tex.south east) to ([xshift=37.5pt, yshift=17pt] code-08-tex.south east);
+\node (ch3) at ([xshift=47.5pt, yshift=17pt] code-08-tex.south east) {\small Ch3};
+\draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule, color=gray] ([xshift=-48pt, yshift=5pt] code-08-tex.south east) to ([xshift=37.5pt, yshift=5pt] code-08-tex.south east);
+\node (ch4) at ([xshift=47.5pt, yshift=5pt] code-08-tex.south east) {\small Ch4};
 \draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule] ([yshift=-5pt] ch1.south) to [bend left] ([yshift=5pt] ch3.north east);
 \draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule] ([yshift=5pt] ch3.north west) to [bend left] ([yshift=-5pt] ch2.south);
 \draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule] ([xshift=5pt] ch3.north east) to [bend left] ([xshift=5pt] ch4.south east);
