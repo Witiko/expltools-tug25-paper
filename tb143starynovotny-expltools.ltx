@@ -88,7 +88,7 @@ All of this makes \TeX{} inherently resistant to static analysis. Even simple ed
 \subsection{How expl3 tames the chaos}
 \emph{Expl3}~\cite{latex2025expl3, peischl2023introduction} is a high-level programming language built on top of \TeX{}, designed to simplify the internal implementation of the \LaTeX{} format and serve as a programming layer for \LaTeX{} package authors. In practice, it can also be used with other \TeX{} formats, such as plain \TeX{} and \Hologo{ConTeXt}, making it a viable replacement for \TeX{} in many contexts. Compared to \TeX{}, expl3 introduces a number of conventions that make analysis far more tractable.
 
-Although it still permits changing the meaning of individual characters at runtime, such behavior is rarely needed, thanks to higher-level abstractions and built-in data types. This improves the consistency of surface syntax.
+Although expl3 still permits changing the meaning of individual characters at runtime, such behavior is rarely needed, thanks to higher-level abstractions and built-in data types. This improves the consistency of surface syntax.
 
 Unlike \TeX{}, expl3 clearly distinguishes variables from functions. Variable names include metadata such as type, scope, and mutability, while function names specify argument counts, types, and even visibility (public vs.\ private). This kind of structured interface makes it possible to perform checks\Dash like validating argument counts or detecting type mismatches\Dash that are nearly impossible in \TeX{}.
 
