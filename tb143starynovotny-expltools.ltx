@@ -240,12 +240,12 @@ In summary, this dual-licensing approach allows us to maintain the integrity of 
 
 \section{Design}
 \label{sec:design}
-In this section, we outline the high-level design of explcheck. Section~\ref{sec:processing-steps} describes how input files are processed. Section~\ref{sec:warnings-and-errors} elaborates on the types of issues that the linter is expected to detect. Finally, Section~\ref{sec:limitations} outlines features that explcheck will not support, given our requirements and design decisions.
+In this section, we outline the high-level design of explcheck. Section~\ref{sec:processing-steps} describes how input files are processed. Section~\ref{sec:warnings-and-errors} discusses how issues are named and organized. Section~\ref{sec:confidence-based-processing} discusses how the linter handles uncertainty. Finally, Section~\ref{sec:limitations} describes the fundamental limitations of the current design.
 
 \subsection{Processing steps}
 \label{sec:processing-steps}
 
-As outlined in Section~\ref{sec:requirements}, the linter processes input files in a series of discrete \emph{processing steps}, each implemented as a separate Lua module:
+As outlined in Section~\ref{sec:functional-requirements}, the linter processes input files in a series of discrete \emph{processing steps}, each implemented as a separate Lua module:
 
 \begin{enumerate}
 \item \textbf{Preprocessing} segments input files into \emph{parts} that contain expl3 code.
@@ -280,7 +280,7 @@ Based on the requirements from sections~\ref{sec:functional-requirements} and \r
 
 These issues are organised into five sections\Dash one per processing step\Dash and each is paired with a name, an identifier, a short description, and one or more code examples that serve both as documentation and as test files. The identifier begins with \texttt{W} (general) or \texttt{S} (style) for warnings, and \texttt{E} (general) or \texttt{T} (type) for errors; this is followed by a digit between \texttt{1} and \texttt{5} indicating the processing step, and finally a two-digit serial number for the individual issue.
 
-For example, the issues visible in Figure~\ref{fig:iceberg} and their identifiers are:
+For example, the issues visible in Figure~\ref{fig:iceberg} are:
 
 \begin{itemize}
   \item \texttt{W101} (Unexpected delimiters)
@@ -297,6 +297,7 @@ The list keeps growing: new issues are added as user feedback arrives and as add
 By release~v0.10.0 (May 2025) the list had grown to 29 warnings and 45 errors~\cite{starynovotny2025warnings}, and more additions are planned for v1.0.0.
 
 \subsection{Confidence-based processing}
+\label{sec:confidence-based-processing}
 As outlined in Section~\ref{sec:issues}, the linter must handle unexpected input while reporting warnings and errors only when it has high confidence, even if that means missing some issues.
 
 For example, on line 7 of the document in Figure~\ref{fig:iceberg}, two variants \cs{\_\_example\_foo:V} and \texttt{:x} are generated. The former variant is unused, which triggers a warning \texttt{W402}, as expected.
@@ -319,10 +320,16 @@ With this approach, the linter always adopts the most charitable interpretation 
 % TODO: Check that the issues are correctly reported by explcheck v1.0.0.
 In our example, this approach reports neither \texttt{E408} nor \texttt{W402}, as expected.
 
-\vfill
+This confidence-based approach is central to the linter’s design. Every statement produced by semantic analysis is tagged with a confidence level: \texttt{NONE} (0\%), \texttt{MAYBE} (50\%), or \texttt{DEFINITELY} (100\%). Later, in Section~\ref{sec:code-coverage}, we show how these confidence percentages can also be used to validate the linter.
 
 \subsection{Limitations}
 \label{sec:limitations}
+TODO
+
+% TODO: Mention the fundamental limitations from [@starynovotny2024project, Section 4.3].
+% TODO: Mention the potential shortage of identifier names.
+
+\vfill
 
 \section{Demonstration}
 \label{sec:demonstration}
@@ -356,14 +363,16 @@ In our example, this approach reports neither \texttt{E408} nor \texttt{W402}, a
 % Corresponds to Section 4.2 of starynovotny-expltools-slides.pdf.
 % TODO: Since this has already been "published" in starynovotny-expltools-slides.pdf and https://witiko.github.io/Expl3-Linter-5/, perhaps we can just mention the result as a motivation for caring about expl3 in the last paragraph of Section 1.4 (How expl3 tames the chaos).
 \subsubsection{Code coverage}
+\label{sec:code-coverage}
 \subsubsection{Most common issues}
 \subsubsection{Processing speed}
 \subsection{Comparison to large language models}
 \section{Future work}
 \label{sec:future-work}
-% Back-reference to Section "Limitations".
-% See also <https://github.com/Witiko/expltools/issues?q=is%3Aissue%20state%3Aopen%20milestone%3A%22explcheck%20v1.1.0%20(after%20first%20stable%20release)%22>.
-% See also "TODO"s in the code.
+% TODO: Mention the non-fundamental limitations from [@starynovotny2024project, Section 4.3] that are still relevant in v1.0.0.
+% Mention issues from <https://github.com/Witiko/expltools/issues?q=is%3Aissue%20state%3Aopen%20milestone%3A%22explcheck%20v1.1.0%20(after%20first%20stable%20release)%22>.
+% (Optional) Mention "TODO"s in the code; this may need adding a separate section after Section "Design" that would discuss the implementation details, so that the content of these "TODO"s is intelligible to the reader.
+% Reference [@starynovotny2025warnings, Section "Caveats"].
 \section{Related work}
 % Corresponds to Section 3 of project-proposal.pdf.
 \label{sec:related-work}
