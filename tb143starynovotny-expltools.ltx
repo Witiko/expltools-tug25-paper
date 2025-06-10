@@ -74,6 +74,7 @@ In addition to editors and interpreters, many languages have tools called \emph{
 
 Linters complement human-written tests: while tests verify dynamic behavior at runtime, they must be explicitly written to cover each relevant case. Linters, on the other hand, scan through all your code up front. They might not catch everything, and their checks are usually more general, but they can flag a lot of potential issues right away\Dash before you've written a single test or even run the program.
 
+% TODO: Clarify (in a footnote?) that, in the following two sections, when we speak about "TeX", we mean low-level TeX code that consists primarily of TeX primitives and potentially also plain TeX macros.
 \subsection{What makes \TeX{} hard to analyze}
 Unlike languages like Lua, Python, or JavaScript, which come from the tradition of numerical and procedural programming, \TeX{} descends from a different lineage: \emph{macro processors}, where programs are built by defining and expanding text-based substitutions (so-called \emph{macros}). This heritage introduces unique challenges for static analysis.
 
@@ -270,7 +271,7 @@ Figure~\ref{fig:iceberg} illustrates the full pipeline applied to an example \La
 
 Each processing step builds upon the results of its predecessor and produces data structures that reflect the current level of analysis. While a step is running, it records the issues pertinent to that level, and once the step completes, later steps focus on the data it produced. Thus almost every issue is most naturally reported at the step where the required information first becomes available, creating a clear parent–child relationship between processing steps and issues.
 
-An issue cannot be detected until the program has been analyzed deeply enough. For example, the stream opened on line 4 of the document from Figure~\ref{fig:iceberg} is visible to both syntactic and semantic analysis, but only the flow analysis step has the flow graph needed to determine whether every execution path eventually closes the stream. Potential resource leaks are therefore detected exclusively by flow analysis.
+An issue cannot be detected until the program has been analyzed deeply enough. For example, the stream opened on line 4 of the document in Figure~\ref{fig:iceberg} is visible to both syntactic and semantic analysis, but only the flow analysis step has the flow graph needed to determine whether every execution path eventually closes the stream. Potential resource leaks are therefore detected exclusively by flow analysis.
 
 Conversely, some issues become invisible after a certain point. For example, whitespace is stylistic and produces no \TeX{} tokens in expl3. Therefore, the missing whitespace on lines 6 and 12 can only be reported by lexical analysis, because all following steps operate on \TeX{} tokens and derived data structures.
 \medskip
@@ -282,12 +283,12 @@ These issues are organised into five sections\Dash one per processing step\Dash 
 For example, the issues visible in Figure~\ref{fig:iceberg} and their identifiers are:
 
 \begin{itemize}
-  \item Unexpected delimiters\hfill[\texttt{W101}]
-  \item Missing stylistic whitespace\hfill[\texttt{S204}]
-  \item Unbraced \texttt{n}-type function call argument\hfill[\texttt{W302}]
-  \item Unused private function variant\hfill[\texttt{W402}]
-  % TODO: Verify the identifier once semantic analysis is finalised.
-  \item Unclosed stream\hfill[\texttt{W522}]
+  \item \texttt{W101} (Unexpected delimiters)
+  \item \texttt{S204} (Missing stylistic whitespace)
+  \item \texttt{W302} (Unbraced \texttt{n}-type function call argument)
+  \item \texttt{W402} (Unused private function variant)
+  % TODO: Verify the identifier W522 once semantic analysis is finalised.
+  \item \texttt{W522} (Unclosed stream)
 \end{itemize}
 
 The list keeps growing: new issues are added as user feedback arrives and as additional edge cases surface during implementation. For example, warning \texttt{W302} was not in the original project proposal but was added later. Once an issue is implemented, its identifier never changes.
@@ -295,10 +296,30 @@ The list keeps growing: new issues are added as user feedback arrives and as add
 % TODO: Update after v1.0.0 has been released.
 By release~v0.10.0 (May 2025) the list had grown to 29 warnings and 45 errors~\cite{starynovotny2025warnings}, and more additions are planned for v1.0.0.
 
-%\subsection{Asymmetric processing}
-% Describe on an example how the requirements of "robustness to unexpected input" and "precision-over-recall"[^1] from Section 3.2.1 translate to a design that estimates the "confidence" of a how well code has been understood, which then drives asymmetric processing based on the type of error that is being tested.
-%
-% [^1]: "When reporting issues, the linter should only emit a warning or error when it is reasonably confident that the code has been correctly understood\Dash even if that means some issues may go undetected."
+\subsection{Confidence-based processing}
+As outlined in Section~\ref{sec:issues}, the linter must handle unexpected input while reporting warnings and errors only when it has high confidence, even if that means missing some issues.
+
+For example, on line 7 of the document in Figure~\ref{fig:iceberg}, two variants \cs{\_\_example\_foo:V} and \texttt{:x} are generated. The former variant is unused, which triggers a warning \texttt{W402}, as expected.
+
+Now assume that instead of the variant argument specifiers \texttt{\{ V, x \}}, line 7 contained input the linter cannot interpret, such as a control sequence: \texttt{\{ \cs{unexpected} \}}. There are two obvious ways in which the linter might react:
+\begin{enumerate}
+\item[1.] Assume that no variants are generated.
+\item[2.] Assume that all variants are generated.
+\end{enumerate}
+
+% TODO: Verify the identifier E408 once semantic analysis is finalised.
+However, we cannot be confident about either assumption, and both yield incorrect results: In the first approach, an error \texttt{E408} (Calling an undefined function) is reported on line 11, even though the variant \cs{\_\_example\_foo:x} might exist. In the second approach, a warning \texttt{W402} is reported for all other variants, even though they might not exist.
+
+To satisfy our requirements, we used a different approach based on \emph{confidence}:
+\begin{enumerate}
+\item[3.] Assume that all variants \emph{may be} generated.
+\end{enumerate}
+
+With this approach, the linter always adopts the most charitable interpretation and reports only those issues for which it has high confidence.
+% TODO: Check that the issues are correctly reported by explcheck v1.0.0.
+In our example, this approach reports neither \texttt{E408} nor \texttt{W402}, as expected.
+
+\vfill
 
 \subsection{Limitations}
 \label{sec:limitations}
