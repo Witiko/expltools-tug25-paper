@@ -326,9 +326,9 @@ This confidence-based approach is central to the linter’s design. Every statem
 \subsection{Limitations}
 \label{sec:limitations}
 
-To meet the twelve-month schedule, we restricted the linter to modeling only \TeX's input processor: it tokenizes the source (see Figure~\ref{fig:iceberg}b) but neither expands macros nor simulates typesetting.
+To meet the twelve-month schedule, we restricted the linter to modeling only \TeX's input processor: it tokenizes the source text (see Figure~\ref{fig:iceberg}b) but neither expands macros nor simulates typesetting.
 
-Analysis is statement-oriented (see Figure~\ref{fig:iceberg}d). Other material such as \cs{begin}\texttt{\{document\}} on line~12 serves only to delimit chunks Ch3 and Ch4. Literals and expressions within statements\Dash such as the specifier list \texttt{\{ V, x \}} on line 7, comma lists, boolean expressions, or key–values\Dash are handled in place or ignored; they have no independent representation.
+Analysis is statement-oriented (see Figure~\ref{fig:iceberg}d). Other material such as \cs{begin}\texttt{\{document\}} on line~12 serves only to delimit chunks Ch3 and Ch4. Literals and expressions within statements\Dash such as the specifier list \texttt{\{ V, x \}} on line 7, comma lists, boolean expressions, or key--values\Dash are handled ad-hoc or ignored; they have no independent representation.
 
 Removing these constraints would require a major redesign. Section~\ref{sec:future-work} discusses less fundamental limitations that we expect to address in future work.
 
