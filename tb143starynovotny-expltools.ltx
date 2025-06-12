@@ -119,8 +119,7 @@ In this article, we present the current state of explcheck, emphasizing its desi
 
 Section~\ref{sec:requirements} begins with a requirements analysis, covering both the intended scope of explcheck's functionality and other considerations. This section closely follows our original project proposal, and can be skipped if you're not interested in the process.
 
-Section~\ref{sec:design} on page \pageref{sec:design} outlines the high-level design of explcheck. In Section~\ref{sec:demonstration}, we show how you can use explcheck. Section~\ref{sec:validation} presents a validation of explcheck's results across all expl3 packages in \TeX{}~Live 2013–2025, both through continuous analysis and a set of experiments developed for this article.
-\looseness=-1
+Sections~\ref{sec:design} (p.~\pageref{sec:design}) and \ref{sec:implementation} outline explcheck's high-level design and implementation. Section~\ref{sec:demonstration} demonstrates its use, and Section~\ref{sec:validation} validates its results across all expl3 packages in \TeX{} Live (2013--2025) via continuous analysis and a set of experiments developed for this article.
 
 In Section~\ref{sec:future-work}, we discuss current limitations and suggest directions for future development. Section~\ref{sec:related-work} surveys related efforts in static analysis of \TeX{} and other programming languages more broadly, highlighting influences on explcheck's design. Finally, Section~\ref{sec:conclusion} summarizes our contributions.
 
@@ -332,6 +331,14 @@ Analysis is statement-oriented (see Figure~\ref{fig:iceberg}d). Other material s
 
 Removing these constraints would require a major redesign. Section~\ref{sec:future-work} discusses less fundamental limitations that we expect to address in future work.
 
+\section{Implementation}
+\label{sec:implementation}
+\subsection{Modules and dependencies}
+% Outline the different Lua modules, using a UML package diagram as a visual aid.
+\subsection{Components}
+% Describe the file system, options, processing steps, issue registry, etc., with a component diagram.
+\subsection{Data model}
+% Present the entities and relationships in the analysis results, using an ER diagram.
 \section{Demonstration}
 \label{sec:demonstration}
 \subsection{Interfaces}
