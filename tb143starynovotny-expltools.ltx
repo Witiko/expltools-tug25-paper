@@ -46,7 +46,13 @@
 
 %%% End of metadata %%%
 
-% Note to editor: If possible, please arrange for the first page to fall on an even-numbered page, so that the introduction and outline can appear side by side. The rest of the article has been written with this layout in mind. That said, no worries if it doesn't work out\Dash I'm sure the article will still look great, thanks in no small part to your careful editing.
+% Note to editor: If possible, please arrange for the first page to fall on an even-numbered page, so that:
+%
+% - The introduction and outline appear side by side.
+% - Figure 2 and sections 4.2 through 4.4 appear side by side.
+% - Figure 3 and Sections 5.1 appear side by side.
+%
+% That said, no worries if it doesn't work out\Dash I'm sure the article will still look great, thanks in no small part to your careful editing.
 
 \begin{document}
 \maketitle
@@ -194,7 +200,7 @@ Each issue should be assigned a unique identifier. These identifiers allow flexi
 \subsubsection{Architecture}
 \label{sec:architecture}
 
-To make the linter easy to run in continuous integration pipelines, it should be written in Lua~5.3, as this is the version used by recent releases of Lua\TeX{}, and should rely only on the standard Lua library.
+To make the linter easy to run in continuous integration pipelines, it should be written in Lua~5.3, as this is the version used by recent releases of Lua\TeX{}, and should rely only on the standard Lua library and the external library \acro{LPEG}~\cite{ierusalimschy2009text, menke2019parsing} for pattern-matching.
 
 The linter should process input files in a series of well-defined steps, each implemented as a separate Lua module. These modules should be usable on their own, so users can drop them into other Lua code without having to rely on the rest of the linter.
 
@@ -202,7 +208,7 @@ Each step should take input from the previous step, look for issues, and convert
 
 \begin{enumerate}
 \item change how input files are discovered,
-\item swap out or rearrange processing steps, or add their own, and
+\item add, remove, or rearrange processing steps, and
 \item change how the linter reacts to the issues it finds.
 \end{enumerate}
 
@@ -333,12 +339,25 @@ Removing these constraints would require a major redesign. Section~\ref{sec:futu
 
 \section{Implementation}
 \label{sec:implementation}
+
+In this section, we present a high-level overview of the implementation. Section~\ref{sec:modules-and-dependencies} details the Lua modules and their dependencies. Section~\ref{sec:components} introduces the core components and explains how they interact. Section~\ref{sec:data-model} defines the analysis data model, outlining its entities and relationships.
+
+\begin{figure*}
+\input images/package-diagram
+\caption{Package diagram of \emph{explcheck}, illustrating the structure and dependencies among its 14 internal Lua modules, plus two external libraries.}
+\label{fig:package-diagram}
+\end{figure*}
+
 \subsection{Modules and dependencies}
+\label{sec:modules-and-dependencies}
 % Outline the different Lua modules, using a UML package diagram as a visual aid.
 \subsection{Components}
+\label{sec:components}
 % Describe the file system, options, processing steps, issue registry, etc., with a component diagram.
 \subsection{Data model}
+\label{sec:data-model}
 % Present the entities and relationships in the analysis results, using an ER diagram.
+
 \section{Demonstration}
 \label{sec:demonstration}
 \subsection{Interfaces}

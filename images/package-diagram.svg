@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg:svg
+   contentStyleType="text/css"
+   data-diagram-type="DESCRIPTION"
+   height="656px"
+   preserveAspectRatio="none"
+   style="width:871px;height:656px;background:#FFFFFF;"
+   version="1.1"
+   viewBox="0 0 871 656"
+   width="871px"
+   zoomAndPan="magnify"
+   id="svg10408"
+   sodipodi:docname="package-diagram.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview10410"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.0175439"
+     inkscape:cx="495.8017"
+     inkscape:cy="421.60343"
+     inkscape:window-width="1854"
+     inkscape:window-height="1011"
+     inkscape:window-x="1026"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g10406"
+     showguides="true">
+    <sodipodi:guide
+       position="549.36205,368.05174"
+       orientation="1,0"
+       id="guide18440"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <script />
+  <svg:defs
+     id="defs10210">
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient7446">
+      <svg:stop
+         style="stop-color:#808080;stop-opacity:1;"
+         offset="0"
+         id="stop7442" />
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="1"
+         id="stop7444" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient7438">
+      <svg:stop
+         style="stop-color:#808080;stop-opacity:1;"
+         offset="0"
+         id="stop7434" />
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="1"
+         id="stop7436" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient7430">
+      <svg:stop
+         style="stop-color:#a6a6a6;stop-opacity:1;"
+         offset="0"
+         id="stop7426" />
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="1"
+         id="stop7428" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient7422">
+      <svg:stop
+         style="stop-color:#999999;stop-opacity:1;"
+         offset="0"
+         id="stop7418" />
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="1"
+         id="stop7420" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient7398">
+      <svg:stop
+         style="stop-color:#808080;stop-opacity:1;"
+         offset="0"
+         id="stop7394" />
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="1"
+         id="stop7396" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient7390">
+      <svg:stop
+         style="stop-color:#808080;stop-opacity:1;"
+         offset="0"
+         id="stop7386" />
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="1"
+         id="stop7388" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient7382">
+      <svg:stop
+         style="stop-color:#808080;stop-opacity:1;"
+         offset="0"
+         id="stop7378" />
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="1"
+         id="stop7380" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient7374">
+      <svg:stop
+         style="stop-color:#a6a6a6;stop-opacity:1;"
+         offset="0"
+         id="stop7370" />
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="1"
+         id="stop7372" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient7366">
+      <svg:stop
+         style="stop-color:#808080;stop-opacity:1;"
+         offset="0"
+         id="stop7362" />
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="1"
+         id="stop7364" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient7358">
+      <svg:stop
+         style="stop-color:#808080;stop-opacity:1;"
+         offset="0"
+         id="stop7354" />
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="1"
+         id="stop7356" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient7350">
+      <svg:stop
+         style="stop-color:#808080;stop-opacity:1;"
+         offset="0"
+         id="stop7346" />
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="1"
+         id="stop7348" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient7342">
+      <svg:stop
+         style="stop-color:#808080;stop-opacity:1;"
+         offset="0"
+         id="stop7338" />
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="1"
+         id="stop7340" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient7334">
+      <svg:stop
+         style="stop-color:#808080;stop-opacity:1;"
+         offset="0"
+         id="stop7330" />
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="1"
+         id="stop7332" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient7326">
+      <svg:stop
+         style="stop-color:#808080;stop-opacity:1;"
+         offset="0"
+         id="stop7322" />
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="1"
+         id="stop7324" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient7318">
+      <svg:stop
+         style="stop-color:#a6a6a6;stop-opacity:1;"
+         offset="0"
+         id="stop7314" />
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="1"
+         id="stop7316" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient7310">
+      <svg:stop
+         style="stop-color:#808080;stop-opacity:1;"
+         offset="0"
+         id="stop7306" />
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="1"
+         id="stop7308" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient7302">
+      <svg:stop
+         style="stop-color:#808080;stop-opacity:1;"
+         offset="0"
+         id="stop7298" />
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="1"
+         id="stop7300" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       id="linearGradient7262"
+       inkscape:swatch="solid">
+      <svg:stop
+         style="stop-color:#bfbfbf;stop-opacity:1;"
+         offset="0"
+         id="stop7260" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7302"
+       id="linearGradient7304"
+       x1="244.06618"
+       y1="68.895447"
+       x2="645.22101"
+       y2="344.62973"
+       gradientUnits="userSpaceOnUse" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7310"
+       id="linearGradient7312"
+       x1="236.45985"
+       y1="84.555191"
+       x2="304.70245"
+       y2="141.23782"
+       gradientUnits="userSpaceOnUse" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7318"
+       id="linearGradient7320"
+       x1="268.47708"
+       y1="179.0995"
+       x2="241.5127"
+       y2="203.67805"
+       gradientUnits="userSpaceOnUse" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7326"
+       id="linearGradient7328"
+       x1="184.25175"
+       y1="78.992943"
+       x2="112.90876"
+       y2="530.74719"
+       gradientUnits="userSpaceOnUse" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7334"
+       id="linearGradient7336"
+       x1="204.27879"
+       y1="84.386353"
+       x2="123.34077"
+       y2="245.41727"
+       gradientUnits="userSpaceOnUse" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7342"
+       id="linearGradient7344"
+       x1="211.84479"
+       y1="83.961914"
+       x2="162.26706"
+       y2="344.85538"
+       gradientUnits="userSpaceOnUse" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7350"
+       id="linearGradient7352"
+       x1="222.48911"
+       y1="86.311584"
+       x2="228.72066"
+       y2="203.84023"
+       gradientUnits="userSpaceOnUse" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7358"
+       id="linearGradient7360"
+       x1="97.147278"
+       y1="290.37341"
+       x2="112.49183"
+       y2="493.12015"
+       gradientUnits="userSpaceOnUse" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7366"
+       id="linearGradient7368"
+       x1="121.1051"
+       y1="290.82526"
+       x2="143.67912"
+       y2="344.67435"
+       gradientUnits="userSpaceOnUse" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7374"
+       id="linearGradient7376"
+       x1="223.45071"
+       y1="296.16437"
+       x2="189.85822"
+       y2="368.37894"
+       gradientUnits="userSpaceOnUse" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7382"
+       id="linearGradient7384"
+       x1="150.50374"
+       y1="388.88754"
+       x2="137.29471"
+       y2="447.28458"
+       gradientUnits="userSpaceOnUse" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7390"
+       id="linearGradient7392"
+       x1="239.8862"
+       y1="415.13577"
+       x2="149.85104"
+       y2="448.7023"
+       gradientUnits="userSpaceOnUse" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7398"
+       id="linearGradient7400"
+       x1="176.28934"
+       y1="390.49091"
+       x2="739.63983"
+       y2="490.81955"
+       gradientUnits="userSpaceOnUse" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7422"
+       id="linearGradient7424"
+       x1="573.2757"
+       y1="351.64508"
+       x2="591.42834"
+       y2="356.17648"
+       gradientUnits="userSpaceOnUse" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7430"
+       id="linearGradient7432"
+       x1="573.35925"
+       y1="314.17969"
+       x2="814.57007"
+       y2="481.73508"
+       gradientUnits="userSpaceOnUse" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7438"
+       id="linearGradient7440"
+       x1="463.39417"
+       y1="535.37946"
+       x2="547.94208"
+       y2="612.41132"
+       gradientUnits="userSpaceOnUse" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7446"
+       id="linearGradient7448"
+       x1="593.55292"
+       y1="534.89813"
+       x2="594.34052"
+       y2="600.34021"
+       gradientUnits="userSpaceOnUse" />
+  </svg:defs>
+  <svg:g
+     id="g10406">
+    <!--cluster explcheck-->
+    <svg:g
+       class="cluster"
+       data-entity="explcheck"
+       data-source-line="3"
+       data-uid="ent0002"
+       id="cluster_explcheck">
+      <svg:path
+         d="M13.5,11 L93.2158,11 A3.75,3.75 0 0 1 95.7158,13.5 L102.7158,33.2969 L702.5,33.2969 A2.5,2.5 0 0 1 705,35.7969 L705,588.5 A2.5,2.5 0 0 1 702.5,591 L13.5,591 A2.5,2.5 0 0 1 11,588.5 L11,13.5 A2.5,2.5 0 0 1 13.5,11"
+         fill="#FFFFFF"
+         style="stroke:#000000;stroke-width:1;"
+         id="path10212" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1;"
+         x1="11"
+         x2="102.7158"
+         y1="33.2969"
+         y2="33.2969"
+         id="line10214" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="19"
+         y="25.9951"
+         id="text10216"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'"><svg:tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'"
+           id="tspan13796">explcheck</svg:tspan></svg:text>
+    </svg:g>
+    <!--cluster analysis-->
+    <svg:g
+       class="cluster"
+       data-entity="analysis"
+       data-source-line="4"
+       data-uid="ent0003"
+       id="cluster_analysis">
+      <svg:path
+         d="M226.5,208 L291.751,208 A3.75,3.75 0 0 1 294.251,210.5 L301.251,230.2969 L570.5,230.2969 A2.5,2.5 0 0 1 573,232.7969 L573,410.5 A2.5,2.5 0 0 1 570.5,413 L226.5,413 A2.5,2.5 0 0 1 224,410.5 L224,210.5 A2.5,2.5 0 0 1 226.5,208"
+         fill="#FFFFFF"
+         style="stroke:#000000;stroke-width:1;"
+         id="path10219" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1;"
+         x1="224"
+         x2="301.251"
+         y1="230.2969"
+         y2="230.2969"
+         id="line10221" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="230"
+         y="222.9951"
+         id="text10223"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">analysis</svg:text>
+    </svg:g>
+    <!--cluster misc-->
+    <svg:g
+       class="cluster"
+       data-entity="misc"
+       data-source-line="16"
+       data-uid="ent0013"
+       id="cluster_misc">
+      <svg:path
+         d="M118.5,453 L155.5186,453 A3.75,3.75 0 0 1 158.0186,455.5 L165.0186,475.2969 L670.5,475.2969 A2.5,2.5 0 0 1 673,477.7969 L673,556.5 A2.5,2.5 0 0 1 670.5,559 L118.5,559 A2.5,2.5 0 0 1 116,556.5 L116,455.5 A2.5,2.5 0 0 1 118.5,453"
+         fill="#FFFFFF"
+         style="stroke:#000000;stroke-width:1;"
+         id="path10226" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1;"
+         x1="116"
+         x2="165.0186"
+         y1="475.2969"
+         y2="475.2969"
+         id="line10228" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="124"
+         y="467.99509"
+         id="text10230"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold';letter-spacing:0px">misc</svg:text>
+    </svg:g>
+    <!--entity cli-->
+    <svg:g
+       class="entity"
+       data-entity="cli"
+       data-source-line="11"
+       data-uid="ent0008"
+       id="entity_cli">
+      <svg:path
+         d="M186.5,46 L217.3965,46 A3.75,3.75 0 0 1 219.8965,48.5 L226.8965,68.2969 L241.3965,68.2969 A2.5,2.5 0 0 1 243.8965,70.7969 L243.8965,82.7969 A2.5,2.5 0 0 1 241.3965,85.2969 L186.5,85.2969 A2.5,2.5 0 0 1 184,82.7969 L184,48.5 A2.5,2.5 0 0 1 186.5,46"
+         fill="#FFFFFF"
+         style="stroke:#000000;stroke-width:1;"
+         id="path10233" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1;"
+         x1="184"
+         x2="226.8965"
+         y1="68.2969"
+         y2="68.2969"
+         id="line10235" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="192"
+         y="61.995098"
+         id="text10237"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">cli</svg:text>
+    </svg:g>
+    <!--entity config-->
+    <svg:g
+       class="entity"
+       data-entity="config"
+       data-source-line="12"
+       data-uid="ent0009"
+       id="entity_config">
+      <svg:path
+         d="M111,350 L172.7949,350 A3.75,3.75 0 0 1 175.2949,352.5 L182.2949,372.2969 L196.7949,372.2969 A2.5,2.5 0 0 1 199.2949,374.7969 L199.2949,386.7969 A2.5,2.5 0 0 1 196.7949,389.2969 L111,389.2969 A2.5,2.5 0 0 1 108.5,386.7969 L108.5,352.5 A2.5,2.5 0 0 1 111,350"
+         fill="#FFFFFF"
+         style="stroke:#000000;stroke-width:1;"
+         id="path10240" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1;"
+         x1="108.5"
+         x2="182.2949"
+         y1="372.2969"
+         y2="372.2969"
+         id="line10242" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="116.5"
+         y="365.99509"
+         id="text10244"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">config</svg:text>
+    </svg:g>
+    <!--entity evaluation-->
+    <svg:g
+       class="entity"
+       data-entity="evaluation"
+       data-source-line="13"
+       data-uid="ent0010"
+       id="entity_evaluation">
+      <svg:path
+         d="M272,145 L368.3574,145 A3.75,3.75 0 0 1 370.8574,147.5 L377.8574,167.2969 L392.3574,167.2969 A2.5,2.5 0 0 1 394.8574,169.7969 L394.8574,181.7969 A2.5,2.5 0 0 1 392.3574,184.2969 L272,184.2969 A2.5,2.5 0 0 1 269.5,181.7969 L269.5,147.5 A2.5,2.5 0 0 1 272,145"
+         fill="#FFFFFF"
+         style="stroke:#000000;stroke-width:1;"
+         id="path10247" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1;"
+         x1="269.5"
+         x2="377.8574"
+         y1="167.2969"
+         y2="167.2969"
+         id="line10249" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="277.5"
+         y="160.9951"
+         id="text10251"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">evaluation</svg:text>
+    </svg:g>
+    <!--entity format-->
+    <svg:g
+       class="entity"
+       data-entity="format"
+       data-source-line="14"
+       data-uid="ent0011"
+       id="entity_format">
+      <svg:path
+         d="M67,251 L133.3408,251 A3.75,3.75 0 0 1 135.8408,253.5 L142.8408,273.2969 L157.3408,273.2969 A2.5,2.5 0 0 1 159.8408,275.7969 L159.8408,287.7969 A2.5,2.5 0 0 1 157.3408,290.2969 L67,290.2969 A2.5,2.5 0 0 1 64.5,287.7969 L64.5,253.5 A2.5,2.5 0 0 1 67,251"
+         fill="#FFFFFF"
+         style="stroke:#000000;stroke-width:1;"
+         id="path10254" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1;"
+         x1="64.5"
+         x2="142.8408"
+         y1="273.2969"
+         y2="273.2969"
+         id="line10256" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="72.5"
+         y="266.99509"
+         id="text10258"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">format</svg:text>
+    </svg:g>
+    <!--entity issues-->
+    <svg:g
+       class="entity"
+       data-entity="issues"
+       data-source-line="15"
+       data-uid="ent0012"
+       id="entity_issues">
+      <svg:path
+         d="M600,350 L662.2598,350 A3.75,3.75 0 0 1 664.7598,352.5 L671.7598,372.2969 L686.2598,372.2969 A2.5,2.5 0 0 1 688.7598,374.7969 L688.7598,386.7969 A2.5,2.5 0 0 1 686.2598,389.2969 L600,389.2969 A2.5,2.5 0 0 1 597.5,386.7969 L597.5,352.5 A2.5,2.5 0 0 1 600,350"
+         fill="#FFFFFF"
+         style="stroke:#000000;stroke-width:1;"
+         id="path10261" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1;"
+         x1="597.5"
+         x2="671.7598"
+         y1="372.2969"
+         y2="372.2969"
+         id="line10263" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="605.5"
+         y="365.99509"
+         id="text10265"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">issues</svg:text>
+    </svg:g>
+    <!--entity preprocessing-->
+    <svg:g
+       class="entity"
+       data-entity="preprocessing"
+       data-source-line="5"
+       data-uid="ent0004"
+       id="entity_preprocessing">
+      <svg:path
+         d="M269.5,251 L394.7119,251 A3.75,3.75 0 0 1 397.2119,253.5 L404.2119,273.2969 L418.7119,273.2969 A2.5,2.5 0 0 1 421.2119,275.7969 L421.2119,287.7969 A2.5,2.5 0 0 1 418.7119,290.2969 L269.5,290.2969 A2.5,2.5 0 0 1 267,287.7969 L267,253.5 A2.5,2.5 0 0 1 269.5,251"
+         fill="#FFFFFF"
+         style="stroke:#000000;stroke-width:1;"
+         id="path10268" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1;"
+         x1="267"
+         x2="404.2119"
+         y1="273.2969"
+         y2="273.2969"
+         id="line10270" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="275"
+         y="266.99509"
+         id="text10272"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">preprocessing</svg:text>
+    </svg:g>
+    <!--entity lexical-->
+    <svg:g
+       class="entity"
+       data-entity="lexical"
+       data-source-line="6"
+       data-uid="ent0005"
+       id="entity_lexical">
+      <svg:path
+         d="M459,251 L522.668,251 A3.75,3.75 0 0 1 525.168,253.5 L532.168,273.2969 L546.668,273.2969 A2.5,2.5 0 0 1 549.168,275.7969 L549.168,287.7969 A2.5,2.5 0 0 1 546.668,290.2969 L459,290.2969 A2.5,2.5 0 0 1 456.5,287.7969 L456.5,253.5 A2.5,2.5 0 0 1 459,251"
+         fill="#FFFFFF"
+         style="stroke:#000000;stroke-width:1;"
+         id="path10275" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1;"
+         x1="456.5"
+         x2="532.168"
+         y1="273.2969"
+         y2="273.2969"
+         id="line10277" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="464.5"
+         y="266.99509"
+         id="text10279"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">lexical</svg:text>
+    </svg:g>
+    <!--entity syntactic-->
+    <svg:g
+       class="entity"
+       data-entity="syntactic"
+       data-source-line="7"
+       data-uid="ent0006"
+       id="entity_syntactic"
+       transform="translate(-40)">
+      <svg:path
+         d="m 289.5,350 h 84.6543 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 289.5 a 2.5,2.5 0 0 1 -2.5,-2.5 V 352.5 a 2.5,2.5 0 0 1 2.5,-2.5"
+         fill="#ffffff"
+         style="stroke:#000000;stroke-width:1"
+         id="path10282" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1"
+         x1="287"
+         x2="383.6543"
+         y1="372.29691"
+         y2="372.29691"
+         id="line10284" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="295"
+         y="365.99509"
+         id="text10286"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">semantic</svg:text>
+    </svg:g>
+    <!--entity flow-->
+    <svg:g
+       class="entity"
+       data-entity="flow"
+       data-source-line="9"
+       data-uid="ent0007"
+       id="entity_flow"
+       transform="translate(37.051723)">
+      <svg:path
+         d="m 439,350 h 46.4414 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 439 a 2.5,2.5 0 0 1 -2.5,-2.5 V 352.5 A 2.5,2.5 0 0 1 439,350"
+         fill="#ffffff"
+         style="stroke:#000000;stroke-width:1"
+         id="path10289" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1"
+         x1="436.5"
+         x2="494.94141"
+         y1="372.29691"
+         y2="372.29691"
+         id="line10291" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="444.5"
+         y="365.99509"
+         id="text10293"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">flow</svg:text>
+    </svg:g>
+    <!--entity obsolete-->
+    <svg:g
+       class="entity"
+       data-entity="obsolete"
+       data-source-line="17"
+       data-uid="ent0014"
+       id="entity_obsolete"
+       transform="translate(-6)">
+      <svg:path
+         d="m 541.5,496 h 81.0723 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 541.5 a 2.5,2.5 0 0 1 -2.5,-2.5 V 498.5 a 2.5,2.5 0 0 1 2.5,-2.5"
+         fill="#ffffff"
+         style="stroke:#000000;stroke-width:1"
+         id="path10296" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1"
+         x1="539"
+         x2="632.07233"
+         y1="518.29688"
+         y2="518.29688"
+         id="line10298" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="547"
+         y="511.99509"
+         id="text10300"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">obsolete</svg:text>
+    </svg:g>
+    <!--entity parsers-->
+    <svg:g
+       class="entity"
+       data-entity="parsers"
+       data-source-line="18"
+       data-uid="ent0015"
+       id="entity_parsers"
+       transform="translate(-8)">
+      <svg:path
+         d="m 405,496 h 72.4385 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 405 a 2.5,2.5 0 0 1 -2.5,-2.5 V 498.5 A 2.5,2.5 0 0 1 405,496"
+         fill="#ffffff"
+         style="stroke:#000000;stroke-width:1"
+         id="path10303" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1"
+         x1="402.5"
+         x2="486.93851"
+         y1="518.29688"
+         y2="518.29688"
+         id="line10305" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="410.5"
+         y="511.99509"
+         id="text10307"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">parsers</svg:text>
+    </svg:g>
+    <!--entity utils-->
+    <svg:g
+       class="entity"
+       data-entity="utils"
+       data-source-line="19"
+       data-uid="ent0016"
+       id="entity_utils"
+       transform="translate(-10)">
+      <svg:path
+         d="m 293,496 h 47.5898 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 293 a 2.5,2.5 0 0 1 -2.5,-2.5 V 498.5 A 2.5,2.5 0 0 1 293,496"
+         fill="#ffffff"
+         style="stroke:#000000;stroke-width:1"
+         id="path10310" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1"
+         x1="290.5"
+         x2="350.08981"
+         y1="518.29688"
+         y2="518.29688"
+         id="line10312" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="298.5"
+         y="511.99509"
+         id="text10314"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">utils</svg:text>
+    </svg:g>
+    <!--entity ranges-->
+    <svg:g
+       class="entity"
+       data-entity="ranges"
+       data-source-line="20"
+       data-uid="ent0017"
+       id="entity_ranges"
+       transform="translate(-12)">
+      <svg:path
+         d="m 161.5,496 h 67.168 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 161.5 a 2.5,2.5 0 0 1 -2.5,-2.5 V 498.5 a 2.5,2.5 0 0 1 2.5,-2.5"
+         fill="#ffffff"
+         style="stroke:#000000;stroke-width:1"
+         id="path10317" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1"
+         x1="159"
+         x2="238.168"
+         y1="518.29688"
+         y2="518.29688"
+         id="line10319" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="167"
+         y="511.99509"
+         id="text10321"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">ranges</svg:text>
+    </svg:g>
+    <!--entity lpeg-->
+    <svg:g
+       class="entity"
+       data-entity="lpeg"
+       data-source-line="24"
+       data-uid="ent0018"
+       id="entity_lpeg">
+      <svg:path
+         d="M558.5,607 L605.8369,607 A3.75,3.75 0 0 1 608.3369,609.5 L615.3369,629.2969 L629.8369,629.2969 A2.5,2.5 0 0 1 632.3369,631.7969 L632.3369,643.7969 A2.5,2.5 0 0 1 629.8369,646.2969 L558.5,646.2969 A2.5,2.5 0 0 1 556,643.7969 L556,609.5 A2.5,2.5 0 0 1 558.5,607"
+         fill="#FFFFFF"
+         style="stroke:#000000;stroke-width:1;"
+         id="path10324" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1;"
+         x1="556"
+         x2="615.3369"
+         y1="629.2969"
+         y2="629.2969"
+         id="line10326" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="564"
+         y="622.99512"
+         id="text10328"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">lpeg</svg:text>
+    </svg:g>
+    <!--entity toml-->
+    <svg:g
+       class="entity"
+       data-entity="toml"
+       data-source-line="25"
+       data-uid="ent0019"
+       id="entity_toml">
+      <svg:path
+         d="M723.5,496 L772.1973,496 A3.75,3.75 0 0 1 774.6973,498.5 L781.6973,518.2969 L796.1973,518.2969 A2.5,2.5 0 0 1 798.6973,520.7969 L798.6973,532.7969 A2.5,2.5 0 0 1 796.1973,535.2969 L723.5,535.2969 A2.5,2.5 0 0 1 721,532.7969 L721,498.5 A2.5,2.5 0 0 1 723.5,496"
+         fill="#FFFFFF"
+         style="stroke:#000000;stroke-width:1;"
+         id="path10331" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1;"
+         x1="721"
+         x2="781.6973"
+         y1="518.2969"
+         y2="518.2969"
+         id="line10333" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="729"
+         y="511.99509"
+         id="text10335"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">toml</svg:text>
+    </svg:g>
+    <!--link analysis to config-->
+    <svg:g
+       class="link"
+       data-entity-1="analysis"
+       data-entity-2="config"
+       data-source-line="27"
+       data-uid="lnk20"
+       id="link_analysis_config">
+      <svg:path
+         d="m 223.9319,297.1544 c -15.73144,21.86626 -18.68751,51.8402 -34.1727,70.3124"
+         fill="none"
+         id="analysis-to-config"
+         style="stroke:url(#linearGradient7376);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
+         sodipodi:nodetypes="cc" />
+      <svg:polygon
+         fill="#000000"
+         points="177.24,371.4136 186.6499,368.5062 181.006,368.1246 181.3875,362.4806 "
+         style="stroke:#bfbfbf;stroke-width:1;fill:#bfbfbf;fill-opacity:1;stroke-opacity:1"
+         id="polygon10339"
+         transform="translate(8)" />
+    </svg:g>
+    <!--link analysis to issues-->
+    <svg:g
+       class="link"
+       data-entity-1="analysis"
+       data-entity-2="issues"
+       data-source-line="28"
+       data-uid="lnk21"
+       id="link_analysis_issues">
+      <svg:path
+         d="M573.1049,351.7634 C573.147,351.7727 573.1891,351.782 573.2312,351.7913 C573.3154,351.8099 573.3995,351.8285 573.4838,351.8472 C573.6522,351.8845 573.8207,351.9218 573.9893,351.9592 C574.3266,352.034 574.6641,352.109 575.002,352.1842 C575.6778,352.3346 576.3547,352.4857 577.0326,352.6376 C578.3883,352.9413 579.7475,353.2478 581.1075,353.5563 C586.5475,354.79 586.1596,354.6805 591.4496,355.9255"
+         fill="none"
+         id="analysis-to-issues"
+         style="stroke:url(#linearGradient7424);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1" />
+      <svg:polygon
+         fill="#000000"
+         points="597.29,357.3,589.4457,351.3446,592.423,356.1545,587.613,359.1318,597.29,357.3"
+         style="stroke:#bfbfbf;stroke-width:1;fill:#bfbfbf;fill-opacity:1;stroke-opacity:1"
+         id="polygon10343" />
+    </svg:g>
+    <!--link analysis to lpeg-->
+    <svg:g
+       class="link"
+       data-entity-1="analysis"
+       data-entity-2="lpeg"
+       data-source-line="29"
+       data-uid="lnk22"
+       id="link_analysis_lpeg">
+      <svg:path
+         d="M 572.98478,313.6282 C 621.11584,317.63752 669.21333,335.29754 705,350 c 58.16,24.31 84.29,30.39 112,87 31.65,64.67 47.81,108.17 0,162 -12.04,13.55 -118.3088,35.3721 -178.8088,38.6521"
+         fill="none"
+         id="analysis-to-lpeg"
+         style="stroke:url(#linearGradient7432);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
+         sodipodi:nodetypes="ccccc" />
+      <svg:polygon
+         fill="#000000"
+         points="632.2,645.9769 641.4033,649.4838 637.1927,645.7062 640.9703,641.4955 "
+         style="stroke:#bfbfbf;stroke-width:1;fill:#bfbfbf;fill-opacity:1;stroke-opacity:1"
+         id="polygon10347"
+         transform="translate(0,-8)" />
+    </svg:g>
+    <!--link analysis to misc-->
+    <svg:g
+       class="link"
+       data-entity-1="analysis"
+       data-entity-2="misc"
+       data-source-line="30"
+       data-uid="lnk23"
+       id="link_analysis_misc">
+      <svg:path
+         d="m 238.2101,413.4164 c -0.0479,0.1922 -0.0963,0.3833 -0.1453,0.5733 -0.098,0.3801 -0.1981,0.7557 -0.3006,1.1267 -1.6386,5.9369 -3.8504,10.7124 -6.7642,13.8836 -13.29,14.46 -57.12,-4.81 -72,8 -3.255,2.8013 -6.0003,6.0605 -8.3116,9.6257 -1.1557,1.7826 -2.2029,3.6417 -3.151,5.5582 -0.1185,0.2396 2.3536,-4.9325 2.2382,-4.6912"
+         fill="none"
+         id="analysis-to-misc"
+         style="stroke:url(#linearGradient7392);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
+         sodipodi:nodetypes="cscccssc" />
+      <svg:polygon
+         fill="#000000"
+         points="131.1865,452.9053 138.6785,446.5124 133.3441,448.3948 131.4617,443.0603 "
+         style="stroke:#bfbfbf;stroke-width:1;fill:#bfbfbf;fill-opacity:1;stroke-opacity:1"
+         id="polygon10351"
+         transform="translate(16)" />
+    </svg:g>
+    <!--link cli to analysis-->
+    <svg:g
+       class="link"
+       data-entity-1="cli"
+       data-entity-2="analysis"
+       data-source-line="32"
+       data-uid="lnk24"
+       id="link_cli_analysis">
+      <svg:path
+         d="m 222.44,85.18 6.5067,119.6003 0.1086,1.6241 0.0536,0.813"
+         fill="none"
+         id="cli-to-analysis"
+         style="stroke:url(#linearGradient7352);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
+         sodipodi:nodetypes="cccc" />
+      <svg:polygon
+         fill="#000000"
+         points="229.1354,207.6241,232.5418,198.383,228.8103,202.6346,224.5587,198.9032,229.1354,207.6241"
+         style="stroke:#bfbfbf;stroke-width:1;fill:#bfbfbf;fill-opacity:1;stroke-opacity:1"
+         id="polygon10355" />
+    </svg:g>
+    <!--link cli to evaluation-->
+    <svg:g
+       class="link"
+       data-entity-1="cli"
+       data-entity-2="evaluation"
+       data-source-line="33"
+       data-uid="lnk25"
+       id="link_cli_evaluation">
+      <svg:path
+         d="M236.75,85.2 C257.65,102.38 283.8144,123.8907 304.6844,141.0407"
+         fill="none"
+         id="cli-to-evaluation"
+         style="stroke:url(#linearGradient7312);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1" />
+      <svg:polygon
+         fill="#000000"
+         points="309.32,144.85,304.9061,136.0456,305.457,141.6756,299.827,142.2264,309.32,144.85"
+         style="stroke:#bfbfbf;stroke-width:1;fill:#bfbfbf;fill-opacity:1;stroke-opacity:1"
+         id="polygon10359" />
+    </svg:g>
+    <!--link cli to format-->
+    <svg:g
+       class="link"
+       data-entity-1="cli"
+       data-entity-2="format"
+       data-source-line="34"
+       data-uid="lnk26"
+       id="link_cli_format">
+      <svg:path
+         d="M204.59,85.23 C185.16,123.91 143.4938,206.8187 124.0838,245.4487"
+         fill="none"
+         id="cli-to-format"
+         style="stroke:url(#linearGradient7336);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1" />
+      <svg:polygon
+         fill="#000000"
+         points="121.39,250.81,129.0049,244.564,123.6349,246.3423,121.8566,240.9722,121.39,250.81"
+         style="stroke:#bfbfbf;stroke-width:1;fill:#bfbfbf;fill-opacity:1;stroke-opacity:1"
+         id="polygon10363" />
+    </svg:g>
+    <!--link cli to config-->
+    <svg:g
+       class="link"
+       data-entity-1="cli"
+       data-entity-2="config"
+       data-source-line="35"
+       data-uid="lnk27"
+       id="link_cli_config">
+      <svg:path
+         d="M211.68,85.19 C206.73,123.76 194.16,214.85 177,290 C172.26,310.77 167.01,328.4359 161.95,344.2359"
+         fill="none"
+         id="cli-to-config"
+         style="stroke:url(#linearGradient7344);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1" />
+      <svg:polygon
+         fill="#000000"
+         points="160.12,349.95,166.6744,342.5988,161.645,345.1882,159.0555,340.1588,160.12,349.95"
+         style="stroke:#bfbfbf;stroke-width:1;fill:#bfbfbf;fill-opacity:1;stroke-opacity:1"
+         id="polygon10367" />
+    </svg:g>
+    <!--link cli to issues-->
+    <svg:g
+       class="link"
+       data-entity-1="cli"
+       data-entity-2="issues"
+       data-source-line="36"
+       data-uid="lnk28"
+       id="link_cli_issues">
+      <svg:path
+         d="M 244.43,69.35 C 310.9,77.11 470.69,104.31 565,192 c 47.47,44.14 70.5706,116.89599 77.6406,152.47599"
+         fill="none"
+         id="cli-to-issues"
+         style="stroke:url(#linearGradient7304);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
+         sodipodi:nodetypes="ccc" />
+      <svg:polygon
+         fill="#000000"
+         points="638.8355,345.0659 634.1326,341.9222 639.81,349.97 641.9792,340.363 "
+         style="stroke:#bfbfbf;stroke-width:1;fill:#bfbfbf;fill-opacity:1;stroke-opacity:1"
+         id="polygon10371"
+         transform="translate(4)" />
+    </svg:g>
+    <!--link cli to misc-->
+    <svg:g
+       class="link"
+       data-entity-1="cli"
+       data-entity-2="misc"
+       data-source-line="37"
+       data-uid="lnk29"
+       id="link_cli_misc">
+      <svg:path
+         d="M 183.96,78.72 C -3.0225067,156.83267 20.427864,368.37136 100.9522,511.7947 c 3.1187,5.0885 6.0449,9.7025 8.6968,13.7838 1.326,2.0406 2.5834,3.9481 3.762,5.7152 0.5892,0.8835 1.1588,1.732 1.7074,2.5444 0.2743,0.4062 -2.8283,-4.1596 -2.5647,-3.7715"
+         fill="none"
+         id="cli-to-misc"
+         style="stroke:url(#linearGradient7328);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
+         sodipodi:nodetypes="ccsssc" />
+      <svg:polygon
+         fill="#000000"
+         points="107.5592,497.8329 115.9255,503.0296 114.1766,493.3372 113.1157,498.8937 "
+         style="stroke:#bfbfbf;stroke-width:1;fill:#bfbfbf;fill-opacity:1;stroke-opacity:1"
+         id="polygon10375"
+         transform="translate(0,32)" />
+    </svg:g>
+    <!--link config to toml-->
+    <svg:g
+       class="link"
+       data-entity-1="config"
+       data-entity-2="toml"
+       data-source-line="39"
+       data-uid="lnk30"
+       id="link_config_toml">
+      <svg:path
+         d="M177.06,389.21 C195.74,403.13 223.41,421.04 251,429 C295.2,441.76 621.81,421.15 665,437 C697.57,448.96 723.1368,472.6768 740.3468,491.5468"
+         fill="none"
+         id="config-to-toml"
+         style="stroke:url(#linearGradient7400);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1" />
+      <svg:polygon
+         fill="#000000"
+         points="744.39,495.98,741.2807,486.6348,741.0207,492.2857,735.3698,492.0257,744.39,495.98"
+         style="stroke:#bfbfbf;stroke-width:1;fill:#bfbfbf;fill-opacity:1;stroke-opacity:1"
+         id="polygon10379" />
+    </svg:g>
+    <!--link config to misc-->
+    <svg:g
+       class="link"
+       data-entity-1="config"
+       data-entity-2="misc"
+       data-source-line="40"
+       data-uid="lnk31"
+       id="link_config_misc">
+      <svg:path
+         d="M150.14,389.03 C148.145,398.6025 145.5487,411.0625 142.768,424.4091 C141.3776,431.0823 139.9411,437.9773 138.5105,444.8437 C138.1528,446.5603 137.7956,448.2752 137.4395,449.9843 C137.2615,450.8389 138.3075,445.8181 138.1301,446.6694"
+         fill="none"
+         id="config-to-misc"
+         style="stroke:url(#linearGradient7384);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1" />
+      <svg:polygon
+         fill="#000000"
+         points="136.9064,452.5433,142.6579,444.5483,137.9262,447.6484,134.8261,442.9166,136.9064,452.5433"
+         style="stroke:#bfbfbf;stroke-width:1;fill:#bfbfbf;fill-opacity:1;stroke-opacity:1"
+         id="polygon10383" />
+    </svg:g>
+    <!--link evaluation to analysis-->
+    <svg:g
+       class="link"
+       data-entity-1="evaluation"
+       data-entity-2="analysis"
+       data-source-line="42"
+       data-uid="lnk32"
+       id="link_evaluation_analysis">
+      <svg:path
+         d="M269.23,178.62 C262.43,182.09 256.13,186.47 251,192 C248.08,195.15 245.5886,198.6736 243.4648,202.4341 C242.9339,203.3742 242.4259,204.3292 241.9399,205.2968 C241.697,205.7806 241.4595,206.2675 241.2274,206.7574 C241.1114,207.0023 240.9967,207.248 240.8833,207.4944 C240.8266,207.6175 243.2484,202.2766 243.1924,202.4001"
+         fill="none"
+         id="evaluation-to-analysis"
+         style="stroke:url(#linearGradient7320);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1" />
+      <svg:polygon
+         fill="#000000"
+         points="240.7143,207.8644,248.0744,201.32,242.7794,203.3108,240.7886,198.0158,240.7143,207.8644"
+         style="stroke:#bfbfbf;stroke-width:1;fill:#bfbfbf;fill-opacity:1;stroke-opacity:1"
+         id="polygon10387" />
+    </svg:g>
+    <!--link format to config-->
+    <svg:g
+       class="link"
+       data-entity-1="format"
+       data-entity-2="config"
+       data-source-line="44"
+       data-uid="lnk33"
+       id="link_format_config">
+      <svg:path
+         d="M120.1,290.2 C127.54,307.38 136.1148,327.1945 143.5448,344.3445"
+         fill="none"
+         id="format-to-config"
+         style="stroke:url(#linearGradient7368);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1" />
+      <svg:polygon
+         fill="#000000"
+         points="145.93,349.85,146.0226,340.0016,143.9423,345.2621,138.6819,343.1818,145.93,349.85"
+         style="stroke:#bfbfbf;stroke-width:1;fill:#bfbfbf;fill-opacity:1;stroke-opacity:1"
+         id="polygon10391" />
+    </svg:g>
+    <!--link format to misc-->
+    <svg:g
+       class="link"
+       data-entity-1="format"
+       data-entity-2="misc"
+       data-source-line="45"
+       data-uid="lnk34"
+       id="link_format_misc">
+      <svg:path
+         d="m 97.5,290.25 c -23.09494,71.70261 -17.331736,130.66732 10.88155,194.965 1.785,4.0387 3.5253,7.7956 5.1435,11.1803 0.4046,0.8462 -1.8219,-3.727 -1.4338,-2.9288"
+         fill="none"
+         id="format-to-misc"
+         style="stroke:url(#linearGradient7360);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
+         sodipodi:nodetypes="ccsc" />
+      <svg:polygon
+         fill="#000000"
+         points="115.6053,489.0196 113.7569,494.3659 108.4106,492.5174 115.9431,498.8626 "
+         style="stroke:#bfbfbf;stroke-width:1;fill:#bfbfbf;fill-opacity:1;stroke-opacity:1"
+         id="polygon10395"
+         transform="translate(-1.2284482)" />
+    </svg:g>
+    <!--link obsolete to lpeg-->
+    <svg:g
+       class="link"
+       data-entity-1="obsolete"
+       data-entity-2="lpeg"
+       data-source-line="47"
+       data-uid="lnk35"
+       id="link_obsolete_lpeg">
+      <svg:path
+         d="M594,535.49 C594,555.49 594,580.81 594,600.73"
+         fill="none"
+         id="obsolete-to-lpeg"
+         style="stroke:url(#linearGradient7448);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1" />
+      <svg:polygon
+         fill="#000000"
+         points="594,606.73,598,597.73,594,601.73,590,597.73,594,606.73"
+         style="stroke:#bfbfbf;stroke-width:1;fill:#bfbfbf;fill-opacity:1;stroke-opacity:1"
+         id="polygon10399" />
+    </svg:g>
+    <!--link parsers to lpeg-->
+    <svg:g
+       class="link"
+       data-entity-1="parsers"
+       data-entity-2="lpeg"
+       data-source-line="48"
+       data-uid="lnk36"
+       id="link_parsers_lpeg">
+      <svg:path
+         d="M464.06,535.03 C475.99,553.58 496.59,581.76 521,599 C531.35,606.31 538.2755,609.8807 550.0655,613.9307"
+         fill="none"
+         id="parsers-to-lpeg"
+         style="stroke:url(#linearGradient7440);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1" />
+      <svg:polygon
+         fill="#000000"
+         points="555.74,615.88,548.5277,609.1731,551.0112,614.2556,545.9287,616.7391,555.74,615.88"
+         style="stroke:#bfbfbf;stroke-width:1;fill:#bfbfbf;fill-opacity:1;stroke-opacity:1"
+         id="polygon10403" />
+    </svg:g>
+    <!--SRC=[XP1BaiCW34Jtd8AvG8wGksWecQWY0uLmFfNotPF1O8lPPDaFeMxrJxdWZ3OnK30cWRk2HukFnEw2xcfVnjfE8G0_XQJ20wUCAKU78XJyyCBu80SyC7c60gwG-pevSRn_mAeIE2QjOfZ8Au0tu0KAnQ3W5FCCHG4IML0Kc4dSlvlYhqJ6WkEXa0Mp36mfn2F947nTlvhrQ9GJ-bsKEBCnUvsdqxdVCh0MT61rpq3-qXlpQQQg_hG3rKb7hP4kctMNpRNBjhxEL533AxqD73PZ3BEPQID5jh-zxEF0rlGEtW00]-->
+    <svg:g
+       class="entity"
+       data-entity="syntactic"
+       data-source-line="7"
+       data-uid="ent0006"
+       id="g18448"
+       transform="translate(60,-40)">
+      <svg:path
+         d="m 289.5,350 h 84.6543 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 289.5 a 2.5,2.5 0 0 1 -2.5,-2.5 V 352.5 a 2.5,2.5 0 0 1 2.5,-2.5"
+         fill="#ffffff"
+         style="stroke:#000000;stroke-width:1"
+         id="path18442" />
+      <svg:line
+         style="stroke:#000000;stroke-width:1"
+         x1="287"
+         x2="383.6543"
+         y1="372.29691"
+         y2="372.29691"
+         id="line18444" />
+      <svg:text
+         fill="#000000"
+         font-family="Verdana"
+         font-size="14px"
+         font-weight="bold"
+         x="295"
+         y="365.99509"
+         id="text18446"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">syntactic</svg:text>
+    </svg:g>
+  </svg:g>
+</svg:svg>

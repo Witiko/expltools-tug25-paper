@@ -1,0 +1,51 @@
+@startuml
+!theme plain
+
+package explcheck {
+  package analysis {
+    package preprocessing
+    package lexical
+    package syntactic
+    package semantic
+    package flow
+  }
+  package cli
+  package config
+  package evaluation
+  package format
+  package issues
+  package misc {
+    package obsolete
+    package parsers
+    package utils
+    package ranges
+  }
+}
+
+package lpeg
+package toml
+
+analysis ..> config
+analysis ..> issues
+analysis ..> lpeg
+analysis ..> misc
+
+cli ..> analysis
+cli ..> evaluation
+cli ..> format
+cli ..> config
+cli ..> issues
+cli ..> misc
+
+config ..> toml
+config ..> misc
+
+evaluation ..> analysis
+
+format ..> config
+format ..> misc
+
+obsolete ..> lpeg
+parsers ..> lpeg
+
+@enduml
