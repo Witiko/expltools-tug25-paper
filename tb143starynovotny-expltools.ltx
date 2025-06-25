@@ -69,7 +69,7 @@ In this article, we introduce \emph{expltools}\Dash a long-overdue addition to t
 Most modern programming languages\Dash whether interpreted or compiled\Dash share a broadly similar syntax, differing mainly in the specific keywords and symbols used to express language constructs. Even interpreted languages such as Lua, Python, and JavaScript often inherit their syntactic conventions from compiled languages like Pascal and C. This inheritance persists partly due to familiarity and momentum, but also because predictable syntax offers significant advantages for code performance and tooling.
 
 \subsection{Why predictable syntax matters}
-% TODO: Add an index at the end of the article for all terms defined via \emph.
+% TODO: Add an index at the end of the article for all terms defined via \emph and \acro.
 One key advantage of predictable syntax is that it enables \emph{static analysis}\Dash automated reasoning about code without running it. Static analysis underpins many tools that help developers write, understand, and improve their code.
 
 Text editors, for example, can offer smarter features thanks to predictable syntax. Even simple syntax highlighting\Dash using different colors for keywords, variables, and comments\Dash makes the code structure easier to read. Going further, editors can index the names and types of variables, functions, and other objects, enabling smarter code completion, more accurate navigation, and robust search across a project. With deeper static analysis, they can even support complex refactoring\Dash such as renaming a variable consistently across its entire scope.
@@ -342,15 +342,47 @@ Removing these constraints would require a major redesign. Section~\ref{sec:futu
 
 In this section, we present a high-level overview of the implementation. Section~\ref{sec:modules-and-dependencies} details the Lua modules and their dependencies. Section~\ref{sec:components} introduces the core components and explains how they interact. Section~\ref{sec:data-model} defines the analysis data model, outlining its entities and relationships.
 
+\subsection{Modules and dependencies}
+\label{sec:modules-and-dependencies}
+
 \begin{figure*}
 \input images/package-diagram
 \caption{Package diagram of \emph{explcheck}, illustrating the structure and dependencies among its 14 internal Lua modules, plus two external libraries.}
 \label{fig:package-diagram}
 \end{figure*}
 
-\subsection{Modules and dependencies}
-\label{sec:modules-and-dependencies}
-% Outline the different Lua modules, using a UML package diagram as a visual aid.
+Figure~\ref{fig:package-diagram} shows a package diagram of \emph{explcheck}. Starting from top of the diagram, here are the individual packages below the top-level package \texttt{explcheck} and what they do:
+
+\begin{itemize}
+\item The package \texttt{cli} implements the command-line interface of \emph{explcheck}.
+\item The package \texttt{evaluation} computes summary statistics from the analysis results, to be displayed in verbose command-line output.
+\item The package \texttt{analysis} performs the processing steps from Section~\ref{sec:processing-steps}.
+\item The package \texttt{format} formats text that is displayed on the command-line output.
+\item The package \texttt{config} provides access to the configuration of \emph{explcheck}. The configuration consists of the command-line options, the default config file \texttt{explcheck-config.toml}, and the user config file \texttt{.explcheckrc}.
+\item The package \texttt{issues} implements a registry of all issues detected during the analysis.
+\item The package \texttt{misc} provides various low-level data types and helper functions that are used by the other more high-level packages. Namely:
+\begin{itemize}
+\item The package \texttt{misc.ranges} implements a data type for representing ranges of bytes, tokens, calls, and statements.
+\item The package \texttt{misc.utils} parsers various helper functions.
+\item The package \texttt{misc.parsers} defines \acro{LPEG} parsers for pattern-matching on parts of the expl3 syntax.
+\item The package \texttt{misc.parsers} contains \acro{LPEG} parsers and other information extracted from \LaTeX3 data files.
+\end{itemize}
+\end{itemize}
+
+Besides these, there are also two external packages in the diagram:
+\begin{itemize}
+\item The package \texttt{toml}~\cite{stoler2017toml} reads the config files of \emph{explcheck}. It is distributed in a Lua module named \texttt{explcheck-toml.lua}.
+\item The library \acro{LPEG} for pattern-matching, which is included with Lua\TeX.
+\end{itemize}
+
+While the \TeX{} directory structure is hierarchical, this hierarchy is seldom exposed. Users load \TeX{} packages, fonts, and Lua modules by name, leaving the task of finding the corresponding files to the \TeX{} installation.
+
+For this reason, the above package names are only logical and map to Lua modules that are all organized in a single directory with all hierarchical information stored in the filename as follows: All leaf packages \meta{package name} map to Lua module files named \texttt{explcheck-}\meta{package name}\texttt{.lua}. For example, the package \texttt{misc.latex3} is implemented in the file \texttt{explcheck-latex3.lua}.
+
+The only exception is package \texttt{analysis}, where the files are named \texttt{explcheck-preprocessing.lua} and \texttt{explcheck-\meta{type}-analysis.lua}, where \meta{type} is \texttt{lexical}, \texttt{syntactic}, \texttt{semantic}, or \texttt{flow}. For example, the package \texttt{analysis.semantic} is implemented in file \texttt{explcheck-semantic-analysis.lua}.
+
+\vfill
+
 \subsection{Components}
 \label{sec:components}
 % Describe the file system, options, processing steps, issue registry, etc., with a component diagram.
