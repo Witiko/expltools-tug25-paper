@@ -1,0 +1,51 @@
+@startuml
+!theme plain
+
+package analysis
+package cli
+package config
+package evaluation
+package format
+package issues
+'package misc
+
+database filesystem
+
+actor user
+actor "text editor"
+
+filesystem -r-() "file content"
+analysis -l-( "file content"
+config -u-( "file content"
+
+config -r-() options
+analysis -d-( options
+issues -u-( options
+
+issues -r-() "warnings\nand errors"
+analysis -d-( "warnings\nand errors"
+cli -l-( "warnings\nand errors"
+
+format -l-() formatting
+cli -r-( formatting
+
+'misc -r-() patterns
+'analysis -u-( patterns
+
+analysis -r-() "analysis\nresults"
+evaluation -l-( "analysis\nresults"
+cli -u-( "analysis\nresults"
+
+evaluation -d-() "evaluation\nresults"
+cli -u-( "evaluation\nresults"
+
+cli -d-() "command-line\noptions"
+config -r-( "command-line\noptions"
+
+cli -d-() "formatted\nresults"
+user -l-( "formatted\nresults"
+
+cli -d-() errorformat
+"text editor" -l-( errorformat
+
+@enduml

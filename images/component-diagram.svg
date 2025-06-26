@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   contentStyleType="text/css"
+   data-diagram-type="DESCRIPTION"
+   height="312.97046"
+   preserveAspectRatio="none"
+   version="1.1"
+   viewBox="0 0 669.98236 312.97046"
+   width="669.98236"
+   zoomAndPan="magnify"
+   id="svg194"
+   sodipodi:docname="component-diagram.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview196"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="2.9148856"
+     inkscape:cx="520.08902"
+     inkscape:cy="233.97144"
+     inkscape:window-width="1854"
+     inkscape:window-height="1011"
+     inkscape:window-x="1026"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="entity_user"
+     showguides="true">
+    <sodipodi:guide
+       position="307.79644,269.755"
+       orientation="0,-1"
+       id="guide508"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="354.62503,295.82807"
+       orientation="0,-1"
+       id="guide742"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="336.78557,190.84967"
+       orientation="0,-1"
+       id="guide509"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="241.39953,98.385497"
+       orientation="0,-1"
+       id="guide617"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="424.26756,84.155947"
+       orientation="0,-1"
+       id="guide619"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="481.20604,52.278897"
+       orientation="0,-1"
+       id="guide928"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="594.61441,41.119997"
+       orientation="0,-1"
+       id="guide1128"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="502.82982,112.63048"
+       orientation="0,-1"
+       id="guide1266"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="311.28833,12.614537"
+       orientation="0,-1"
+       id="guide1268"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="467.25675,221.0286"
+       orientation="0,-1"
+       id="guide827"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="597.96514,106.10128"
+       orientation="1,0"
+       id="guide1843"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     class="entity"
+     data-entity="analysis"
+     data-source-line="3"
+     data-uid="ent0002"
+     id="entity_analysis"
+     transform="translate(49.5,-13.5)">
+    <path
+       d="m 198.5,14 h 77.251 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 198.5 a 2.5,2.5 0 0 1 -2.5,-2.5 V 16.5 a 2.5,2.5 0 0 1 2.5,-2.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path4" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="196"
+       x2="285.25101"
+       y1="36.296902"
+       y2="36.296902"
+       id="line6" />
+    <text
+       fill="#000000"
+       font-family="'CMU Typewriter Text'"
+       font-size="14px"
+       font-weight="bold"
+       x="204"
+       y="29.9951"
+       id="text8">analysis</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="cli"
+     data-source-line="4"
+     data-uid="ent0003"
+     id="entity_cli"
+     transform="translate(-44.5,-82.755468)">
+    <path
+       d="m 368.5,266 h 30.8965 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 368.5 a 2.5,2.5 0 0 1 -2.5,-2.5 V 268.5 a 2.5,2.5 0 0 1 2.5,-2.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path11" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="366"
+       x2="408.89651"
+       y1="288.29691"
+       y2="288.29691"
+       id="line13" />
+    <text
+       fill="#000000"
+       font-family="'CMU Typewriter Text'"
+       font-size="14px"
+       font-weight="bold"
+       x="374"
+       y="281.99509"
+       id="text15">cli</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="config"
+     data-source-line="5"
+     data-uid="ent0004"
+     id="entity_config"
+     transform="translate(-90.5,-42.755468)">
+    <path
+       d="m 99,141.5 h 61.7949 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 99 a 2.5,2.5 0 0 1 -2.5,-2.5 V 144 a 2.5,2.5 0 0 1 2.5,-2.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path18" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="96.5"
+       x2="170.29491"
+       y1="163.79691"
+       y2="163.79691"
+       id="line20" />
+    <text
+       fill="#000000"
+       font-family="'CMU Typewriter Text'"
+       font-size="14px"
+       font-weight="bold"
+       x="104.5"
+       y="157.4951"
+       id="text22">config</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="evaluation"
+     data-source-line="6"
+     data-uid="ent0005"
+     id="entity_evaluation"
+     transform="translate(109.5,5.244532)">
+    <path
+       d="m 402,14 h 96.3574 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 402 a 2.5,2.5 0 0 1 -2.5,-2.5 V 16.5 A 2.5,2.5 0 0 1 402,14"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path25" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="399.5"
+       x2="507.85739"
+       y1="36.296902"
+       y2="36.296902"
+       id="line27" />
+    <text
+       fill="#000000"
+       font-family="'CMU Typewriter Text'"
+       font-size="14px"
+       font-weight="bold"
+       x="407.5"
+       y="29.9951"
+       id="text29">evaluation</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="format"
+     data-source-line="7"
+     data-uid="ent0006"
+     id="entity_format"
+     transform="translate(49.5,-168.75547)">
+    <path
+       d="m 517,266 h 66.3408 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 517 a 2.5,2.5 0 0 1 -2.5,-2.5 V 268.5 A 2.5,2.5 0 0 1 517,266"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path32" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="514.5"
+       x2="592.84082"
+       y1="288.29691"
+       y2="288.29691"
+       id="line34" />
+    <text
+       fill="#000000"
+       font-family="'CMU Typewriter Text'"
+       font-size="14px"
+       font-weight="bold"
+       x="522.5"
+       y="281.99509"
+       id="text36">format</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="issues"
+     data-source-line="8"
+     data-uid="ent0007"
+     id="entity_issues"
+     transform="translate(-90.5,-82.755468)">
+    <path
+       d="m 189,266 h 62.2598 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 189 a 2.5,2.5 0 0 1 -2.5,-2.5 V 268.5 A 2.5,2.5 0 0 1 189,266"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path39" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="186.5"
+       x2="260.7598"
+       y1="288.29691"
+       y2="288.29691"
+       id="line41" />
+    <text
+       fill="#000000"
+       font-family="'CMU Typewriter Text'"
+       font-size="14px"
+       font-weight="bold"
+       x="194.5"
+       y="281.99509"
+       id="text43">issues</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="filesystem"
+     data-source-line="11"
+     data-uid="ent0008"
+     id="entity_filesystem"
+     transform="translate(-10.5,-2.7554681)">
+    <path
+       d="m 11,21 c 0,-10 45.9673,-10 45.9673,-10 0,0 45.9673,0 45.9673,10 v 25.2969 c 0,10 -45.9673,10 -45.9673,10 0,0 -45.9673,0 -45.9673,-10 V 21"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path46" />
+    <path
+       d="m 11,21 c 0,10 45.9673,10 45.9673,10 0,0 45.9673,0 45.9673,-10"
+       fill="none"
+       style="stroke:#000000;stroke-width:1"
+       id="path48" />
+    <text
+       fill="#000000"
+       font-family="'CMU Serif'"
+       font-size="14px"
+       x="27.686132"
+       y="45.995098"
+       id="text50">filesystem</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="user"
+     data-source-line="13"
+     data-uid="ent0009"
+     id="entity_user"
+     transform="translate(61.5,-202.75547)">
+    <circle
+       cx="536.76813"
+       cy="374"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse53"
+       r="8" />
+    <path
+       d="m 536.7681,382 v 27 m -13,-19 h 26 m -13,19 -13,15 m 13,-15 13,15"
+       fill="none"
+       style="stroke:#000000;stroke-width:1"
+       id="path55" />
+    <text
+       fill="#000000"
+       font-family="'CMU Serif'"
+       font-size="14px"
+       x="516.41101"
+       y="438.99509"
+       id="text57">person</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="text editor"
+     data-source-line="14"
+     data-uid="ent0010"
+     id="entity_text editor"
+     transform="translate(241.5,-138.81386)">
+    <circle
+       cx="395.7637"
+       cy="374"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse60"
+       r="8" />
+    <path
+       d="m 395.7637,382 v 27 m -13,-19 h 26 m -13,19 -13,15 m 13,-15 13,15"
+       fill="none"
+       style="stroke:#000000;stroke-width:1"
+       id="path62" />
+    <text
+       fill="#000000"
+       font-family="'CMU Serif'"
+       font-size="14px"
+       x="363.97034"
+       y="438.99509"
+       id="text64">text editor</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="file content"
+     data-source-line="16"
+     data-uid="ent0011"
+     id="entity_file content"
+     transform="translate(29.5,-2.7554681)">
+    <circle
+       cx="139"
+       cy="33.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse67"
+       r="8" />
+    <text
+       fill="#000000"
+       font-family="'CMU Serif'"
+       font-size="14px"
+       x="105.314"
+       y="17.495098"
+       id="text69">file content</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="options"
+     data-source-line="20"
+     data-uid="ent0017"
+     id="entity_options"
+     transform="translate(-64.5,-42.755468)">
+    <circle
+       cx="232"
+       cy="161"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse72"
+       r="8" />
+    <text
+       fill="#000000"
+       font-family="'CMU Serif'"
+       font-size="14px"
+       x="246.21831"
+       y="164.9951"
+       id="text74">options</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="warnings\nand errors"
+     data-source-line="24"
+     data-uid="ent0022"
+     id="entity_warnings\nand errors"
+     transform="translate(-70.5,-82.755468)">
+    <circle
+       cx="322"
+       cy="283.44162"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse77"
+       r="8" />
+    <text
+       fill="#000000"
+       font-family="'CMU Serif'"
+       font-size="14px"
+       x="321.86331"
+       y="306.75058"
+       id="text79"
+       style="line-height:1"><tspan
+         sodipodi:role="line"
+         id="tspan621"
+         x="321.86331"
+         y="306.75058"
+         style="text-align:center;text-anchor:middle">warnings</tspan><tspan
+         sodipodi:role="line"
+         id="tspan623"
+         x="321.86331"
+         y="320.75058"
+         style="text-align:center;text-anchor:middle">and errors</tspan></text>
+  </g>
+  <g
+     class="entity"
+     data-entity="formatting"
+     data-source-line="28"
+     data-uid="ent0027"
+     id="entity_formatting"
+     transform="translate(-10.5,-148.75547)">
+    <circle
+       cx="504"
+       cy="285.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse84"
+       r="8" />
+    <text
+       fill="#000000"
+       font-family="'CMU Serif'"
+       font-size="14px"
+       x="471.63873"
+       y="309.49509"
+       id="text86">formatting</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="analysis\nresults"
+     data-source-line="34"
+     data-uid="ent0031"
+     id="entity_analysis\nresults"
+     transform="translate(73.5,-2.7554681)">
+    <circle
+       cx="355"
+       cy="33.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse89"
+       r="8" />
+    <text
+       fill="#000000"
+       font-family="'CMU Serif'"
+       font-size="14px"
+       x="308.67242"
+       y="17.586231"
+       id="text91">analysis results</text>
+  </g>
+  <g
+     class="entity"
+     data-entity="evaluation\nresults"
+     data-source-line="38"
+     data-uid="ent0037"
+     id="entity_evaluation\nresults"
+     transform="translate(-58.5,-68.755468)">
+    <circle
+       cx="442"
+       cy="161"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse96"
+       r="8" />
+    <text
+       fill="#000000"
+       font-family="'CMU Serif'"
+       font-size="14px"
+       x="458.26196"
+       y="159.05348"
+       id="text98"
+       style="line-height:1"><tspan
+         sodipodi:role="line"
+         id="tspan613"
+         x="458.26196"
+         y="159.05348"
+         dy="0">evaluation</tspan><tspan
+         sodipodi:role="line"
+         id="tspan615"
+         x="458.26196"
+         y="173.05348">results</tspan></text>
+  </g>
+  <g
+     class="entity"
+     data-entity="command-line\noptions"
+     data-source-line="41"
+     data-uid="ent0041"
+     id="entity_command-line\noptions"
+     transform="translate(-70.5,-70.755468)">
+    <circle
+       cx="238"
+       cy="343.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse103"
+       r="8" />
+    <text
+       fill="#000000"
+       font-family="'CMU Serif'"
+       font-size="14px"
+       x="238.24582"
+       y="367.00992"
+       id="text105"
+       style="line-height:1"><tspan
+         sodipodi:role="line"
+         id="tspan680"
+         x="238.24582"
+         y="367.00992"
+         style="text-align:center;text-anchor:middle">command-line</tspan><tspan
+         sodipodi:role="line"
+         id="tspan682"
+         x="238.24582"
+         y="381.00992"
+         style="text-align:center;text-anchor:middle">options</tspan></text>
+  </g>
+  <g
+     class="entity"
+     data-entity="formatted\nresults"
+     data-source-line="44"
+     data-uid="ent0044"
+     id="entity_formatted\nresults"
+     transform="translate(21.5,-201.78513)">
+    <circle
+       cx="477"
+       cy="403.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse110"
+       r="8" />
+    <text
+       fill="#000000"
+       font-family="'CMU Serif'"
+       font-size="14px"
+       x="477.07721"
+       y="427.49509"
+       id="text112"
+       style="line-height:1"><tspan
+         sodipodi:role="line"
+         id="tspan924"
+         x="477.07721"
+         y="427.49509"
+         style="text-align:center;text-anchor:middle">human-readable</tspan><tspan
+         sodipodi:role="line"
+         id="tspan926"
+         x="477.07721"
+         y="441.49509"
+         style="text-align:center;text-anchor:middle">results</tspan></text>
+  </g>
+  <g
+     class="entity"
+     data-entity="errorformat"
+     data-source-line="47"
+     data-uid="ent0048"
+     id="entity_errorformat"
+     transform="translate(221.5,-130.75547)">
+    <circle
+       cx="271"
+       cy="403.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse117"
+       r="8" />
+    <text
+       fill="#000000"
+       font-family="'CMU Serif'"
+       font-size="14px"
+       x="270.95282"
+       y="426.75058"
+       id="text119"
+       style="line-height:1"><tspan
+         sodipodi:role="line"
+         id="tspan684"
+         x="270.95282"
+         y="426.75058"
+         style="text-align:center;text-anchor:middle">machine-readable</tspan><tspan
+         sodipodi:role="line"
+         id="tspan686"
+         x="270.95282"
+         y="440.75058"
+         style="text-align:center;text-anchor:middle">results</tspan></text>
+  </g>
+  <g
+     class="link"
+     data-entity-1="filesystem"
+     data-entity-2="file content"
+     data-source-line="16"
+     data-uid="lnk12"
+     id="link_filesystem_file content"
+     transform="translate(9.5,-2.7554681)">
+    <path
+       d="m 83.05,33.5 h 67.9081"
+       fill="none"
+       id="filesystem-file content"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="file content"
+     data-entity-2="analysis"
+     data-source-line="17"
+     data-uid="lnk14"
+     id="link_file content_analysis"
+     transform="translate(9.5,-2.7554681)">
+    <path
+       d="M 177.30233,33.5 235.69,33.4416"
+       fill="none"
+       id="file content-backto-analysis"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="m 171.2382,41.9572 a 9,9 0 0 0 0,-16.9144"
+       fill="none"
+       style="stroke:#000000;stroke-width:1.5"
+       id="path125" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="file content"
+     data-entity-2="config"
+     data-source-line="18"
+     data-uid="lnk16"
+     id="link_file content_config"
+     transform="translate(9.5,-2.7554681)">
+    <path
+       d="M 157.90842,52.115639 C 158.98282,93.922993 42.886413,58.791275 42.75,101.25"
+       fill="none"
+       id="file content-backto-config"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="m 150.097,45.4694 a 9,9 0 0 0 16.9011,0.6727"
+       fill="none"
+       style="stroke:#000000;stroke-width:1.5"
+       id="path129" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="config"
+     data-entity-2="options"
+     data-source-line="20"
+     data-uid="lnk18"
+     id="link_config_options"
+     transform="translate(-70.5,-42.755468)">
+    <path
+       d="M 167.7,172.02465 C 207.01,172.18442 196.55866,160.98641 230.11551,161"
+       fill="none"
+       id="config-options"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="analysis"
+     data-entity-2="options"
+     data-source-line="21"
+     data-uid="lnk19"
+     id="link_analysis_options"
+     transform="translate(9.5,-2.7554681)">
+    <path
+       d="M 286.49,42.413538 C 280.79496,85.642733 163.72621,65.627008 160.4253,102.5955"
+       fill="none"
+       id="analysis-to-options"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="m 167.8745,110.0776 c -1.78543,-8.21062 -12.85075,-9.71296 -16.7607,-2.2756"
+       fill="none"
+       style="stroke:#000000;stroke-width:1.5"
+       id="path135"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="options"
+     data-entity-2="issues"
+     data-source-line="22"
+     data-uid="lnk21"
+     id="link_options_issues"
+     transform="translate(-70.5,-42.755468)">
+    <path
+       d="m 238,179.5254 c 1.1416,38.73805 -45.87328,13.49324 -46,46.2146"
+       fill="none"
+       id="options-backto-issues"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="m 229.5428,173.1182 a 9,9 0 0 0 16.9144,0"
+       fill="none"
+       style="stroke:#000000;stroke-width:1.5"
+       id="path139" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="issues"
+     data-entity-2="warnings\nand errors"
+     data-source-line="24"
+     data-uid="lnk23"
+     id="link_issues_warnings\nand errors"
+     transform="translate(-70.5,-82.755468)">
+    <path
+       d="m 257.7,297.31173 c 26.49848,0 24.64211,-14.35246 56.41551,-14.3553"
+       fill="none"
+       id="issues-warnings\nand errors"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="analysis"
+     data-entity-2="warnings\nand errors"
+     data-source-line="25"
+     data-uid="lnk24"
+     id="link_analysis_warnings\nand errors"
+     transform="translate(9.5,-2.7554681)">
+    <path
+       d="m 324.49,42.683538 c 14.79,50.65 -102.15962,93.629182 -88.36005,142.876512"
+       fill="none"
+       id="analysis-to-warnings\nand errors"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="m 246.9158,189.10681 c -4.97131,-6.77418 -15.69085,-3.64482 -16.2368,4.74"
+       fill="none"
+       style="stroke:#000000;stroke-width:1.5"
+       id="path145"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="warnings\nand errors"
+     data-entity-2="cli"
+     data-source-line="26"
+     data-uid="lnk26"
+     id="link_warnings\nand errors_cli"
+     transform="translate(-70.5,-82.755468)">
+    <path
+       d="M 340.2208,283.44161 H 391.9"
+       fill="none"
+       id="warnings\nand errors-backto-cli"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="m 334.3282,291.89881 a 9,9 0 0 0 0,-16.9144"
+       fill="none"
+       style="stroke:#000000;stroke-width:1.5"
+       id="path149" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="formatting"
+     data-entity-2="format"
+     data-source-line="28"
+     data-uid="lnk29"
+     id="link_formatting_format"
+     transform="translate(-10.5,-148.75547)">
+    <path
+       d="m 511.96773,285.5 c 26.9314,-0.30307 31.33919,-18.30059 62.07682,-20.02415"
+       fill="none"
+       id="formatting-format"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="cli"
+     data-entity-2="formatting"
+     data-source-line="29"
+     data-uid="lnk30"
+     id="link_cli_formatting"
+     transform="translate(-70.5,-82.755468)">
+    <path
+       d="M 431.19207,277.52832 C 459.55664,277.69284 485.73836,214.79263 545.57905,219.5"
+       fill="none"
+       id="cli-to-formatting"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="m 551.6518,211.0428 a 9,9 0 0 0 0,16.9144"
+       fill="none"
+       style="stroke:#000000;stroke-width:1.5"
+       id="path155" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="analysis"
+     data-entity-2="analysis\nresults"
+     data-source-line="34"
+     data-uid="lnk32"
+     id="link_analysis_analysis\nresults"
+     transform="translate(49.5,-2.7554681)">
+    <path
+       d="M 302,33.7385 371.34551,33.5"
+       fill="none"
+       id="analysis-analysis\nresults"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="analysis\nresults"
+     data-entity-2="evaluation"
+     data-source-line="35"
+     data-uid="lnk34"
+     id="link_analysis\nresults_evaluation"
+     transform="translate(9.5,-2.7554681)">
+    <path
+       d="M 437.22966,33.5 H 499.34"
+       fill="none"
+       id="analysis\nresults-backto-evaluation"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="m 431.2782,41.9572 a 9,9 0 0 0 0,-16.9144"
+       fill="none"
+       style="stroke:#000000;stroke-width:1.5"
+       id="path161" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="evaluation"
+     data-entity-2="evaluation\nresults"
+     data-source-line="38"
+     data-uid="lnk38"
+     id="link_evaluation_evaluation\nresults"
+     transform="translate(9.5,-2.7554681)">
+    <path
+       d="m 499.48538,52.182558 c -95.3598,0.285338 -108.23324,7.665705 -122.00323,35.579026"
+       fill="none"
+       id="evaluation-evaluation\nresults"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="evaluation\nresults"
+     data-entity-2="cli"
+     data-source-line="39"
+     data-uid="lnk40"
+     id="link_evaluation\nresults_cli"
+     transform="translate(-70.5,-42.755468)">
+    <path
+       d="m 445.23651,151.83063 c -12.21913,20.15778 -9.48843,50.28345 -27.90457,74.10929"
+       fill="none"
+       id="evaluation\nresults-backto-cli"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="m 440.7645,142.7393 a 9,9 0 0 0 14.8914,8.0214"
+       fill="none"
+       style="stroke:#000000;stroke-width:1.5"
+       id="path171" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="cli"
+     data-entity-2="command-line\noptions"
+     data-source-line="41"
+     data-uid="lnk42"
+     id="link_cli_command-line\noptions"
+     transform="translate(-70.5,-82.755468)">
+    <path
+       d="m 402.17,305.11 c -42.52469,54.62388 -62.67181,18.27823 -157.04767,47.08974"
+       fill="none"
+       id="cli-command-line\noptions"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="config"
+     data-entity-2="command-line\noptions"
+     data-source-line="42"
+     data-uid="lnk43"
+     id="link_config_command-line\noptions"
+     transform="translate(-70.5,-42.755468)">
+    <path
+       d="m 143,180.79 c 2.04,28.06 -35.68697,53.25913 -17.82697,95.35913 15.55,36.65 50.78599,39.80576 94.22467,39.2242"
+       fill="none"
+       id="config-to-command-line\noptions"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="ccc" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="cli"
+     data-entity-2="formatted\nresults"
+     data-source-line="44"
+     data-uid="lnk45"
+     id="link_cli_formatted\nresults"
+     transform="translate(-70.5,-82.755468)">
+    <path
+       d="m 435.14,305.2 c 53.78305,30.57961 56.52425,-32.18628 126.02569,-23.01045"
+       fill="none"
+       id="cli-formatted\nresults"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="formatted\nresults"
+     data-entity-2="user"
+     data-source-line="45"
+     data-uid="lnk47"
+     id="link_formatted\nresults_user"
+     transform="translate(21.5,-202.75547)">
+    <path
+       d="m 495.40966,403.5 c 32.09581,1.3792 27.26775,-9.98223 61.77034,-10"
+       fill="none"
+       id="formatted\nresults-backto-user"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="m 489.4582,411.9572 a 9,9 0 0 0 0,-16.9144"
+       fill="none"
+       style="stroke:#000000;stroke-width:1.5"
+       id="path183" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="cli"
+     data-entity-2="errorformat"
+     data-source-line="47"
+     data-uid="lnk49"
+     id="link_cli_errorformat"
+     transform="translate(-70.5,-82.755468)">
+    <path
+       d="m 420.86,305.2 c 20.93471,69.04789 115.58795,11.04458 137.67343,43.52466"
+       fill="none"
+       id="cli-errorformat"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     class="link"
+     data-entity-1="errorformat"
+     data-entity-2="text editor"
+     data-source-line="48"
+     data-uid="lnk51"
+     id="link_errorformat_text editor"
+     transform="translate(221.5,-130.75547)">
+    <path
+       d="m 289.32233,403.5 c 78.79101,0.77134 24.99424,-18.58915 107.64767,-18"
+       fill="none"
+       id="errorformat-backto-text editor"
+       style="stroke:#000000;stroke-width:1"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="m 283.2582,411.9572 a 9,9 0 0 0 0,-16.9144"
+       fill="none"
+       style="stroke:#000000;stroke-width:1.5"
+       id="path189" />
+  </g>
+  <path
+     d="m 155.1867,264.29645 a 9,9 0 0 0 0,16.9144"
+     fill="none"
+     style="stroke:#000000;stroke-width:1.5"
+     id="path155-3" />
+</svg>

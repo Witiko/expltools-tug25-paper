@@ -51,6 +51,7 @@
 % - The introduction and outline appear side by side.
 % - Figure 2 and sections 4.2 through 4.4 appear side by side.
 % - Figure 3 and Sections 5.1 appear side by side.
+% - Figure 4 and Sections 5.2 appear side by side.
 %
 % That said, no worries if it doesn't work out\Dash I'm sure the article will still look great, thanks in no small part to your careful editing.
 
@@ -105,7 +106,7 @@ Scoping remains dynamic in expl3, but the language encourages the use of functio
 While these conventions are not enforced by the runtime, many expl3 packages adopt them, making the syntax more predictable and amenable to static analysis. Despite this, there was no editor support, linter, or other static tooling available for expl3 as recently as a year ago.
 
 \subsection{Toward better tooling for expl3}
-Between April and August 2024, we published a series of blog posts on the static analysis of expl3~\cite{starynovotny2024statica, starynovotny2024staticb, starynovotny2024staticc, starynovotny2024staticd}, culminating in a proposal for a year-long project to develop \emph{explcheck}\Dash an expl3 linter\Dash submitted to the \TeX{} Development Fund in September~\cite{starynovotny2024project}. The proposal was accepted, and over the following two months, we worked toward explcheck's initial release.
+Between April and August 2024, we published a series of blog posts on the static analysis of expl3~\cite{starynovotny2024statica, starynovotny2024staticb, starynovotny2024staticc, starynovotny2024staticd}, culminating in a proposal for a year-long project to develop \emph{explcheck}\Dash an expl3 linter\Dash submitted to the \TeX{} Development Fund in September~\cite{starynovotny2024project}. The proposal was accepted, and over the following two months, we worked toward the initial release.
 
 \begin{figure}[t]
 \centering
@@ -131,7 +132,7 @@ In Section~\ref{sec:future-work}, we discuss current limitations and suggest dir
 
 \section{Requirements}
 \label{sec:requirements}
-In this section, we outline our goals for \emph{explcheck}. Section~\ref{sec:functional-requirements} identifies the core features the tool should provide, while Section~\ref{sec:non-functional-requirements} covers broader considerations such as the classification of reported issues, software architecture, validation, and licensing.
+In this section, we outline our goals for explcheck. Section~\ref{sec:functional-requirements} identifies the core features the tool should provide, while Section~\ref{sec:non-functional-requirements} covers broader considerations such as the classification of reported issues, software architecture, validation, and licensing.
 
 \subsection{Functional requirements}
 \label{sec:functional-requirements}
@@ -268,7 +269,7 @@ Figure~\ref{fig:iceberg} illustrates the full pipeline applied to an example \La
 \centering
 % TODO: Check that the issues from the figure are correctly reported by explcheck v1.0.0.
 \input images/iceberg
-\caption{Processing an example \LaTeX{} document \texttt{example.tex} (top left) with Lua\LaTeX{} (top right) and \emph{explcheck} (bottom). While compiling with Lua\LaTeX{} produces a \acro{PDF} without warnings or errors, running the same code through explcheck allows us to dive beneath the surface and uncover many issues worth fixing. Illustration by Gabriela Fišerová.\looseness=-1}
+\caption{Processing an example \LaTeX{} document \texttt{example.tex} (top left) with Lua\LaTeX{} (top right) and explcheck (bottom). While compiling with Lua\LaTeX{} produces a \acro{PDF} without warnings or errors, running the same code through explcheck allows us to dive beneath the surface and uncover many issues worth fixing. Illustration by Gabriela Fišerová.\looseness=-1}
 \label{fig:iceberg}
 \end{figure*}
 
@@ -326,7 +327,7 @@ With this approach, the linter always adopts the most charitable interpretation 
 % TODO: Check that the issues are correctly reported by explcheck v1.0.0.
 In our example, this approach reports neither \texttt{E408} nor \texttt{W402}, as expected.
 
-This confidence-based approach is central to the linter’s design. Every statement produced by semantic analysis is tagged with a \emph{confidence level}: \texttt{NONE} (0\%), \texttt{MAYBE} (50\%), or \texttt{DEFINITELY} (100\%). Later, in Section~\ref{sec:code-coverage}, we use these confidence levels to validate the linter.
+This confidence-based approach is central to the linter’s design. Every statement produced by semantic analysis is tagged with a \emph{confidence level}: \texttt{NONE} (0\%), \texttt{MAYBE} (50\%), or \texttt{DEFINITELY} (100\%). Later, in Section~\ref{sec:code-coverage}, we also use these confidence levels to validate the linter.
 
 \subsection{Limitations}
 \label{sec:limitations}
@@ -340,52 +341,49 @@ Removing these constraints would require a major redesign. Section~\ref{sec:futu
 \section{Implementation}
 \label{sec:implementation}
 
-In this section, we present a high-level overview of the implementation. Section~\ref{sec:modules-and-dependencies} details the Lua modules and their dependencies. Section~\ref{sec:components} introduces the core components and explains how they interact. Section~\ref{sec:data-model} defines the analysis data model, outlining its entities and relationships.
+In this section, we present a high-level overview of the implementation. Sections~\ref{sec:package-structure} and \ref{sec:flow-of-information} describe the Lua modules of explcheck and how they interact. Section~\ref{sec:data-model} defines the analysis data model, outlining its entities and relationships.
 
-\subsection{Modules and dependencies}
-\label{sec:modules-and-dependencies}
+\subsection{Package structure}
+\label{sec:package-structure}
 
 \begin{figure*}
-\input images/package-diagram
-\caption{Package diagram of \emph{explcheck}, illustrating the structure and dependencies among its 14 internal Lua modules, plus two external libraries.}
+\setlength{\belowcaptionskip}{\baselineskip}
+\centering
+\includegraphics[scale=0.8]{images/package-diagram}%
+\vspace{0.5\baselineskip}%
+\caption{Package diagram of explcheck, illustrating the structure and organization of its Lua modules.}
 \label{fig:package-diagram}
 \end{figure*}
 
-Figure~\ref{fig:package-diagram} shows a package diagram of \emph{explcheck}. Starting from top of the diagram, here are the individual packages below the top-level package \texttt{explcheck} and what they do:
+Figure~\ref{fig:package-diagram} shows a package diagram of explcheck, where the following packages are organized as illustrated from top to bottom:
 
 \begin{itemize}
-\item The package \texttt{cli} implements the command-line interface of \emph{explcheck}.
-\item The package \texttt{evaluation} computes summary statistics from the analysis results, to be displayed in verbose command-line output.
-\item The package \texttt{analysis} performs the processing steps from Section~\ref{sec:processing-steps}.
-\item The package \texttt{format} formats text that is displayed on the command-line output.
-\item The package \texttt{config} provides access to the configuration of \emph{explcheck}. The configuration consists of the command-line options, the default config file \texttt{explcheck-config.toml}, and the user config file \texttt{.explcheckrc}.
-\item The package \texttt{issues} implements a registry of all issues detected during the analysis.
-\item The package \texttt{misc} provides various low-level data types and helper functions that are used by the other more high-level packages. Namely:
-\begin{itemize}
-\item The package \texttt{misc.ranges} implements a data type for representing ranges of bytes, tokens, calls, and statements.
-\item The package \texttt{misc.utils} parsers various helper functions.
-\item The package \texttt{misc.parsers} defines \acro{LPEG} parsers for pattern-matching on parts of the expl3 syntax.
-\item The package \texttt{misc.parsers} contains \acro{LPEG} parsers and other information extracted from \LaTeX3 data files.
-\end{itemize}
+\item \texttt{cli}: Implements the command-line interface.
+\item \texttt{evaluation}: Computes statistics from analysis results for verbose command-line output.
+\item \texttt{analysis}: Performs the processing steps outlined in Section~\ref{sec:processing-steps}.
+\item \texttt{format}: Formats text displayed in the command-line output.
+\item \texttt{config}: Provides access to configuration, comprising command-line options and config files.
+\item \texttt{issues}: Maintains a registry of all issues detected during analysis.
+\item \texttt{misc}: Supplies low-level data types and helper functions used by other packages.
 \end{itemize}
 
-Besides these, there are also two external packages in the diagram:
-\begin{itemize}
-\item The package \texttt{toml}~\cite{stoler2017toml} reads the config files of \emph{explcheck}. It is distributed in a Lua module named \texttt{explcheck-toml.lua}.
-\item The library \acro{LPEG} for pattern-matching, which is included with Lua\TeX.
-\end{itemize}
-
-While the \TeX{} directory structure is hierarchical, this hierarchy is seldom exposed. Users load \TeX{} packages, fonts, and Lua modules by name, leaving the task of finding the corresponding files to the \TeX{} installation.
-
-For this reason, the above package names are only logical and map to Lua modules that are all organized in a single directory with all hierarchical information stored in the filename as follows: All leaf packages \meta{package name} map to Lua module files named \texttt{explcheck-}\meta{package name}\texttt{.lua}. For example, the package \texttt{misc.latex3} is implemented in the file \texttt{explcheck-latex3.lua}.
-
-The only exception is package \texttt{analysis}, where the files are named \texttt{explcheck-preprocessing.lua} and \texttt{explcheck-\meta{type}-analysis.lua}, where \meta{type} is \texttt{lexical}, \texttt{syntactic}, \texttt{semantic}, or \texttt{flow}. For example, the package \texttt{analysis.semantic} is implemented in file \texttt{explcheck-semantic-analysis.lua}.
+Since the hierarchical \TeX{} directory structure is generally hidden from users, who load macro packages, fonts, and Lua modules by name, all Lua modules for explcheck reside in a single directory. The logical package hierarchy is preserved through file naming: a package named \meta{package name} is implemented in the Lua module \texttt{explcheck-\meta{package name}.lua}.\footnote{The only exception to this naming convention is the \texttt{analysis} package, whose submodules are named explicitly after the processing steps as \texttt{explcheck-preprocessing.lua} and \texttt{explcheck-\meta{type}-analysis.lua}, with \meta{type} being \texttt{lexical}, \texttt{syntactic}, \texttt{semantic}, or \texttt{flow}.} For instance, \texttt{misc.latex3} becomes \texttt{explcheck-latex3.lua}.
 
 \vfill
 
-\subsection{Components}
-\label{sec:components}
+\subsection{Component interactions}
+\label{sec:flow-of-information}
+
+\begin{figure*}
+\centering
+\includegraphics[scale=0.8]{images/component-diagram}%
+\vspace{0.75\baselineskip}%
+\caption{Component diagram of explcheck, illustrating the interactions between its Lua modules and users.}
+\label{fig:component-diagram}
+\end{figure*}
+
 % Describe the file system, options, processing steps, issue registry, etc., with a component diagram.
+
 \subsection{Data model}
 \label{sec:data-model}
 % Present the entities and relationships in the analysis results, using an ER diagram.

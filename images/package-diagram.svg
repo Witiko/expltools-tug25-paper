@@ -2,18 +2,17 @@
 <svg:svg
    contentStyleType="text/css"
    data-diagram-type="DESCRIPTION"
-   height="616.29688"
+   height="322.51224"
    preserveAspectRatio="none"
    version="1.1"
-   viewBox="0 0 817.09955 616.29688"
-   width="817.09955"
+   viewBox="0 0 654.63629 322.51224"
+   width="654.63629"
    zoomAndPan="magnify"
    id="svg10408"
    sodipodi:docname="package-diagram.svg"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
      id="namedview10410"
@@ -25,223 +24,19 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.71951219"
-     inkscape:cx="134.81356"
-     inkscape:cy="355.79661"
+     inkscape:zoom="1.0175439"
+     inkscape:cx="135.62068"
+     inkscape:cy="250.60344"
      inkscape:window-width="1854"
      inkscape:window-height="1011"
      inkscape:window-x="1026"
      inkscape:window-y="32"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g10406"
+     inkscape:current-layer="svg10408"
      showguides="true" />
   <script />
   <svg:defs
      id="defs10210">
-    <svg:linearGradient
-       inkscape:collect="always"
-       id="linearGradient7446">
-      <svg:stop
-         style="stop-color:#808080;stop-opacity:1;"
-         offset="0"
-         id="stop7442" />
-      <svg:stop
-         style="stop-color:#bfbfbf;stop-opacity:1;"
-         offset="1"
-         id="stop7444" />
-    </svg:linearGradient>
-    <svg:linearGradient
-       inkscape:collect="always"
-       id="linearGradient7438">
-      <svg:stop
-         style="stop-color:#808080;stop-opacity:1;"
-         offset="0"
-         id="stop7434" />
-      <svg:stop
-         style="stop-color:#bfbfbf;stop-opacity:1;"
-         offset="1"
-         id="stop7436" />
-    </svg:linearGradient>
-    <svg:linearGradient
-       inkscape:collect="always"
-       id="linearGradient7430">
-      <svg:stop
-         style="stop-color:#a6a6a6;stop-opacity:1;"
-         offset="0"
-         id="stop7426" />
-      <svg:stop
-         style="stop-color:#bfbfbf;stop-opacity:1;"
-         offset="1"
-         id="stop7428" />
-    </svg:linearGradient>
-    <svg:linearGradient
-       inkscape:collect="always"
-       id="linearGradient7422">
-      <svg:stop
-         style="stop-color:#999999;stop-opacity:1;"
-         offset="0"
-         id="stop7418" />
-      <svg:stop
-         style="stop-color:#bfbfbf;stop-opacity:1;"
-         offset="1"
-         id="stop7420" />
-    </svg:linearGradient>
-    <svg:linearGradient
-       inkscape:collect="always"
-       id="linearGradient7398">
-      <svg:stop
-         style="stop-color:#808080;stop-opacity:1;"
-         offset="0"
-         id="stop7394" />
-      <svg:stop
-         style="stop-color:#bfbfbf;stop-opacity:1;"
-         offset="1"
-         id="stop7396" />
-    </svg:linearGradient>
-    <svg:linearGradient
-       inkscape:collect="always"
-       id="linearGradient7390">
-      <svg:stop
-         style="stop-color:#808080;stop-opacity:1;"
-         offset="0"
-         id="stop7386" />
-      <svg:stop
-         style="stop-color:#bfbfbf;stop-opacity:1;"
-         offset="1"
-         id="stop7388" />
-    </svg:linearGradient>
-    <svg:linearGradient
-       inkscape:collect="always"
-       id="linearGradient7382">
-      <svg:stop
-         style="stop-color:#808080;stop-opacity:1;"
-         offset="0"
-         id="stop7378" />
-      <svg:stop
-         style="stop-color:#bfbfbf;stop-opacity:1;"
-         offset="1"
-         id="stop7380" />
-    </svg:linearGradient>
-    <svg:linearGradient
-       inkscape:collect="always"
-       id="linearGradient7374">
-      <svg:stop
-         style="stop-color:#a6a6a6;stop-opacity:1;"
-         offset="0"
-         id="stop7370" />
-      <svg:stop
-         style="stop-color:#bfbfbf;stop-opacity:1;"
-         offset="1"
-         id="stop7372" />
-    </svg:linearGradient>
-    <svg:linearGradient
-       inkscape:collect="always"
-       id="linearGradient7366">
-      <svg:stop
-         style="stop-color:#808080;stop-opacity:1;"
-         offset="0"
-         id="stop7362" />
-      <svg:stop
-         style="stop-color:#bfbfbf;stop-opacity:1;"
-         offset="1"
-         id="stop7364" />
-    </svg:linearGradient>
-    <svg:linearGradient
-       inkscape:collect="always"
-       id="linearGradient7358">
-      <svg:stop
-         style="stop-color:#808080;stop-opacity:1;"
-         offset="0"
-         id="stop7354" />
-      <svg:stop
-         style="stop-color:#bfbfbf;stop-opacity:1;"
-         offset="1"
-         id="stop7356" />
-    </svg:linearGradient>
-    <svg:linearGradient
-       inkscape:collect="always"
-       id="linearGradient7350">
-      <svg:stop
-         style="stop-color:#808080;stop-opacity:1;"
-         offset="0"
-         id="stop7346" />
-      <svg:stop
-         style="stop-color:#bfbfbf;stop-opacity:1;"
-         offset="1"
-         id="stop7348" />
-    </svg:linearGradient>
-    <svg:linearGradient
-       inkscape:collect="always"
-       id="linearGradient7342">
-      <svg:stop
-         style="stop-color:#808080;stop-opacity:1;"
-         offset="0"
-         id="stop7338" />
-      <svg:stop
-         style="stop-color:#bfbfbf;stop-opacity:1;"
-         offset="1"
-         id="stop7340" />
-    </svg:linearGradient>
-    <svg:linearGradient
-       inkscape:collect="always"
-       id="linearGradient7334">
-      <svg:stop
-         style="stop-color:#808080;stop-opacity:1;"
-         offset="0"
-         id="stop7330" />
-      <svg:stop
-         style="stop-color:#bfbfbf;stop-opacity:1;"
-         offset="1"
-         id="stop7332" />
-    </svg:linearGradient>
-    <svg:linearGradient
-       inkscape:collect="always"
-       id="linearGradient7326">
-      <svg:stop
-         style="stop-color:#808080;stop-opacity:1;"
-         offset="0"
-         id="stop7322" />
-      <svg:stop
-         style="stop-color:#bfbfbf;stop-opacity:1;"
-         offset="1"
-         id="stop7324" />
-    </svg:linearGradient>
-    <svg:linearGradient
-       inkscape:collect="always"
-       id="linearGradient7318">
-      <svg:stop
-         style="stop-color:#a6a6a6;stop-opacity:1;"
-         offset="0"
-         id="stop7314" />
-      <svg:stop
-         style="stop-color:#bfbfbf;stop-opacity:1;"
-         offset="1"
-         id="stop7316" />
-    </svg:linearGradient>
-    <svg:linearGradient
-       inkscape:collect="always"
-       id="linearGradient7310">
-      <svg:stop
-         style="stop-color:#808080;stop-opacity:1;"
-         offset="0"
-         id="stop7306" />
-      <svg:stop
-         style="stop-color:#bfbfbf;stop-opacity:1;"
-         offset="1"
-         id="stop7308" />
-    </svg:linearGradient>
-    <svg:linearGradient
-       inkscape:collect="always"
-       id="linearGradient7302">
-      <svg:stop
-         style="stop-color:#808080;stop-opacity:1;"
-         offset="0"
-         id="stop7298" />
-      <svg:stop
-         style="stop-color:#bfbfbf;stop-opacity:1;"
-         offset="1"
-         id="stop7300" />
-    </svg:linearGradient>
     <svg:linearGradient
        id="linearGradient7262"
        inkscape:swatch="solid">
@@ -250,1071 +45,470 @@
          offset="0"
          id="stop7260" />
     </svg:linearGradient>
-    <svg:linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7302"
-       id="linearGradient7304"
-       x1="244.06618"
-       y1="68.895447"
-       x2="645.22101"
-       y2="344.62973"
-       gradientUnits="userSpaceOnUse" />
-    <svg:linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7310"
-       id="linearGradient7312"
-       x1="236.45985"
-       y1="84.555191"
-       x2="304.70245"
-       y2="141.23782"
-       gradientUnits="userSpaceOnUse" />
-    <svg:linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7318"
-       id="linearGradient7320"
-       x1="268.47708"
-       y1="179.0995"
-       x2="241.5127"
-       y2="203.67805"
-       gradientUnits="userSpaceOnUse" />
-    <svg:linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7326"
-       id="linearGradient7328"
-       x1="184.25175"
-       y1="78.992943"
-       x2="112.90876"
-       y2="530.74719"
-       gradientUnits="userSpaceOnUse" />
-    <svg:linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7334"
-       id="linearGradient7336"
-       x1="204.27879"
-       y1="84.386353"
-       x2="123.34077"
-       y2="245.41727"
-       gradientUnits="userSpaceOnUse" />
-    <svg:linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7342"
-       id="linearGradient7344"
-       x1="211.84479"
-       y1="83.961914"
-       x2="162.26706"
-       y2="344.85538"
-       gradientUnits="userSpaceOnUse" />
-    <svg:linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7350"
-       id="linearGradient7352"
-       x1="222.48911"
-       y1="86.311584"
-       x2="228.72066"
-       y2="203.84023"
-       gradientUnits="userSpaceOnUse" />
-    <svg:linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7358"
-       id="linearGradient7360"
-       x1="97.147278"
-       y1="290.37341"
-       x2="112.49183"
-       y2="493.12015"
-       gradientUnits="userSpaceOnUse" />
-    <svg:linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7366"
-       id="linearGradient7368"
-       x1="121.1051"
-       y1="290.82526"
-       x2="143.67912"
-       y2="344.67435"
-       gradientUnits="userSpaceOnUse" />
-    <svg:linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7374"
-       id="linearGradient7376"
-       x1="223.45071"
-       y1="296.16437"
-       x2="189.85822"
-       y2="368.37894"
-       gradientUnits="userSpaceOnUse" />
-    <svg:linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7382"
-       id="linearGradient7384"
-       x1="150.50374"
-       y1="388.88754"
-       x2="137.29471"
-       y2="447.28458"
-       gradientUnits="userSpaceOnUse" />
-    <svg:linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7390"
-       id="linearGradient7392"
-       x1="239.8862"
-       y1="415.13577"
-       x2="149.85104"
-       y2="448.7023"
-       gradientUnits="userSpaceOnUse" />
-    <svg:linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7398"
-       id="linearGradient7400"
-       x1="176.28934"
-       y1="390.49091"
-       x2="739.63983"
-       y2="490.81955"
-       gradientUnits="userSpaceOnUse" />
-    <svg:linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7422"
-       id="linearGradient7424"
-       x1="573.2757"
-       y1="351.64508"
-       x2="591.42834"
-       y2="356.17648"
-       gradientUnits="userSpaceOnUse" />
-    <svg:linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7430"
-       id="linearGradient7432"
-       x1="573.35925"
-       y1="314.17969"
-       x2="814.57007"
-       y2="481.73508"
-       gradientUnits="userSpaceOnUse" />
-    <svg:linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7438"
-       id="linearGradient7440"
-       x1="463.39417"
-       y1="535.37946"
-       x2="547.94208"
-       y2="612.41132"
-       gradientUnits="userSpaceOnUse" />
-    <svg:linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7446"
-       id="linearGradient7448"
-       x1="593.55292"
-       y1="534.89813"
-       x2="594.34052"
-       y2="600.34021"
-       gradientUnits="userSpaceOnUse" />
   </svg:defs>
   <svg:g
-     id="g10406"
-     transform="translate(-30.5,-30.5)">
-    <!--cluster explcheck-->
-    <svg:g
-       class="cluster"
-       data-entity="explcheck"
-       data-source-line="3"
-       data-uid="ent0002"
-       id="cluster_explcheck">
-      <svg:path
-         d="m 33.5,31 h 79.7158 c 1.19853,0.363559 2.13644,1.301469 2.5,2.5 l 7,19.7969 H 702.5 c 1.38071,0 2.5,1.119288 2.5,2.5 V 588.5 c 0,1.38071 -1.11929,2.5 -2.5,2.5 H 33.5 C 32.119288,591 31,589.88072 31,588.5 V 33.5 C 31,32.119288 32.119288,31 33.5,31"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10212"
-         sodipodi:nodetypes="ccccsssssssc" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="31"
-         x2="122.7158"
-         y1="53.296902"
-         y2="53.296902"
-         id="line10214" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="39"
-         y="45.995102"
-         id="text10216"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'"><svg:tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'"
-           id="tspan13796">explcheck</svg:tspan></svg:text>
-    </svg:g>
-    <!--cluster analysis-->
-    <svg:g
-       class="cluster"
-       data-entity="analysis"
-       data-source-line="4"
-       data-uid="ent0003"
-       id="cluster_analysis">
-      <svg:path
-         d="m 226.5,208 h 65.251 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 H 570.5 a 2.5,2.5 0 0 1 2.5,2.5 V 410.5 a 2.5,2.5 0 0 1 -2.5,2.5 h -344 a 2.5,2.5 0 0 1 -2.5,-2.5 v -200 a 2.5,2.5 0 0 1 2.5,-2.5"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10219" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="224"
-         x2="301.25101"
-         y1="230.29691"
-         y2="230.29691"
-         id="line10221" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="230"
-         y="222.9951"
-         id="text10223"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">analysis</svg:text>
-    </svg:g>
-    <!--cluster misc-->
-    <svg:g
-       class="cluster"
-       data-entity="misc"
-       data-source-line="16"
-       data-uid="ent0013"
-       id="cluster_misc">
-      <svg:path
-         d="m 118.5,453 h 37.0186 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 H 670.5 a 2.5,2.5 0 0 1 2.5,2.5 V 556.5 a 2.5,2.5 0 0 1 -2.5,2.5 h -552 a 2.5,2.5 0 0 1 -2.5,-2.5 v -101 a 2.5,2.5 0 0 1 2.5,-2.5"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10226" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="116"
-         x2="165.0186"
-         y1="475.29691"
-         y2="475.29691"
-         id="line10228" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="124"
-         y="467.99509"
-         id="text10230"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold';letter-spacing:0px">misc</svg:text>
-    </svg:g>
-    <!--entity cli-->
-    <svg:g
-       class="entity"
-       data-entity="cli"
-       data-source-line="11"
-       data-uid="ent0008"
-       id="entity_cli"
-       transform="translate(20,28)">
-      <svg:path
-         d="m 186.5,46 h 30.8965 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 186.5 a 2.5,2.5 0 0 1 -2.5,-2.5 V 48.5 a 2.5,2.5 0 0 1 2.5,-2.5"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10233" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="184"
-         x2="226.8965"
-         y1="68.296898"
-         y2="68.296898"
-         id="line10235" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="192"
-         y="61.995098"
-         id="text10237"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">cli</svg:text>
-    </svg:g>
-    <!--entity config-->
-    <svg:g
-       class="entity"
-       data-entity="config"
-       data-source-line="12"
-       data-uid="ent0009"
-       id="entity_config">
-      <svg:path
-         d="m 111,350 h 61.7949 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 111 a 2.5,2.5 0 0 1 -2.5,-2.5 V 352.5 A 2.5,2.5 0 0 1 111,350"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10240" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="108.5"
-         x2="182.29491"
-         y1="372.29691"
-         y2="372.29691"
-         id="line10242" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="116.5"
-         y="365.99509"
-         id="text10244"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">config</svg:text>
-    </svg:g>
-    <!--entity evaluation-->
-    <svg:g
-       class="entity"
-       data-entity="evaluation"
-       data-source-line="13"
-       data-uid="ent0010"
-       id="entity_evaluation">
-      <svg:path
-         d="m 272,145 h 96.3574 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 272 a 2.5,2.5 0 0 1 -2.5,-2.5 V 147.5 A 2.5,2.5 0 0 1 272,145"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10247" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="269.5"
-         x2="377.85739"
-         y1="167.29691"
-         y2="167.29691"
-         id="line10249" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="277.5"
-         y="160.9951"
-         id="text10251"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">evaluation</svg:text>
-    </svg:g>
-    <!--entity format-->
-    <svg:g
-       class="entity"
-       data-entity="format"
-       data-source-line="14"
-       data-uid="ent0011"
-       id="entity_format"
-       transform="translate(6)">
-      <svg:path
-         d="m 67,251 h 66.3408 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 67 a 2.5,2.5 0 0 1 -2.5,-2.5 V 253.5 A 2.5,2.5 0 0 1 67,251"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10254" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="64.5"
-         x2="142.84081"
-         y1="273.29691"
-         y2="273.29691"
-         id="line10256" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="72.5"
-         y="266.99509"
-         id="text10258"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">format</svg:text>
-    </svg:g>
-    <!--entity issues-->
-    <svg:g
-       class="entity"
-       data-entity="issues"
-       data-source-line="15"
-       data-uid="ent0012"
-       id="entity_issues">
-      <svg:path
-         d="m 600,350 h 62.2598 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 600 a 2.5,2.5 0 0 1 -2.5,-2.5 V 352.5 A 2.5,2.5 0 0 1 600,350"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10261" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="597.5"
-         x2="671.75983"
-         y1="372.29691"
-         y2="372.29691"
-         id="line10263" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="605.5"
-         y="365.99509"
-         id="text10265"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">issues</svg:text>
-    </svg:g>
-    <!--entity preprocessing-->
-    <svg:g
-       class="entity"
-       data-entity="preprocessing"
-       data-source-line="5"
-       data-uid="ent0004"
-       id="entity_preprocessing"
-       transform="translate(0,-1.3898305)">
-      <svg:path
-         d="m 269.5,251 h 125.2119 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 269.5 a 2.5,2.5 0 0 1 -2.5,-2.5 V 253.5 a 2.5,2.5 0 0 1 2.5,-2.5"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10268" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="267"
-         x2="404.21191"
-         y1="273.29691"
-         y2="273.29691"
-         id="line10270" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="275"
-         y="266.99509"
-         id="text10272"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">preprocessing</svg:text>
-    </svg:g>
-    <!--entity lexical-->
-    <svg:g
-       class="entity"
-       data-entity="lexical"
-       data-source-line="6"
-       data-uid="ent0005"
-       id="entity_lexical"
-       transform="translate(0,1.3898305)">
-      <svg:path
-         d="m 459,251 h 63.668 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 459 a 2.5,2.5 0 0 1 -2.5,-2.5 V 253.5 A 2.5,2.5 0 0 1 459,251"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10275" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="456.5"
-         x2="532.16803"
-         y1="273.29691"
-         y2="273.29691"
-         id="line10277" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="464.5"
-         y="266.99509"
-         id="text10279"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">lexical</svg:text>
-    </svg:g>
-    <!--entity syntactic-->
-    <svg:g
-       class="entity"
-       data-entity="syntactic"
-       data-source-line="7"
-       data-uid="ent0006"
-       id="entity_syntactic"
-       transform="translate(-40,1.9655172)">
-      <svg:path
-         d="m 289.5,350 h 84.6543 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 289.5 a 2.5,2.5 0 0 1 -2.5,-2.5 V 352.5 a 2.5,2.5 0 0 1 2.5,-2.5"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10282" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="287"
-         x2="383.6543"
-         y1="372.29691"
-         y2="372.29691"
-         id="line10284" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="295"
-         y="365.99509"
-         id="text10286"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">semantic</svg:text>
-    </svg:g>
-    <!--entity flow-->
-    <svg:g
-       class="entity"
-       data-entity="flow"
-       data-source-line="9"
-       data-uid="ent0007"
-       id="entity_flow"
-       transform="translate(37.051723,-1.9655172)">
-      <svg:path
-         d="m 439,350 h 46.4414 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 439 a 2.5,2.5 0 0 1 -2.5,-2.5 V 352.5 A 2.5,2.5 0 0 1 439,350"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10289" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="436.5"
-         x2="494.94141"
-         y1="372.29691"
-         y2="372.29691"
-         id="line10291" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="444.5"
-         y="365.99509"
-         id="text10293"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">flow</svg:text>
-    </svg:g>
-    <!--entity obsolete-->
-    <svg:g
-       class="entity"
-       data-entity="obsolete"
-       data-source-line="17"
-       data-uid="ent0014"
-       id="entity_obsolete"
-       transform="translate(0.94915288,-2.7796611)">
-      <svg:path
-         d="m 541.5,496 h 67.10678 c 1.19853,0.36356 2.13644,1.30147 2.5,2.5 l 7,19.7969 h 14.5 c 1.38071,0 2.5,1.11929 2.5,2.5 v 12 c 0,1.38071 -1.11929,2.5 -2.5,2.5 H 541.5 c -1.38071,0 -2.5,-1.11929 -2.5,-2.5 V 498.5 c 0,-1.38071 1.11929,-2.5 2.5,-2.5"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10296"
-         sodipodi:nodetypes="ccccsssssssc" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="539"
-         x2="632.07233"
-         y1="518.29688"
-         y2="518.29688"
-         id="line10298" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="547"
-         y="511.99509"
-         id="text10300"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">latex3</svg:text>
-    </svg:g>
-    <!--entity parsers-->
-    <svg:g
-       class="entity"
-       data-entity="parsers"
-       data-source-line="18"
-       data-uid="ent0015"
-       id="entity_parsers"
-       transform="translate(-1.050847,2.7796611)">
-      <svg:path
-         d="m 405,496 h 72.4385 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 405 a 2.5,2.5 0 0 1 -2.5,-2.5 V 498.5 A 2.5,2.5 0 0 1 405,496"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10303" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="402.5"
-         x2="486.93851"
-         y1="518.29688"
-         y2="518.29688"
-         id="line10305" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="410.5"
-         y="511.99509"
-         id="text10307"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">parsers</svg:text>
-    </svg:g>
-    <!--entity utils-->
-    <svg:g
-       class="entity"
-       data-entity="utils"
-       data-source-line="19"
-       data-uid="ent0016"
-       id="entity_utils"
-       transform="translate(-3.050847,-2.7796611)">
-      <svg:path
-         d="m 293,496 h 47.5898 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 293 a 2.5,2.5 0 0 1 -2.5,-2.5 V 498.5 A 2.5,2.5 0 0 1 293,496"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10310" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="290.5"
-         x2="350.08981"
-         y1="518.29688"
-         y2="518.29688"
-         id="line10312" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="298.5"
-         y="511.99509"
-         id="text10314"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">utils</svg:text>
-    </svg:g>
-    <!--entity ranges-->
-    <svg:g
-       class="entity"
-       data-entity="ranges"
-       data-source-line="20"
-       data-uid="ent0017"
-       id="entity_ranges"
-       transform="translate(-5.0508476,2.7796611)">
-      <svg:path
-         d="m 161.5,496 h 67.168 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 161.5 a 2.5,2.5 0 0 1 -2.5,-2.5 V 498.5 a 2.5,2.5 0 0 1 2.5,-2.5"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10317" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="159"
-         x2="238.168"
-         y1="518.29688"
-         y2="518.29688"
-         id="line10319" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="167"
-         y="511.99509"
-         id="text10321"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">ranges</svg:text>
-    </svg:g>
-    <!--entity lpeg-->
-    <svg:g
-       class="entity"
-       data-entity="lpeg"
-       data-source-line="24"
-       data-uid="ent0018"
-       id="entity_lpeg">
-      <svg:path
-         d="m 558.5,607 h 47.3369 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 558.5 a 2.5,2.5 0 0 1 -2.5,-2.5 V 609.5 a 2.5,2.5 0 0 1 2.5,-2.5"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10324" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="556"
-         x2="615.33691"
-         y1="629.29688"
-         y2="629.29688"
-         id="line10326" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="564"
-         y="622.99512"
-         id="text10328"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">lpeg</svg:text>
-    </svg:g>
-    <!--entity toml-->
-    <svg:g
-       class="entity"
-       data-entity="toml"
-       data-source-line="25"
-       data-uid="ent0019"
-       id="entity_toml">
-      <svg:path
-         d="m 723.5,496 h 48.6973 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 723.5 a 2.5,2.5 0 0 1 -2.5,-2.5 V 498.5 a 2.5,2.5 0 0 1 2.5,-2.5"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path10331" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="721"
-         x2="781.69733"
-         y1="518.29688"
-         y2="518.29688"
-         id="line10333" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="729"
-         y="511.99509"
-         id="text10335"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">toml</svg:text>
-    </svg:g>
-    <!--link analysis to config-->
-    <svg:g
-       class="link"
-       data-entity-1="analysis"
-       data-entity-2="config"
-       data-source-line="27"
-       data-uid="lnk20"
-       id="link_analysis_config">
-      <svg:path
-         d="m 223.9319,297.1544 c -15.73144,21.86626 -18.68751,51.8402 -34.1727,70.3124"
-         fill="none"
-         id="analysis-to-config"
-         style="stroke:url(#linearGradient7376);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
-         sodipodi:nodetypes="cc" />
-      <svg:polygon
-         fill="#000000"
-         points="181.006,368.1246 181.3875,362.4806 177.24,371.4136 186.6499,368.5062 "
-         style="fill:#bfbfbf;fill-opacity:1;stroke:#bfbfbf;stroke-width:1;stroke-opacity:1"
-         id="polygon10339"
-         transform="translate(8)" />
-    </svg:g>
-    <!--link analysis to issues-->
-    <svg:g
-       class="link"
-       data-entity-1="analysis"
-       data-entity-2="issues"
-       data-source-line="28"
-       data-uid="lnk21"
-       id="link_analysis_issues">
-      <svg:path
-         d="m 573.1049,351.7634 c 0.0421,0.009 0.0842,0.0186 0.1263,0.0279 0.0842,0.0186 0.1683,0.0372 0.2526,0.0559 0.1684,0.0373 0.3369,0.0746 0.5055,0.112 0.3373,0.0748 0.6748,0.1498 1.0127,0.225 0.6758,0.1504 1.3527,0.3015 2.0306,0.4534 1.3557,0.3037 2.7149,0.6102 4.0749,0.9187 5.44,1.2337 5.0521,1.1242 10.3421,2.3692"
-         fill="none"
-         id="analysis-to-issues"
-         style="stroke:url(#linearGradient7424);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1" />
-      <svg:polygon
-         fill="#000000"
-         points="592.423,356.1545 587.613,359.1318 597.29,357.3 589.4457,351.3446 "
-         style="fill:#bfbfbf;fill-opacity:1;stroke:#bfbfbf;stroke-width:1;stroke-opacity:1"
-         id="polygon10343" />
-    </svg:g>
-    <!--link analysis to lpeg-->
-    <svg:g
-       class="link"
-       data-entity-1="analysis"
-       data-entity-2="lpeg"
-       data-source-line="29"
-       data-uid="lnk22"
-       id="link_analysis_lpeg">
-      <svg:path
-         d="M 572.98478,313.6282 C 621.11584,317.63752 669.21333,335.29754 705,350 c 58.16,24.31 84.29,30.39 112,87 31.65,64.67 47.81,108.17 0,162 -12.04,13.55 -118.3088,35.3721 -178.8088,38.6521"
-         fill="none"
-         id="analysis-to-lpeg"
-         style="stroke:url(#linearGradient7432);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
-         sodipodi:nodetypes="ccccc" />
-      <svg:polygon
-         fill="#000000"
-         points="637.1927,645.7062 640.9703,641.4955 632.2,645.9769 641.4033,649.4838 "
-         style="fill:#bfbfbf;fill-opacity:1;stroke:#bfbfbf;stroke-width:1;stroke-opacity:1"
-         id="polygon10347"
-         transform="translate(0,-8)" />
-    </svg:g>
-    <!--link analysis to misc-->
-    <svg:g
-       class="link"
-       data-entity-1="analysis"
-       data-entity-2="misc"
-       data-source-line="30"
-       data-uid="lnk23"
-       id="link_analysis_misc">
-      <svg:path
-         d="m 238.2101,413.4164 c -0.0479,0.1922 -0.0963,0.3833 -0.1453,0.5733 -0.098,0.3801 -0.1981,0.7557 -0.3006,1.1267 -1.6386,5.9369 -3.8504,10.7124 -6.7642,13.8836 -13.29,14.46 -57.12,-4.81 -72,8 -3.255,2.8013 -6.0003,6.0605 -8.3116,9.6257 -1.1557,1.7826 -2.2029,3.6417 -3.151,5.5582 -0.1185,0.2396 2.3536,-4.9325 2.2382,-4.6912"
-         fill="none"
-         id="analysis-to-misc"
-         style="stroke:url(#linearGradient7392);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
-         sodipodi:nodetypes="cscccssc" />
-      <svg:polygon
-         fill="#000000"
-         points="133.3441,448.3948 131.4617,443.0603 131.1865,452.9053 138.6785,446.5124 "
-         style="fill:#bfbfbf;fill-opacity:1;stroke:#bfbfbf;stroke-width:1;stroke-opacity:1"
-         id="polygon10351"
-         transform="translate(16)" />
-    </svg:g>
-    <!--link cli to analysis-->
-    <svg:g
-       class="link"
-       data-entity-1="cli"
-       data-entity-2="analysis"
-       data-source-line="32"
-       data-uid="lnk24"
-       id="link_cli_analysis">
-      <svg:path
-         d="m 242.44,113.18 -13.4933,91.6003 0.1086,1.6241 0.0536,0.813"
-         fill="none"
-         id="cli-to-analysis"
-         style="stroke:url(#linearGradient7352);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
-         sodipodi:nodetypes="cccc" />
-      <svg:polygon
-         fill="#000000"
-         points="224.5587,198.9032 229.1354,207.6241 232.5418,198.383 228.8103,202.6346 "
-         style="fill:#bfbfbf;fill-opacity:1;stroke:#bfbfbf;stroke-width:1;stroke-opacity:1"
-         id="polygon10355"
-         transform="rotate(15.215255,228.56345,203.45289)" />
-    </svg:g>
-    <!--link cli to evaluation-->
-    <svg:g
-       class="link"
-       data-entity-1="cli"
-       data-entity-2="evaluation"
-       data-source-line="33"
-       data-uid="lnk25"
-       id="link_cli_evaluation">
-      <svg:path
-         d="m 256.75,113.2 c 20.9,17.18 27.0644,10.6907 47.9344,27.8407"
-         fill="none"
-         id="cli-to-evaluation"
-         style="stroke:url(#linearGradient7312);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
-         sodipodi:nodetypes="cc" />
-      <svg:polygon
-         fill="#000000"
-         points="305.457,141.6756 299.827,142.2264 309.32,144.85 304.9061,136.0456 "
-         style="fill:#bfbfbf;fill-opacity:1;stroke:#bfbfbf;stroke-width:1;stroke-opacity:1"
-         id="polygon10359" />
-    </svg:g>
-    <!--link cli to format-->
-    <svg:g
-       class="link"
-       data-entity-1="cli"
-       data-entity-2="format"
-       data-source-line="34"
-       data-uid="lnk26"
-       id="link_cli_format">
-      <svg:path
-         d="m 224.59,113.23 c -19.43,38.68 -81.0962,93.5887 -100.5062,132.2187"
-         fill="none"
-         id="cli-to-format"
-         style="stroke:url(#linearGradient7336);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
-         sodipodi:nodetypes="cc" />
-      <svg:polygon
-         fill="#000000"
-         points="123.6349,246.3423 121.8566,240.9722 121.39,250.81 129.0049,244.564 "
-         style="fill:#bfbfbf;fill-opacity:1;stroke:#bfbfbf;stroke-width:1;stroke-opacity:1"
-         id="polygon10363" />
-    </svg:g>
-    <!--link cli to config-->
-    <svg:g
-       class="link"
-       data-entity-1="cli"
-       data-entity-2="config"
-       data-source-line="35"
-       data-uid="lnk27"
-       id="link_cli_config">
-      <svg:path
-         d="M 231.68,113.19 C 226.73,151.76 194.16,214.85 177,290 c -4.74,20.77 -9.99,38.4359 -15.05,54.2359"
-         fill="none"
-         id="cli-to-config"
-         style="stroke:url(#linearGradient7344);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
-         sodipodi:nodetypes="ccc" />
-      <svg:polygon
-         fill="#000000"
-         points="161.645,345.1882 159.0555,340.1588 160.12,349.95 166.6744,342.5988 "
-         style="fill:#bfbfbf;fill-opacity:1;stroke:#bfbfbf;stroke-width:1;stroke-opacity:1"
-         id="polygon10367" />
-    </svg:g>
-    <!--link cli to issues-->
-    <svg:g
-       class="link"
-       data-entity-1="cli"
-       data-entity-2="issues"
-       data-source-line="36"
-       data-uid="lnk28"
-       id="link_cli_issues">
-      <svg:path
-         d="m 264.43,97.35 c 66.47,7.76 206.26,6.96 300.57,94.65 47.47,44.14 70.5706,116.89599 77.6406,152.47599"
-         fill="none"
-         id="cli-to-issues"
-         style="stroke:url(#linearGradient7304);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
-         sodipodi:nodetypes="ccc" />
-      <svg:polygon
-         fill="#000000"
-         points="639.81,349.97 641.9792,340.363 638.8355,345.0659 634.1326,341.9222 "
-         style="fill:#bfbfbf;fill-opacity:1;stroke:#bfbfbf;stroke-width:1;stroke-opacity:1"
-         id="polygon10371"
-         transform="translate(4)" />
-    </svg:g>
-    <!--link cli to misc-->
-    <svg:g
-       class="link"
-       data-entity-1="cli"
-       data-entity-2="misc"
-       data-source-line="37"
-       data-uid="lnk29"
-       id="link_cli_misc">
-      <svg:path
-         d="M 203.96,106.72 C 16.977493,184.83267 20.427864,368.37136 100.9522,511.7947 c 3.1187,5.0885 6.0449,9.7025 8.6968,13.7838 1.326,2.0406 2.5834,3.9481 3.762,5.7152 0.5892,0.8835 1.1588,1.732 1.7074,2.5444 0.2743,0.4062 -2.8283,-4.1596 -2.5647,-3.7715"
-         fill="none"
-         id="cli-to-misc"
-         style="stroke:url(#linearGradient7328);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
-         sodipodi:nodetypes="ccsssc" />
-      <svg:polygon
-         fill="#000000"
-         points="114.1766,493.3372 113.1157,498.8937 107.5592,497.8329 115.9255,503.0296 "
-         style="fill:#bfbfbf;fill-opacity:1;stroke:#bfbfbf;stroke-width:1;stroke-opacity:1"
-         id="polygon10375"
-         transform="translate(0,32)" />
-    </svg:g>
-    <!--link config to toml-->
-    <svg:g
-       class="link"
-       data-entity-1="config"
-       data-entity-2="toml"
-       data-source-line="39"
-       data-uid="lnk30"
-       id="link_config_toml">
-      <svg:path
-         d="m 177.06,389.21 c 18.68,13.92 46.35,31.83 73.94,39.79 44.2,12.76 370.81,-7.85 414,8 32.57,11.96 58.1368,35.6768 75.3468,54.5468"
-         fill="none"
-         id="config-to-toml"
-         style="stroke:url(#linearGradient7400);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1" />
-      <svg:polygon
-         fill="#000000"
-         points="741.0207,492.2857 735.3698,492.0257 744.39,495.98 741.2807,486.6348 "
-         style="fill:#bfbfbf;fill-opacity:1;stroke:#bfbfbf;stroke-width:1;stroke-opacity:1"
-         id="polygon10379" />
-    </svg:g>
-    <!--link config to misc-->
-    <svg:g
-       class="link"
-       data-entity-1="config"
-       data-entity-2="misc"
-       data-source-line="40"
-       data-uid="lnk31"
-       id="link_config_misc">
-      <svg:path
-         d="m 150.14,389.03 c -1.995,9.5725 -4.5913,22.0325 -7.372,35.3791 -1.3904,6.6732 -2.8269,13.5682 -4.2575,20.4346 -0.3577,1.7166 -0.7149,3.4315 -1.071,5.1406 -0.178,0.8546 0.868,-4.1662 0.6906,-3.3149"
-         fill="none"
-         id="config-to-misc"
-         style="stroke:url(#linearGradient7384);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1" />
-      <svg:polygon
-         fill="#000000"
-         points="137.9262,447.6484 134.8261,442.9166 136.9064,452.5433 142.6579,444.5483 "
-         style="fill:#bfbfbf;fill-opacity:1;stroke:#bfbfbf;stroke-width:1;stroke-opacity:1"
-         id="polygon10383" />
-    </svg:g>
-    <!--link evaluation to analysis-->
-    <svg:g
-       class="link"
-       data-entity-1="evaluation"
-       data-entity-2="analysis"
-       data-source-line="42"
-       data-uid="lnk32"
-       id="link_evaluation_analysis">
-      <svg:path
-         d="m 269.23,178.62 c -6.8,3.47 -13.1,7.85 -18.23,13.38 -2.92,3.15 -5.4114,6.6736 -7.5352,10.4341 -0.5309,0.9401 -1.0389,1.8951 -1.5249,2.8627 -0.2429,0.4838 -0.4804,0.9707 -0.7125,1.4606 -0.116,0.2449 -0.2307,0.4906 -0.3441,0.737 -0.0567,0.1231 2.3651,-5.2178 2.3091,-5.0943"
-         fill="none"
-         id="evaluation-to-analysis"
-         style="stroke:url(#linearGradient7320);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1" />
-      <svg:polygon
-         fill="#000000"
-         points="242.7794,203.3108 240.7886,198.0158 240.7143,207.8644 248.0744,201.32 "
-         style="fill:#bfbfbf;fill-opacity:1;stroke:#bfbfbf;stroke-width:1;stroke-opacity:1"
-         id="polygon10387" />
-    </svg:g>
-    <!--link format to config-->
-    <svg:g
-       class="link"
-       data-entity-1="format"
-       data-entity-2="config"
-       data-source-line="44"
-       data-uid="lnk33"
-       id="link_format_config">
-      <svg:path
-         d="m 120.1,290.2 c 7.44,17.18 16.0148,36.9945 23.4448,54.1445"
-         fill="none"
-         id="format-to-config"
-         style="stroke:url(#linearGradient7368);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1" />
-      <svg:polygon
-         fill="#000000"
-         points="143.9423,345.2621 138.6819,343.1818 145.93,349.85 146.0226,340.0016 "
-         style="fill:#bfbfbf;fill-opacity:1;stroke:#bfbfbf;stroke-width:1;stroke-opacity:1"
-         id="polygon10391" />
-    </svg:g>
-    <!--link format to misc-->
-    <svg:g
-       class="link"
-       data-entity-1="format"
-       data-entity-2="misc"
-       data-source-line="45"
-       data-uid="lnk34"
-       id="link_format_misc">
-      <svg:path
-         d="m 97.5,290.25 c -23.09494,71.70261 -17.331736,130.66732 10.88155,194.965 1.785,4.0387 3.5253,7.7956 5.1435,11.1803 0.4046,0.8462 -1.8219,-3.727 -1.4338,-2.9288"
-         fill="none"
-         id="format-to-misc"
-         style="stroke:url(#linearGradient7360);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
-         sodipodi:nodetypes="ccsc" />
-      <svg:polygon
-         fill="#000000"
-         points="108.4106,492.5174 115.9431,498.8626 115.6053,489.0196 113.7569,494.3659 "
-         style="fill:#bfbfbf;fill-opacity:1;stroke:#bfbfbf;stroke-width:1;stroke-opacity:1"
-         id="polygon10395"
-         transform="translate(-1.2284482)" />
-    </svg:g>
-    <!--link obsolete to lpeg-->
-    <svg:g
-       class="link"
-       data-entity-1="obsolete"
-       data-entity-2="lpeg"
-       data-source-line="47"
-       data-uid="lnk35"
-       id="link_obsolete_lpeg"
-       transform="translate(-10)">
-      <svg:path
-         d="M 594,532.71034 V 600.73"
-         fill="none"
-         id="obsolete-to-lpeg"
-         style="stroke:url(#linearGradient7448);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
-         sodipodi:nodetypes="cc" />
-      <svg:polygon
-         fill="#000000"
-         points="598,597.73 594,601.73 590,597.73 594,606.73 "
-         style="fill:#bfbfbf;fill-opacity:1;stroke:#bfbfbf;stroke-width:1;stroke-opacity:1"
-         id="polygon10399" />
-    </svg:g>
-    <!--link parsers to lpeg-->
-    <svg:g
-       class="link"
-       data-entity-1="parsers"
-       data-entity-2="lpeg"
-       data-source-line="48"
-       data-uid="lnk36"
-       id="link_parsers_lpeg">
-      <svg:path
-         d="m 464.06,537.80966 c 37.73254,7.23546 66.26092,68.01667 86.0055,76.12104"
-         fill="none"
-         id="parsers-to-lpeg"
-         style="stroke:url(#linearGradient7440);stroke-width:1;stroke-dasharray:7, 7;stroke-opacity:1"
-         sodipodi:nodetypes="cc" />
-      <svg:polygon
-         fill="#000000"
-         points="551.0112,614.2556 545.9287,616.7391 555.74,615.88 548.5277,609.1731 "
-         style="fill:#bfbfbf;fill-opacity:1;stroke:#bfbfbf;stroke-width:1;stroke-opacity:1"
-         id="polygon10403" />
-    </svg:g>
-    <!--SRC=[XP1BaiCW34Jtd8AvG8wGksWecQWY0uLmFfNotPF1O8lPPDaFeMxrJxdWZ3OnK30cWRk2HukFnEw2xcfVnjfE8G0_XQJ20wUCAKU78XJyyCBu80SyC7c60gwG-pevSRn_mAeIE2QjOfZ8Au0tu0KAnQ3W5FCCHG4IML0Kc4dSlvlYhqJ6WkEXa0Mp36mfn2F947nTlvhrQ9GJ-bsKEBCnUvsdqxdVCh0MT61rpq3-qXlpQQQg_hG3rKb7hP4kctMNpRNBjhxEL533AxqD73PZ3BEPQID5jh-zxEF0rlGEtW00]-->
-    <svg:g
-       class="entity"
-       data-entity="syntactic"
-       data-source-line="7"
-       data-uid="ent0006"
-       id="g18448"
-       transform="translate(60,-40)">
-      <svg:path
-         d="m 289.5,350 h 84.6543 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 289.5 a 2.5,2.5 0 0 1 -2.5,-2.5 V 352.5 a 2.5,2.5 0 0 1 2.5,-2.5"
-         fill="#ffffff"
-         style="stroke:#000000;stroke-width:1"
-         id="path18442" />
-      <svg:line
-         style="stroke:#000000;stroke-width:1"
-         x1="287"
-         x2="383.6543"
-         y1="372.29691"
-         y2="372.29691"
-         id="line18444" />
-      <svg:text
-         fill="#000000"
-         font-family="Verdana"
-         font-size="14px"
-         font-weight="bold"
-         x="295"
-         y="365.99509"
-         id="text18446"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">syntactic</svg:text>
-    </svg:g>
+     class="cluster"
+     data-entity="analysis"
+     data-source-line="4"
+     data-uid="ent0003"
+     id="cluster_analysis"
+     transform="translate(-91.91097,-207.5)">
+    <svg:path
+       d="m 226.5,208 h 65.251 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 H 570.5 a 2.5,2.5 0 0 1 2.5,2.5 V 410.5 a 2.5,2.5 0 0 1 -2.5,2.5 h -344 a 2.5,2.5 0 0 1 -2.5,-2.5 v -200 a 2.5,2.5 0 0 1 2.5,-2.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path10219" />
+    <svg:line
+       style="stroke:#000000;stroke-width:1"
+       x1="224"
+       x2="301.25101"
+       y1="230.29691"
+       y2="230.29691"
+       id="line10221" />
+    <svg:text
+       fill="#000000"
+       font-family="Verdana"
+       font-size="14px"
+       font-weight="bold"
+       x="230"
+       y="222.9951"
+       id="text10223"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">analysis</svg:text>
+  </svg:g>
+  <svg:g
+     class="cluster"
+     data-entity="misc"
+     data-source-line="16"
+     data-uid="ent0013"
+     id="cluster_misc"
+     transform="translate(-53.037037,-236.98776)">
+    <svg:path
+       d="m 118.5,453 h 37.0186 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 H 670.5 a 2.5,2.5 0 0 1 2.5,2.5 V 556.5 a 2.5,2.5 0 0 1 -2.5,2.5 h -552 a 2.5,2.5 0 0 1 -2.5,-2.5 v -101 a 2.5,2.5 0 0 1 2.5,-2.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path10226" />
+    <svg:line
+       style="stroke:#000000;stroke-width:1"
+       x1="116"
+       x2="165.0186"
+       y1="475.29691"
+       y2="475.29691"
+       id="line10228" />
+    <svg:text
+       fill="#000000"
+       font-family="Verdana"
+       font-size="14px"
+       font-weight="bold"
+       x="124"
+       y="467.99509"
+       id="text10230"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold';letter-spacing:0px">misc</svg:text>
+  </svg:g>
+  <svg:g
+     class="entity"
+     data-entity="cli"
+     data-source-line="11"
+     data-uid="ent0008"
+     id="entity_cli"
+     transform="translate(210.11824,183.55782)">
+    <svg:path
+       d="m 331.30806,-25.997615 h 30.8965 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 h -54.8965 a 2.5,2.5 0 0 1 -2.5,-2.5 v -34.2969 a 2.5,2.5 0 0 1 2.5,-2.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path10233" />
+    <svg:line
+       style="stroke:#000000;stroke-width:1"
+       x1="328.80804"
+       x2="371.70456"
+       y1="-3.700717"
+       y2="-3.700717"
+       id="line10235" />
+    <svg:text
+       fill="#000000"
+       font-family="Verdana"
+       font-size="14px"
+       font-weight="bold"
+       x="336.80804"
+       y="-10.002517"
+       id="text10237"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">cli</svg:text>
+  </svg:g>
+  <svg:g
+     class="entity"
+     data-entity="config"
+     data-source-line="12"
+     data-uid="ent0009"
+     id="entity_config"
+     transform="translate(-100.0634,-312.50023)">
+    <svg:path
+       d="m 111,350 h 61.7949 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 111 a 2.5,2.5 0 0 1 -2.5,-2.5 V 352.5 A 2.5,2.5 0 0 1 111,350"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path10240" />
+    <svg:line
+       style="stroke:#000000;stroke-width:1"
+       x1="108.5"
+       x2="182.29491"
+       y1="372.29691"
+       y2="372.29691"
+       id="line10242" />
+    <svg:text
+       fill="#000000"
+       font-family="Verdana"
+       font-size="14px"
+       font-weight="bold"
+       x="116.5"
+       y="365.99509"
+       id="text10244"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">config</svg:text>
+  </svg:g>
+  <svg:g
+     class="entity"
+     data-entity="evaluation"
+     data-source-line="13"
+     data-uid="ent0010"
+     id="entity_evaluation"
+     transform="translate(255.6794,-137.98757)">
+    <svg:path
+       d="m 272,145 h 96.3574 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 272 a 2.5,2.5 0 0 1 -2.5,-2.5 V 147.5 A 2.5,2.5 0 0 1 272,145"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path10247" />
+    <svg:line
+       style="stroke:#000000;stroke-width:1"
+       x1="269.5"
+       x2="377.85739"
+       y1="167.29691"
+       y2="167.29691"
+       id="line10249" />
+    <svg:text
+       fill="#000000"
+       font-family="Verdana"
+       font-size="14px"
+       font-weight="bold"
+       x="277.5"
+       y="160.9951"
+       id="text10251"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">evaluation</svg:text>
+  </svg:g>
+  <svg:g
+     class="entity"
+     data-entity="format"
+     data-source-line="14"
+     data-uid="ent0011"
+     id="entity_format"
+     transform="translate(494.29549,-165.32966)">
+    <svg:path
+       d="m 67,251 h 66.3408 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 67 a 2.5,2.5 0 0 1 -2.5,-2.5 V 253.5 A 2.5,2.5 0 0 1 67,251"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path10254" />
+    <svg:line
+       style="stroke:#000000;stroke-width:1"
+       x1="64.5"
+       x2="142.84081"
+       y1="273.29691"
+       y2="273.29691"
+       id="line10256" />
+    <svg:text
+       fill="#000000"
+       font-family="Verdana"
+       font-size="14px"
+       font-weight="bold"
+       x="72.5"
+       y="266.99509"
+       id="text10258"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">format</svg:text>
+  </svg:g>
+  <svg:g
+     class="entity"
+     data-entity="issues"
+     data-source-line="15"
+     data-uid="ent0012"
+     id="entity_issues"
+     transform="translate(-576.661,-162.18135)">
+    <svg:path
+       d="m 579.661,285.38289 h 62.2598 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 579.661 a 2.5,2.5 0 0 1 -2.5,-2.5 v -34.2969 a 2.5,2.5 0 0 1 2.5,-2.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path10261" />
+    <svg:line
+       style="stroke:#000000;stroke-width:1"
+       x1="577.16101"
+       x2="651.42084"
+       y1="307.67981"
+       y2="307.67981"
+       id="line10263" />
+    <svg:text
+       fill="#000000"
+       font-family="Verdana"
+       font-size="14px"
+       font-weight="bold"
+       x="585.16101"
+       y="301.37799"
+       id="text10265"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">issues</svg:text>
+  </svg:g>
+  <svg:g
+     class="entity"
+     data-entity="preprocessing"
+     data-source-line="5"
+     data-uid="ent0004"
+     id="entity_preprocessing"
+     transform="translate(-91.91097,-208.88983)">
+    <svg:path
+       d="m 269.5,251 h 125.2119 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 269.5 a 2.5,2.5 0 0 1 -2.5,-2.5 V 253.5 a 2.5,2.5 0 0 1 2.5,-2.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path10268" />
+    <svg:line
+       style="stroke:#000000;stroke-width:1"
+       x1="267"
+       x2="404.21191"
+       y1="273.29691"
+       y2="273.29691"
+       id="line10270" />
+    <svg:text
+       fill="#000000"
+       font-family="Verdana"
+       font-size="14px"
+       font-weight="bold"
+       x="275"
+       y="266.99509"
+       id="text10272"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">preprocessing</svg:text>
+  </svg:g>
+  <svg:g
+     class="entity"
+     data-entity="lexical"
+     data-source-line="6"
+     data-uid="ent0005"
+     id="entity_lexical"
+     transform="translate(-91.91097,-206.11017)">
+    <svg:path
+       d="m 459,251 h 63.668 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 459 a 2.5,2.5 0 0 1 -2.5,-2.5 V 253.5 A 2.5,2.5 0 0 1 459,251"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path10275" />
+    <svg:line
+       style="stroke:#000000;stroke-width:1"
+       x1="456.5"
+       x2="532.16803"
+       y1="273.29691"
+       y2="273.29691"
+       id="line10277" />
+    <svg:text
+       fill="#000000"
+       font-family="Verdana"
+       font-size="14px"
+       font-weight="bold"
+       x="464.5"
+       y="266.99509"
+       id="text10279"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">lexical</svg:text>
+  </svg:g>
+  <svg:g
+     class="entity"
+     data-entity="syntactic"
+     data-source-line="7"
+     data-uid="ent0006"
+     id="entity_syntactic"
+     transform="translate(-131.91097,-205.53449)">
+    <svg:path
+       d="m 289.5,350 h 84.6543 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 289.5 a 2.5,2.5 0 0 1 -2.5,-2.5 V 352.5 a 2.5,2.5 0 0 1 2.5,-2.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path10282" />
+    <svg:line
+       style="stroke:#000000;stroke-width:1"
+       x1="287"
+       x2="383.6543"
+       y1="372.29691"
+       y2="372.29691"
+       id="line10284" />
+    <svg:text
+       fill="#000000"
+       font-family="Verdana"
+       font-size="14px"
+       font-weight="bold"
+       x="295"
+       y="365.99509"
+       id="text10286"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">semantic</svg:text>
+  </svg:g>
+  <svg:g
+     class="entity"
+     data-entity="flow"
+     data-source-line="9"
+     data-uid="ent0007"
+     id="entity_flow"
+     transform="translate(-54.85925,-209.46552)">
+    <svg:path
+       d="m 439,350 h 46.4414 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 439 a 2.5,2.5 0 0 1 -2.5,-2.5 V 352.5 A 2.5,2.5 0 0 1 439,350"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path10289" />
+    <svg:line
+       style="stroke:#000000;stroke-width:1"
+       x1="436.5"
+       x2="494.94141"
+       y1="372.29691"
+       y2="372.29691"
+       id="line10291" />
+    <svg:text
+       fill="#000000"
+       font-family="Verdana"
+       font-size="14px"
+       font-weight="bold"
+       x="444.5"
+       y="365.99509"
+       id="text10293"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">flow</svg:text>
+  </svg:g>
+  <svg:g
+     class="entity"
+     data-entity="obsolete"
+     data-source-line="17"
+     data-uid="ent0014"
+     id="entity_obsolete"
+     transform="translate(-52.087884,-239.76742)">
+    <svg:path
+       d="m 541.5,496 h 67.10678 c 1.19853,0.36356 2.13644,1.30147 2.5,2.5 l 7,19.7969 h 14.5 c 1.38071,0 2.5,1.11929 2.5,2.5 v 12 c 0,1.38071 -1.11929,2.5 -2.5,2.5 H 541.5 c -1.38071,0 -2.5,-1.11929 -2.5,-2.5 V 498.5 c 0,-1.38071 1.11929,-2.5 2.5,-2.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path10296"
+       sodipodi:nodetypes="ccccsssssssc" />
+    <svg:line
+       style="stroke:#000000;stroke-width:1"
+       x1="539"
+       x2="632.07233"
+       y1="518.29688"
+       y2="518.29688"
+       id="line10298" />
+    <svg:text
+       fill="#000000"
+       font-family="Verdana"
+       font-size="14px"
+       font-weight="bold"
+       x="547"
+       y="511.99509"
+       id="text10300"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">latex3</svg:text>
+  </svg:g>
+  <svg:g
+     class="entity"
+     data-entity="parsers"
+     data-source-line="18"
+     data-uid="ent0015"
+     id="entity_parsers"
+     transform="translate(-54.087884,-234.20809)">
+    <svg:path
+       d="m 405,496 h 72.4385 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 405 a 2.5,2.5 0 0 1 -2.5,-2.5 V 498.5 A 2.5,2.5 0 0 1 405,496"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path10303" />
+    <svg:line
+       style="stroke:#000000;stroke-width:1"
+       x1="402.5"
+       x2="486.93851"
+       y1="518.29688"
+       y2="518.29688"
+       id="line10305" />
+    <svg:text
+       fill="#000000"
+       font-family="Verdana"
+       font-size="14px"
+       font-weight="bold"
+       x="410.5"
+       y="511.99509"
+       id="text10307"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">parsers</svg:text>
+  </svg:g>
+  <svg:g
+     class="entity"
+     data-entity="utils"
+     data-source-line="19"
+     data-uid="ent0016"
+     id="entity_utils"
+     transform="translate(-56.087884,-239.76742)">
+    <svg:path
+       d="m 293,496 h 47.5898 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 293 a 2.5,2.5 0 0 1 -2.5,-2.5 V 498.5 A 2.5,2.5 0 0 1 293,496"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path10310" />
+    <svg:line
+       style="stroke:#000000;stroke-width:1"
+       x1="290.5"
+       x2="350.08981"
+       y1="518.29688"
+       y2="518.29688"
+       id="line10312" />
+    <svg:text
+       fill="#000000"
+       font-family="Verdana"
+       font-size="14px"
+       font-weight="bold"
+       x="298.5"
+       y="511.99509"
+       id="text10314"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">utils</svg:text>
+  </svg:g>
+  <svg:g
+     class="entity"
+     data-entity="ranges"
+     data-source-line="20"
+     data-uid="ent0017"
+     id="entity_ranges"
+     transform="translate(-58.087884,-234.20809)">
+    <svg:path
+       d="m 161.5,496 h 67.168 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 161.5 a 2.5,2.5 0 0 1 -2.5,-2.5 V 498.5 a 2.5,2.5 0 0 1 2.5,-2.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path10317" />
+    <svg:line
+       style="stroke:#000000;stroke-width:1"
+       x1="159"
+       x2="238.168"
+       y1="518.29688"
+       y2="518.29688"
+       id="line10319" />
+    <svg:text
+       fill="#000000"
+       font-family="Verdana"
+       font-size="14px"
+       font-weight="bold"
+       x="167"
+       y="511.99509"
+       id="text10321"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">ranges</svg:text>
+  </svg:g>
+  <svg:g
+     class="entity"
+     data-entity="syntactic"
+     data-source-line="7"
+     data-uid="ent0006"
+     id="g18448"
+     transform="translate(-31.910973,-247.5)">
+    <svg:path
+       d="m 289.5,350 h 84.6543 a 3.75,3.75 0 0 1 2.5,2.5 l 7,19.7969 h 14.5 a 2.5,2.5 0 0 1 2.5,2.5 v 12 a 2.5,2.5 0 0 1 -2.5,2.5 H 289.5 a 2.5,2.5 0 0 1 -2.5,-2.5 V 352.5 a 2.5,2.5 0 0 1 2.5,-2.5"
+       fill="#ffffff"
+       style="stroke:#000000;stroke-width:1"
+       id="path18442" />
+    <svg:line
+       style="stroke:#000000;stroke-width:1"
+       x1="287"
+       x2="383.6543"
+       y1="372.29691"
+       y2="372.29691"
+       id="line18444" />
+    <svg:text
+       fill="#000000"
+       font-family="Verdana"
+       font-size="14px"
+       font-weight="bold"
+       x="295"
+       y="365.99509"
+       id="text18446"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text Bold'">syntactic</svg:text>
   </svg:g>
 </svg:svg>

@@ -15,7 +15,7 @@ package explcheck {
   package format
   package issues
   package misc {
-    package obsolete
+    package latex3
     package parsers
     package utils
     package ranges
