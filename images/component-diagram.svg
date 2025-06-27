@@ -25,15 +25,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="2.9148856"
-     inkscape:cx="520.08902"
-     inkscape:cy="233.97144"
+     inkscape:zoom="1.4574428"
+     inkscape:cx="280.62851"
+     inkscape:cy="201.03705"
      inkscape:window-width="1854"
      inkscape:window-height="1011"
      inkscape:window-x="1026"
      inkscape:window-y="32"
      inkscape:window-maximized="1"
-     inkscape:current-layer="entity_user"
+     inkscape:current-layer="svg194"
      showguides="true">
     <sodipodi:guide
        position="307.79644,269.755"
@@ -382,7 +382,7 @@
        font-size="14px"
        x="246.21831"
        y="164.9951"
-       id="text74">options</text>
+       id="text74">configuration</text>
   </g>
   <g
      class="entity"
@@ -557,7 +557,7 @@
          id="tspan926"
          x="477.07721"
          y="441.49509"
-         style="text-align:center;text-anchor:middle">results</tspan></text>
+         style="text-align:center;text-anchor:middle">output</tspan></text>
   </g>
   <g
      class="entity"
@@ -590,7 +590,7 @@
          id="tspan686"
          x="270.95282"
          y="440.75058"
-         style="text-align:center;text-anchor:middle">results</tspan></text>
+         style="text-align:center;text-anchor:middle">output</tspan></text>
   </g>
   <g
      class="link"
@@ -727,13 +727,13 @@
      id="link_analysis_warnings\nand errors"
      transform="translate(9.5,-2.7554681)">
     <path
-       d="m 324.49,42.683538 c 14.79,50.65 -102.15962,93.629182 -88.36005,142.876512"
+       d="M 304.49,42.683538 C 351.96012,183.31006 246.96176,119.10724 243.48238,185.42897"
        fill="none"
        id="analysis-to-warnings\nand errors"
        style="stroke:#000000;stroke-width:1"
        sodipodi:nodetypes="cc" />
     <path
-       d="m 246.9158,189.10681 c -4.97131,-6.77418 -15.69085,-3.64482 -16.2368,4.74"
+       d="m 251.20345,192.59173 c -2.16607,-8.1186 -13.28952,-9.10364 -16.84859,-1.49206"
        fill="none"
        style="stroke:#000000;stroke-width:1.5"
        id="path145"

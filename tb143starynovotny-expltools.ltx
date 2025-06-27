@@ -361,15 +361,13 @@ Figure~\ref{fig:package-diagram} shows a package diagram of explcheck, where the
 \item \texttt{cli}: Implements the command-line interface.
 \item \texttt{evaluation}: Computes statistics from analysis results for verbose command-line output.
 \item \texttt{analysis}: Performs the processing steps outlined in Section~\ref{sec:processing-steps}.
-\item \texttt{format}: Formats text displayed in the command-line output.
+\item \texttt{format}: Formats the command-line output.
 \item \texttt{config}: Provides access to configuration, comprising command-line options and config files.
 \item \texttt{issues}: Maintains a registry of all issues detected during analysis.
 \item \texttt{misc}: Supplies low-level data types and helper functions used by other packages.
 \end{itemize}
 
 Since the hierarchical \TeX{} directory structure is generally hidden from users, who load macro packages, fonts, and Lua modules by name, all Lua modules for explcheck reside in a single directory. The logical package hierarchy is preserved through file naming: a package named \meta{package name} is implemented in the Lua module \texttt{explcheck-\meta{package name}.lua}.\footnote{The only exception to this naming convention is the \texttt{analysis} package, whose submodules are named explicitly after the processing steps as \texttt{explcheck-preprocessing.lua} and \texttt{explcheck-\meta{type}-analysis.lua}, with \meta{type} being \texttt{lexical}, \texttt{syntactic}, \texttt{semantic}, or \texttt{flow}.} For instance, \texttt{misc.latex3} becomes \texttt{explcheck-latex3.lua}.
-
-\vfill
 
 \subsection{Component interactions}
 \label{sec:flow-of-information}
@@ -382,7 +380,7 @@ Since the hierarchical \TeX{} directory structure is generally hidden from users
 \label{fig:component-diagram}
 \end{figure*}
 
-% Describe the file system, options, processing steps, issue registry, etc., with a component diagram.
+Figure~\ref{fig:component-diagram} shows the interactions among explcheck's Lua modules, as well as its inputs and outputs. Starting from the top-left corner, files loaded from the filesystem are passed through processing steps provided by the \texttt{analysis} package. These steps use the issue registry from the \texttt{issues} package to record warnings and errors. Both the \texttt{analysis} and \texttt{issues} packages rely on configuration settings managed by the \texttt{config} package, which aggregates options from config files and command-line arguments. After analysis completes, results are evaluated by the \texttt{evaluation} package. Finally, the warnings, errors, and evaluation results are gathered by the central \texttt{cli} package and formatted by the \texttt{format} package to produce either human- or machine-readable output.
 
 \subsection{Data model}
 \label{sec:data-model}
