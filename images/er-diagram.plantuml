@@ -1,0 +1,41 @@
+left to right direction
+
+@startuml
+!theme plain
+
+left to right direction
+
+hide members
+hide circle
+
+class file
+class byte
+class part
+class token
+class grouping
+class call
+class statement
+class chunk
+class "replacement\ntext"
+class argument
+class edge
+
+interface segment
+segment <|.. part
+segment <|.. "replacement\ntext"
+
+file ||--o{ byte
+byte }o--|| part
+byte }|--o| token
+call ||--|{ token
+token ||--o| grouping : start
+token |o--o| grouping : stop
+statement ||--|{ call
+chunk |o--o{ statement
+call ||--o{ argument
+argument ||--o| "replacement\ntext"
+segment ||--o{ statement
+chunk ||--o{ edge : from
+edge }o--|| chunk : to
+
+@enduml
