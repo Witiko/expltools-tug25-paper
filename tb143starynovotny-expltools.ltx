@@ -52,6 +52,7 @@
 % - Figure 2 and sections 4.2 through 4.4 appear side by side.
 % - Figure 3 and Sections 5.1 appear side by side.
 % - Figure 4 and Sections 5.2 appear side by side.
+% - Figure 5 and Sections 5.3 appear side by side.
 %
 % That said, no worries if it doesn't work out\Dash I'm sure the article will still look great, thanks in no small part to your careful editing.
 
@@ -347,7 +348,7 @@ In this section, we present a high-level overview of the implementation. Section
 \label{sec:package-structure}
 
 \begin{figure*}
-\setlength{\belowcaptionskip}{\baselineskip}
+\setlength{\belowcaptionskip}{0.75\baselineskip}
 \centering
 \includegraphics[scale=0.8]{images/package-diagram}%
 \vspace{0.5\baselineskip}%
@@ -355,36 +356,64 @@ In this section, we present a high-level overview of the implementation. Section
 \label{fig:package-diagram}
 \end{figure*}
 
-Figure~\ref{fig:package-diagram} shows a package diagram of explcheck, where the following packages are organized as illustrated from top to bottom:
+Figure~\ref{fig:package-diagram} illustrates how explcheck's implementation is organized into the following packages (listed from top to bottom):
 
 \begin{itemize}
-\item \texttt{cli}: Implements the command-line interface.
-\item \texttt{evaluation}: Computes statistics from analysis results for verbose command-line output.
 \item \texttt{analysis}: Performs the processing steps outlined in Section~\ref{sec:processing-steps}.
-\item \texttt{format}: Formats the command-line output.
+\item \texttt{evaluation}: Computes statistics from analysis results for verbose command-line output.
 \item \texttt{config}: Provides access to configuration, comprising command-line options and config files.
+\item \texttt{format}: Formats the command-line output.
 \item \texttt{issues}: Maintains a registry of all issues detected during analysis.
+\item \texttt{cli}: Implements the command-line interface.
 \item \texttt{misc}: Supplies low-level data types and helper functions used by other packages.
 \end{itemize}
 
-Since the hierarchical \TeX{} directory structure is generally hidden from users, who load macro packages, fonts, and Lua modules by name, all Lua modules for explcheck reside in a single directory. The logical package hierarchy is preserved through file naming: a package named \meta{package name} is implemented in the Lua module \texttt{explcheck-\meta{package name}.lua}.\footnote{The only exception to this naming convention is the \texttt{analysis} package, whose submodules are named explicitly after the processing steps as \texttt{explcheck-preprocessing.lua} and \texttt{explcheck-\meta{type}-analysis.lua}, with \meta{type} being \texttt{lexical}, \texttt{syntactic}, \texttt{semantic}, or \texttt{flow}.} For instance, \texttt{misc.latex3} becomes \texttt{explcheck-latex3.lua}.
+Since the hierarchical \TeX{} directory structure is generally hidden from users, who load macro packages, fonts, and Lua modules by name, all Lua modules for explcheck reside in a single directory.
+
+The logical package hierarchy is preserved via file naming: a package named \meta{package name} is implemented in the Lua module \texttt{explcheck-\meta{package name}.lua}.\footnote{The only exception is the \texttt{analysis} package, whose Lua modules are named \texttt{explcheck-preprocessing.lua} and \texttt{explcheck-\meta{type}-analysis.lua}, with \meta{type} being \texttt{lexical}, \texttt{syntactic}, \texttt{semantic}, or \texttt{flow}.} For instance, \texttt{misc.latex3} becomes \texttt{explcheck-latex3.lua}.
 
 \subsection{Component interactions}
 \label{sec:flow-of-information}
 
 \begin{figure*}
+\setlength{\belowcaptionskip}{0.25\baselineskip}
 \centering
-\includegraphics[scale=0.8]{images/component-diagram}%
-\vspace{0.75\baselineskip}%
-\caption{Component diagram of explcheck, illustrating the interactions between its Lua modules and users.}
+\begin{tikzpicture}[inner sep=0pt, remember picture]
+\node(component-diagram) {\includegraphics[scale=0.8]{images/component-diagram}};
+\end{tikzpicture}%
+\vspace{0.25\baselineskip}%
+\caption{Component diagram of explcheck, showing the interactions between its Lua modules and users.}
 \label{fig:component-diagram}
 \end{figure*}
 
-Figure~\ref{fig:component-diagram} shows the interactions among explcheck's Lua modules, as well as its inputs and outputs. Starting from the top-left corner, files loaded from the filesystem are passed through processing steps provided by the \texttt{analysis} package. These steps use the issue registry from the \texttt{issues} package to record warnings and errors. Both the \texttt{analysis} and \texttt{issues} packages rely on configuration settings managed by the \texttt{config} package, which aggregates options from config files and command-line arguments. After analysis completes, results are evaluated by the \texttt{evaluation} package. Finally, the warnings, errors, and evaluation results are gathered by the central \texttt{cli} package and formatted by the \texttt{format} package to produce either human- or machine-readable output.
+Figure~\ref{fig:component-diagram} shows the interactions among explcheck's Lua modules, as well as its inputs and outputs.
+
+Starting from the top-left corner, files loaded from the filesystem are passed through processing steps provided by the \texttt{analysis} package. These steps use the issue registry from the \texttt{issues} package to record warnings and errors. Both the \texttt{analysis} and \texttt{issues} packages rely on configuration settings managed by the \texttt{config} package, which aggregates options from config files and command-line arguments.
+\looseness=-1
+
+After analysis completes, its results are evaluated by the \texttt{evaluation} package. Finally, the warnings, errors, and evaluation results are gathered by the central \texttt{cli} package and formatted by the \texttt{format} package to produce either human- or machine-readable output.
 
 \subsection{Data model}
 \label{sec:data-model}
-% Present the entities and relationships in the analysis results, using an ER diagram.
+
+\begin{figure*}
+\centering
+\begin{tikzpicture}[inner sep=0pt, remember picture]
+\node(er-diagram) {\includegraphics[scale=0.8]{images/er-diagram}};
+\end{tikzpicture}%
+\vspace{0.5\baselineskip}%
+\caption{Entity relationship diagram of the analysis data model, highlighting our representation of input files.}
+\label{fig:er-diagram}
+\input images/trace-arrow
+\end{figure*}
+
+Figure~\ref{fig:er-diagram} illustrates the internal representation of expl3 input files, constructed incrementally by the processing steps. It expands on the basic data model introduced in Section~\ref{sec:processing-steps}.
+
+Starting from the top-left corner, the input file consists of bytes, which are segmented into expl3 parts during preprocessing. Lexical analysis then converts byte sequences into \TeX{} tokens and identifies brace pairs (\texttt{\{}, \texttt{\}}) as potential \TeX{} groupings.
+
+Syntactic analysis uses these tokens and groupings to recognize function calls and their arguments. Semantic analysis classifies function calls as statements; for function definitions, it identifies replacement text arguments and backtracks to syntactic analysis to analyze nested calls and statements.
+
+Finally, flow analysis merges statements from different segments (such as parts and replacement texts) into chunks of well-understood code and organizes these chunks into a flow graph by connecting them with edges.
 
 \section{Demonstration}
 \label{sec:demonstration}

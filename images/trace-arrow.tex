@@ -1,0 +1,8 @@
+\begin{tikzpicture}[overlay, remember picture]
+\draw [-{Straight Barb[length=3mm, width=3mm]}, line width=\fboxrule, dashed, color=gray]
+  ([xshift=-0.24\linewidth, yshift=-0.3\baselineskip] component-diagram.north east)
+  .. % node [above left, yshift=0.2\linewidth] {\guillemotleft trace\guillemotright}
+  controls ([xshift=0.2\linewidth, yshift=0.125\linewidth]component-diagram.north east)
+  and ([xshift=0.2\linewidth, yshift=-0.15\linewidth]component-diagram.south east)
+  .. ([xshift=-0.13\linewidth, yshift=-0.115\linewidth] er-diagram.north east);
+\end{tikzpicture}
