@@ -26,14 +26,14 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="1.4574428"
-     inkscape:cx="280.62851"
+     inkscape:cx="281.31464"
      inkscape:cy="201.03705"
      inkscape:window-width="1854"
      inkscape:window-height="1011"
      inkscape:window-x="1026"
      inkscape:window-y="32"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg194"
+     inkscape:current-layer="entity_command-line\noptions"
      showguides="true">
     <sodipodi:guide
        position="307.79644,269.755"
@@ -524,7 +524,7 @@
          id="tspan682"
          x="238.24582"
          y="381.00992"
-         style="text-align:center;text-anchor:middle">options</tspan></text>
+         style="text-align:center;text-anchor:middle">arguments</tspan></text>
   </g>
   <g
      class="entity"
