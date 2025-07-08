@@ -1,51 +1,39 @@
 @startuml
 !theme plain
 
-package analysis
-package cli
-package config
-package evaluation
-package format
-package issues
-'package misc
+left to right direction
 
-database filesystem
+hide members
+hide circle
 
-actor user
-actor "text editor"
+class file
+class byte
+class part
+class token
+class grouping
+class call
+class statement
+class chunk
+class "replacement\ntext"
+class argument
+class edge
 
-filesystem -r-() "file content"
-analysis -l-( "file content"
-config -u-( "file content"
+interface segment
+segment <|.. part
+segment <|.. "replacement\ntext"
 
-config -r-() options
-analysis -d-( options
-issues -u-( options
-
-issues -r-() "warnings\nand errors"
-analysis -d-( "warnings\nand errors"
-cli -l-( "warnings\nand errors"
-
-format -l-() formatting
-cli -r-( formatting
-
-'misc -r-() patterns
-'analysis -u-( patterns
-
-analysis -r-() "analysis\nresults"
-evaluation -l-( "analysis\nresults"
-cli -u-( "analysis\nresults"
-
-evaluation -d-() "evaluation\nresults"
-cli -u-( "evaluation\nresults"
-
-cli -d-() "command-line\noptions"
-config -r-( "command-line\noptions"
-
-cli -d-() "formatted\nresults"
-user -l-( "formatted\nresults"
-
-cli -d-() errorformat
-"text editor" -l-( errorformat
+file ||--o{ byte
+byte }o--|| part
+byte }|--o| token
+call ||--|{ token
+token ||--o| grouping : start
+token |o--o| grouping : stop
+statement ||--|{ call
+chunk |o--o{ statement
+call ||--o{ argument
+argument ||--o| "replacement\ntext"
+segment ||--o{ statement
+chunk ||--o{ edge : from
+edge }o--|| chunk : to
 
 @enduml
