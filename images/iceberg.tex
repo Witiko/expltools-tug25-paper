@@ -67,7 +67,7 @@
 };
 \node [below=70pt of code-02-tex.south, anchor=north, text width=9cm, align=center] {%
   \small
-  (a) Preprocessing identifies two expl3 parts and warns about an unnecessary command \cs{ExplSyntaxOff} on line 15.
+  (a) preprocessing identifies two expl3 parts and warns about an unnecessary command \cs{ExplSyntaxOff} on line 15
 };
 \draw [-{Stealth[length=3mm, width=3mm]}, line width=\fboxrule] ([xshift=-2cm, yshift=-5pt] code-01-tex.south) to [bend right] node [text width=5cm, midway, right, align=left, xshift=12.5pt, yshift=-10pt] {%
   analyze with\\
@@ -144,7 +144,7 @@
     \baselineskip=13pt%
     \cs{\_\_example\_foo:x}%
     \token{\{}{1}%
-    \token{H}{11}%
+    \token{h}{11}%
     \token{e}{11}%
     \token{l}{11}%
     \token{l}{11}%
@@ -174,7 +174,7 @@
 };
 \node [below=10pt of code-06-tex.south, anchor=north, text width=6cm, align=center, xshift=-3pt] (code-07-tex) {%
   \small
-  (b) Lexical analysis identifies 68 tokens and warns about missing whitespace around braces (\texttt{\{}, \texttt{\}}) on lines 6 and 12.
+  (b) lexical analysis identifies 68 tokens and warns about missing whitespace around braces (\texttt{\{}, \texttt{\}}) on lines 6 and 12
 };
 %\draw [-{Stealth[length=2mm, width=2mm]}, line width=\fboxrule] ([xshift=-5pt, yshift=5pt] code-02-tex.north east) to [bend left] ([xshift=-5pt, yshift=-5pt] code-05-tex.north west);
 %\draw [-{Stealth[length=2mm, width=2mm]}, line width=\fboxrule] ([xshift=5pt, yshift=5pt] code-03-tex.south east) to [bend right] ([xshift=-5pt, yshift=-8pt] code-06-tex.north west);
@@ -182,48 +182,48 @@
 \node [below=40pt of code-03-tex.south west, anchor=north west, text width=7.6cm, align=left, xshift=-5pt] (code-07-tex) {%
   \small
   \begin{enumerate}
-  \item[C1.] Call \texttt{\textbackslash iow\_new:N} with the argument \texttt{\textbackslash l\_example\_iow}.
-  \item[C2.] Call \texttt{\textbackslash iow\_open:Nn} with arguments \texttt{\textbackslash l\_example\_iow} and \texttt{\{ example.idx \}}.
-  \item[C3.] Call \texttt{\textbackslash cs\_new:Nn} with arguments \texttt{\textbackslash \_\_example\_foo:n} and \texttt{\{ \textbackslash cs\_new:Nn \ldots\ \}}.
-  \item[C4.] Call \texttt{\textbackslash cs\_generate\_variant:Nn} with \texttt{\textbackslash \_\_example\_foo:n} and \texttt{\{ V, x \}}.
-  \item[C5.] Call \texttt{\textbackslash \_\_example\_foo:x} with \texttt{\{ Hello \}}.
-  \item[C6.] Call \texttt{\textbackslash example\_bar:nn} with \textcolor{red}{\hl{\texttt{w}}} and \texttt{\{ orld \}}.
+  \item[\emph{c1}] call \texttt{\textbackslash iow\_new:N} with the argument \texttt{\textbackslash l\_example\_iow}
+  \item[\emph{c2}] call \texttt{\textbackslash iow\_open:Nn} with arguments \texttt{\textbackslash l\_example\_iow} and \texttt{\{ example.idx \}}
+  \item[\emph{c3}] call \texttt{\textbackslash cs\_new:Nn} with arguments \texttt{\textbackslash \_\_example\_foo:n} and \texttt{\{ \textbackslash cs\_new:Nn \ldots\ \}}
+  \item[\emph{c4}] call \texttt{\textbackslash cs\_generate\_variant:Nn} with \texttt{\textbackslash \_\_example\_foo:n} and \texttt{\{ V, x \}}
+  \item[\emph{c5}] call \texttt{\textbackslash \_\_example\_foo:x} with \texttt{\{ hello \}}
+  \item[\emph{c6}] call \texttt{\textbackslash example\_bar:nn} with \textcolor{red}{\hl{\texttt{w}}} and \texttt{\{ orld \}}
   \end{enumerate}
 };
 \node [below=10pt of code-07-tex.south, anchor=north, text width=7.2cm, align=center, xshift=-5pt] (code-07-label) {%
   \small
-  (c) Syntactic analysis identifies six expl3 calls and warns about missing braces around the \mbox{\texttt{n}-type} argument~\cite[Section~1.1]{latex2025interface3} \texttt{w} on line 13.
+  (c) syntactic analysis identifies six expl3 calls and warns about missing braces around the \mbox{\texttt{n}-type} argument \texttt{w} on line 13
 };
 % Semantic analysis
 \node [right=0pt of code-07-tex.south east, anchor=south west, text width=6.1cm, align=left] (code-08-tex) {%
   \small
   \begin{enumerate}[nosep, itemsep=1pt]
-  \item[S1.] \textcolor{red}{\hl{Reserve a stream \texttt{\textbackslash l\_example\_iow}.}}
-  \item[S2.] Open a file \texttt{example.idx} for writing.
-  \item[S3.] Define a function \texttt{\textbackslash \_\_example\_foo:n}:
+  \item[\emph{s1}] \textcolor{red}{\hl{reserve a stream \texttt{\textbackslash l\_example\_iow}}}
+  \item[\emph{s2}] open a file \texttt{example.idx} for writing
+  \item[\emph{s3}] define a function \texttt{\textbackslash \_\_example\_foo:n}
   \begin{enumerate}
-  \item[S4.] Define \texttt{\textbackslash \_\_example\_bar:nn} with text \meta{argument}\texttt{,\textvisiblespace}\meta{arguments}\texttt{!}.
+  \item[\emph{s4}] define \texttt{\textbackslash \_\_example\_bar:nn} with text \meta{argument}\texttt{,\textvisiblespace}\meta{arguments}\texttt{!}
   \end{enumerate}
-  \item[S5.] \textcolor{red}{\hl{Generate variant \texttt{\textbackslash \_\_example\_foo:V}.}}
-  \item[S6.] Generate variant \texttt{\textbackslash \_\_example\_foo:x}.
-  \item[S7.] Call \texttt{\textbackslash \_\_example\_foo:x}.
-  \item[S8.] Call \texttt{\textbackslash \_\_example\_bar:nn}.
+  \item[\emph{s5}] \textcolor{red}{\hl{generate variant \texttt{\textbackslash \_\_example\_foo:V}}}
+  \item[\emph{s6}] generate variant \texttt{\textbackslash \_\_example\_foo:x}
+  \item[\emph{s7}] call \texttt{\textbackslash \_\_example\_foo:x}
+  \item[\emph{s8}] call \texttt{\textbackslash \_\_example\_bar:nn}
   \end{enumerate}
 };
 % Flow analysis
-\draw[decorate, decoration={brace, amplitude=60pt, aspect=0.5}, line width=\fboxrule, color=gray] ([yshift=-5pt] code-08-tex.north east) -- ([yshift=25pt] code-08-tex.south east) node[midway, xshift=70pt, color=black] (ch1) {\small Ch1};
-\draw[decorate, decoration={brace, amplitude=15pt, aspect=0.3}, line width=\fboxrule, color=gray] ([yshift=-37.5pt] code-08-tex.north east) -- ([yshift=47.5pt] code-08-tex.south east) node[midway, xshift=25pt, , yshift=5pt, color=black] (ch2) {\small Ch2};
+\draw[decorate, decoration={brace, amplitude=60pt, aspect=0.5}, line width=\fboxrule, color=gray] ([yshift=-5pt] code-08-tex.north east) -- ([yshift=25pt] code-08-tex.south east) node[midway, xshift=70pt, color=black] (ch1) {\small\itshape ch1};
+\draw[decorate, decoration={brace, amplitude=15pt, aspect=0.3}, line width=\fboxrule, color=gray] ([yshift=-37.5pt] code-08-tex.north east) -- ([yshift=47.5pt] code-08-tex.south east) node[midway, xshift=25pt, , yshift=5pt, color=black] (ch2) {\small\itshape ch2};
 \draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule, color=gray] ([xshift=-53pt, yshift=17pt] code-08-tex.south east) to ([xshift=37.5pt, yshift=17pt] code-08-tex.south east);
-\node (ch3) at ([xshift=47.5pt, yshift=17pt] code-08-tex.south east) {\small Ch3};
+\node (ch3) at ([xshift=47.5pt, yshift=17pt] code-08-tex.south east) {\small\itshape ch3};
 \draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule, color=gray] ([xshift=-48pt, yshift=5pt] code-08-tex.south east) to ([xshift=37.5pt, yshift=5pt] code-08-tex.south east);
-\node (ch4) at ([xshift=47.5pt, yshift=5pt] code-08-tex.south east) {\small Ch4};
+\node (ch4) at ([xshift=47.5pt, yshift=5pt] code-08-tex.south east) {\small\itshape ch4};
 \draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule] ([yshift=-5pt] ch1.south) to [bend left] ([yshift=5pt] ch3.north east);
 \draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule] ([yshift=5pt] ch3.north west) to [bend left] ([yshift=-5pt] ch2.south);
 \draw [-{Stealth[length=2mm, width=2mm, open]}, line width=\fboxrule] ([xshift=5pt] ch3.north east) to [bend left] ([xshift=5pt] ch4.south east);
 % Label for both semantic and flow analyses.
 \node [right=6pt of code-07-label.north east, anchor=north west, text width=9cm, align=center] (code-08-label) {%
   \small
-  (d) Semantic analysis identifies eight statements and warns about an unused variant from line 7. Flow analysis identifies four chunks and warns about an unclosed stream from line 4.
+  (d) semantic analysis identifies eight statements and warns about an unused variant from line 7; flow analysis identifies four chunks and warns about an unclosed stream from line 4
 };
 \end{tikzpicture}
 \endgroup
