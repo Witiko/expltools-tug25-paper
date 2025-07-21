@@ -328,6 +328,9 @@ With this approach, the linter always adopts the most charitable interpretation 
 % TODO: Check that the issues are correctly reported by explcheck v1.0.0.
 In our example, this approach reports neither \texttt{E408} nor \texttt{W402}, as expected.
 
+% TODO: Replace the following (slightly redundant) paragraph with different ways in which the concept of confidence is used in explcheck.
+% For example, our stepwise approach means that we have token- or call-level information available even in places, where we could not detect any statements. For example, if the control sequence token "\__example_foo:V" appeared at some unusual place, such as on line 12 as "\begin{docu \__example_foo:V ment}", we would use this information to determine that the variant "\__example_foo:V" \emph{may} be used, even though semantic analysis has found no calls to it, and the warning \texttt{W402} would not be reported.
+% This makes our approach more flexible and robust than using an end-to-end formal grammar, as discussed with Mathias Jakobsen during a coffee break at TUG 2025 (also reference the TUG article that covers their talk titled "Best-effort TeX parsing for interactive editing").
 This confidence-based approach is central to the linter’s design. Every statement produced by semantic analysis is tagged with a \emph{confidence level}: \texttt{NONE} (0\%), \texttt{MAYBE} (50\%), or \texttt{DEFINITELY} (100\%). Later, in Section~\ref{sec:code-coverage}, we also use these confidence levels to validate the linter.
 
 \subsection{Limitations}
