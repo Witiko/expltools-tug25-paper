@@ -5,8 +5,8 @@
    height="284.41669"
    preserveAspectRatio="none"
    version="1.1"
-   viewBox="0 0 679.62665 284.41668"
-   width="679.62665"
+   viewBox="0 0 671.74799 284.41668"
+   width="671.74799"
    zoomAndPan="magnify"
    id="svg287"
    sodipodi:docname="er-diagram.svg"
@@ -27,7 +27,7 @@
      showgrid="false"
      showguides="true"
      inkscape:zoom="1.4142136"
-     inkscape:cx="279.66073"
+     inkscape:cx="280.72138"
      inkscape:cy="138.59293"
      inkscape:window-width="1854"
      inkscape:window-height="1011"
@@ -62,7 +62,7 @@
        id="guide27167"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="242.64983,135.96075"
+       position="490.49409,135.46075"
        orientation="0,-1"
        id="guide27169"
        inkscape:locked="false" />
@@ -75,6 +75,11 @@
        position="275.00885,284.15118"
        orientation="0,-1"
        id="guide552"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="490.4941,109.16384"
+       orientation="0,-1"
+       id="guide692"
        inkscape:locked="false" />
   </sodipodi:namedview>
   <defs
@@ -146,32 +151,14 @@
      transform="translate(-92.336778,12.121195)">
     <rect
        fill="#ffffff"
-       height="42.5938"
+       height="26.296904"
        rx="2.5"
        ry="2.5"
        style="stroke:#000000;stroke-width:1"
-       width="94.648399"
+       width="85.902588"
        x="656"
-       y="129.5"
+       y="136.83475"
        id="rect44" />
-    <text
-       fill="#000000"
-       font-family="'CMU Serif'"
-       font-size="14px"
-       x="703.20404"
-       y="148.5502"
-       id="text46"
-       style="line-height:1"><tspan
-         sodipodi:role="line"
-         id="tspan674"
-         x="703.20404"
-         y="148.5502"
-         style="text-align:center;text-anchor:middle">replacement</tspan><tspan
-         sodipodi:role="line"
-         id="tspan676"
-         x="703.20404"
-         y="162.5502"
-         style="text-align:center;text-anchor:middle">text</tspan></text>
   </g>
   <g
      class="entity"
@@ -241,7 +228,7 @@
        sodipodi:nodetypes="cc" />
     <polygon
        fill="none"
-       points="167.38,118.66 186.3405,117.9523 182.1237,106.7175 "
+       points="182.1237,106.7175 167.38,118.66 186.3405,117.9523 "
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1"
        id="polygon67"
        transform="rotate(-15,176.47604,112.55396)" />
@@ -256,14 +243,14 @@
      transform="translate(-76.928268,30.95594)">
     <path
        codeLine="25"
-       d="M 160.87798,160.6171 C 174.62535,199.54549 221.28,231 277,231 h 228.5 c 63.22871,0 158.52767,-31.75795 171.39806,-77.24095"
+       d="M 160.87798,160.6171 C 174.62535,199.54549 221.28,231 277,231 h 228.5 c 63.22871,0 158.52767,-41.22009 171.39806,-86.70309"
        fill="none"
        id="segment-backto-replacement\ntext"
        style="stroke:#000000;stroke-width:1;stroke-dasharray:7, 7"
        sodipodi:nodetypes="cssc" />
     <polygon
        fill="none"
-       points="171.3395,148.9422 153.01,144.04 164.7323,158.9594 "
+       points="164.7323,158.9594 171.3395,148.9422 153.01,144.04 "
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1"
        id="polygon71"
        transform="rotate(37.157478,154.54052,146.63622)" />
@@ -1191,10 +1178,18 @@
        y="134.62732"
        id="text53"
        style="fill:#000000;fill-opacity:1">argument</text>
+    <text
+       fill="#000000"
+       font-family="'CMU Serif'"
+       font-size="14px"
+       x="643.47113"
+       y="134.62732"
+       id="text627"
+       style="fill:#000000;fill-opacity:1">nested code</text>
   </g>
   <path
      style="fill:none;stroke:#808080;stroke-width:0.531;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:6.372, 6.372;stroke-dashoffset:0;stroke-opacity:1"
-     d="M 557.46797,0.26550001 V 118.88819 H 679.36115 V 284.15118 H 0.26550001 V 73.265336 H 273.1476 V 0.26550001 Z"
+     d="M 557.46797,0.26550001 V 124.88819 h 114.0145 V 284.15118 H 0.26550001 V 73.265336 H 273.1476 V 0.26550001 Z"
      id="path454"
      sodipodi:nodetypes="ccccccccc" />
 </svg>
