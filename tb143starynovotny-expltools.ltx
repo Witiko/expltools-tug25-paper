@@ -260,7 +260,7 @@ As outlined in Section~\ref{sec:functional-requirements}, the linter processes i
 \item \textbf{Lexical analysis} reads the parts as \emph{\TeX{} tokens}.
 \item \textbf{Syntactic analysis} merges tokens into \emph{calls}.
 \item \textbf{Semantic analysis} classifies calls as \emph{statements}.
-\item \textbf{Flow analysis} merges statements into \emph{chunks} of well-understood code organized in a \emph{flow graph}.
+\item \textbf{Flow analysis} merges statements into \emph{chunks} of known statements organized in a \emph{flow graph}.
 \end{enumerate}
 
 Figure~\ref{fig:iceberg} illustrates the full pipeline applied to an example \LaTeX{} document with expl3 code.
@@ -419,7 +419,7 @@ Starting from the top-left corner, the input file consists of bytes, which are s
 
 Syntactic analysis uses these tokens and groupings to recognize function calls and their arguments. Semantic analysis classifies function calls as statements; for function definitions, it identifies replacement text arguments and backtracks to syntactic analysis to analyze nested calls and statements.
 
-Finally, flow analysis merges statements from different segments (such as parts and replacement texts) into chunks of well-understood code and organizes these chunks into a flow graph by connecting them with edges.
+Finally, flow analysis merges statements from different segments (such as parts and replacement texts) into chunks of known statements and organizes these chunks into a flow graph by connecting them with edges.
 
 \subsection{Inter-file dependencies}
 % See:
