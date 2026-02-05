@@ -7,10 +7,10 @@ You can typeset the article by running the following commands:
 
 ```
 latexmk -pdf -cd images/iceberg-code-01.tex
-latexmk -pdf tb143starynovotny-expltools.ltx
+latexmk -pdf tb146starynovotny-expltools.ltx
 ```
 
-After running the command, a file [`tb143starynovotny-expltools.pdf`][1] with the
+After running the command, a file [`tb146starynovotny-expltools.pdf`][1] with the
 typeset article will be created.
 
- [1]: https://github.com/witiko/expltools-tug25-paper/releases/download/latest/tb143starynovotny-expltools.pdf
+ [1]: https://github.com/witiko/expltools-tug25-paper/releases/download/latest/tb146starynovotny-expltools.pdf

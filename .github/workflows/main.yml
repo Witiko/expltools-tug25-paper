@@ -26,14 +26,14 @@ jobs:
       - name: Typeset figures
         run: latexmk -cd images/iceberg-code-01.tex
       - name: Typeset article
-        run: latexmk tb143starynovotny-expltools.ltx
+        run: latexmk tb146starynovotny-expltools.ltx
       - name: Archive sources
-        run: zip -@ tb143starynovotny-expltools < MANIFEST
+        run: zip -@ tb146starynovotny-expltools < MANIFEST
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: tb143starynovotny-expltools
-          path: tb143starynovotny-expltools.zip
+          name: tb146starynovotny-expltools
+          path: tb146starynovotny-expltools.zip
       - name: Create a prerelease
         if: github.ref == 'refs/heads/main'
         uses: marvinpinto/action-automatic-releases@latest
@@ -43,5 +43,5 @@ jobs:
           prerelease: true
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           files: |
-            tb143starynovotny-expltools.pdf
-            tb143starynovotny-expltools.zip
+            tb146starynovotny-expltools.pdf
+            tb146starynovotny-expltools.zip
