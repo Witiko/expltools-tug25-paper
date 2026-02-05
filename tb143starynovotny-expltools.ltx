@@ -333,6 +333,9 @@ In our example, this approach reports neither \texttt{E408} nor \texttt{W402}, a
 % This makes our approach more flexible and robust than using an end-to-end formal grammar, as discussed with Mathias Jakobsen during a coffee break at TUG 2025 (also reference the TUG article that covers their talk titled "Best-effort TeX parsing for interactive editing").
 This confidence-based approach is central to the linter's design. Every statement produced by semantic analysis is tagged with a \emph{confidence level}: \texttt{NONE} (0\%), \texttt{MAYBE} (50\%), or \texttt{DEFINITELY} (100\%). Later, in Section~\ref{sec:code-coverage}, we also use these confidence levels to validate the linter.
 
+% TODO: Also discuss how confidences tie to the flow analysis
+% with a reference to <https://witiko.github.io/Expl3-Linter-11.5/#confidence>.
+
 \subsection{Limitations}
 \label{sec:limitations}
 
