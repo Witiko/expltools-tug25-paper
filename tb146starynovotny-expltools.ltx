@@ -411,7 +411,8 @@ After analysis completes, its results are evaluated by the \texttt{evaluation} p
 \node(er-diagram) {\includegraphics[scale=0.8]{images/er-diagram}};
 \end{tikzpicture}%
 \vspace{0.5\baselineskip}%
-% TODO: Update according to <https://witiko.github.io/images/er-diagram.svg>.
+% TODO: Update according to <https://witiko.github.io/images/er-diagram.svg> and <https://witiko.github.io/images/er-diagram-2.svg>.
+% TODO: Be more precise about the representation of edges, which rely not just on chunks but also on statements. This will be helpful for us in Section 8 (Future work), where we'd like to explain the previous work on improving the performance on flow analysis by introducing macro-statements. This will be wholly unintelligible if we provide a simplified explanation here.
 \caption{Entity relationship diagram of the analysis data model, highlighting our representation of input files.}
 \label{fig:er-diagram}
 \input images/trace-arrow
@@ -424,6 +425,7 @@ Starting from the top-left corner, the input file consists of bytes, which are s
 Syntactic analysis uses these tokens and groupings to recognize function calls and their arguments. Semantic analysis classifies function calls as statements; for function definitions, it identifies replacement text arguments and backtracks to syntactic analysis to analyze nested calls and statements.
 
 Finally, flow analysis merges statements from different segments (such as parts and replacement texts) into chunks of known statements and organizes these chunks into a flow graph by connecting them with edges.
+% TODO: Be more precise about the representation of edges, which rely not just on chunks but also on statements. This will be helpful for us in Section 8 (Future work), where we'd like to explain the previous work on improving the performance on flow analysis by introducing macro-statements. This will be wholly unintelligible if we provide a simplified explanation here.
 
 % We can't really do justice to all implementation details here.
 % TODO: Refer the interested reader to some of the meatier blog posts:
